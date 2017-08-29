@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha --recursive",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -14,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/AGrzes/yellow/issues"
   },
-  "homepage": "https://github.com/AGrzes/yellow#readme"
+  "homepage": "https://github.com/AGrzes/yellow#readme",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "coveralls": "^2.13.1",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0"
+  }
 }
