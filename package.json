@@ -1,0 +1,18 @@
+{
+  "name": "yellow",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AGrzes/yellow.git"
+  },
+  "author": "Grzegorz Abramczyk <abramczykg@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AGrzes/yellow/issues"
+  },
+  "homepage": "https://github.com/AGrzes/yellow#readme"
+}
