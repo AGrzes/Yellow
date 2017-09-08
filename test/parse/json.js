@@ -75,7 +75,22 @@ describe('parse', () => {
             }])
             done(error)
           }))
-        })    
+        })  
+        it('Should override target when asked', (done) => {
+          StreamTest[version].fromObjects([{
+            content: '{"test":"value"}',
+            json: {
+              "test": "another value"
+            }
+          }]).pipe(parseJson({override:true})).pipe(StreamTest[version].toObjects((error, objects) => {
+            expect(objects).to.containSubset([{
+              json: {
+                "test": "value"
+              }
+            }])
+            done(error)
+          }))
+        })              
       })
     })
   })
