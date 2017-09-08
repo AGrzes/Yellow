@@ -5,12 +5,12 @@ describe('parse', () => {
   describe('yaml', () => {
     StreamTest.versions.forEach(function (version) {
       describe('for ' + version + ' streams', function () {
-        it('Should parse json content', (done) => {
+        it('Should parse yaml content', (done) => {
           StreamTest[version].fromObjects([{
             content: 'test: value'
           }]).pipe(parseYaml()).pipe(StreamTest[version].toObjects((error, objects) => {
             expect(objects).to.containSubset([{
-              json: {
+              yaml: {
                 "test": "value"
               }
             }])
@@ -27,12 +27,12 @@ describe('parse', () => {
             done(error)
           }))
         })
-        it('Should not set json missing content', (done) => {
+        it('Should not set yaml missing content', (done) => {
           StreamTest[version].fromObjects([{
             other: "value"
           }]).pipe(parseYaml()).pipe(StreamTest[version].toObjects((error, objects) => {
             expect(objects).to.not.containSubset([{
-              json: {}
+              yaml: {}
             }])
             done(error)
           }))
@@ -54,7 +54,7 @@ describe('parse', () => {
             source: 'test: value'
           }]).pipe(parseYaml({source:'source'})).pipe(StreamTest[version].toObjects((error, objects) => {
             expect(objects).to.containSubset([{
-              json: {
+              yaml: {
                 "test": "value"
               }
             }])
@@ -64,12 +64,12 @@ describe('parse', () => {
         it('Should not override target by default', (done) => {
           StreamTest[version].fromObjects([{
             content: 'test: value',
-            json: {
+            yaml: {
               "test": "another value"
             }
           }]).pipe(parseYaml()).pipe(StreamTest[version].toObjects((error, objects) => {
             expect(objects).to.containSubset([{
-              json: {
+              yaml: {
                 "test": "another value"
               }
             }])
@@ -79,12 +79,12 @@ describe('parse', () => {
         it('Should override target when asked', (done) => {
           StreamTest[version].fromObjects([{
             content: 'test: value',
-            json: {
+            yaml: {
               "test": "another value"
             }
           }]).pipe(parseYaml({override:true})).pipe(StreamTest[version].toObjects((error, objects) => {
             expect(objects).to.containSubset([{
-              json: {
+              yaml: {
                 "test": "value"
               }
             }])
