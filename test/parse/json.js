@@ -17,6 +17,16 @@ describe('parse', () => {
             done(error)
           }))
         })
+        it('Should handle missing content', (done) => {
+          StreamTest[version].fromObjects([{
+            other: "value"
+          }]).pipe(parseJson()).pipe(StreamTest[version].toObjects((error, objects) => {
+            expect(objects).to.containSubset([{
+              other: "value"
+            }])
+            done(error)
+          }))
+        })
       })
     })
   })
