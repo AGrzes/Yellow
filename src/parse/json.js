@@ -4,7 +4,7 @@ module.exports = (options) => {
   const target = options.target || 'json'
   const source = options.source || 'content'
   return miss.through.obj((message, encoding, cb) => {
-  if (message[source]) {
+  if (message[source]&&!message[target]) {
     message[target]= JSON.parse(message[source])
   }
   cb(null, message)
