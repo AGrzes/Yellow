@@ -48,7 +48,19 @@ describe('parse', () => {
             }])
             done(error)
           }))
-        })       
+        })     
+        it('Should handle custom source field', (done) => {
+          StreamTest[version].fromObjects([{
+            source: '{"test":"value"}'
+          }]).pipe(parseJson({source:'source'})).pipe(StreamTest[version].toObjects((error, objects) => {
+            expect(objects).to.containSubset([{
+              json: {
+                "test": "value"
+              }
+            }])
+            done(error)
+          }))
+        })            
       })
     })
   })
