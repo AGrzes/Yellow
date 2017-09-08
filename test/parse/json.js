@@ -40,7 +40,9 @@ describe('parse', () => {
         it('Should handle custom target field', (done) => {
           StreamTest[version].fromObjects([{
             content: '{"test":"value"}'
-          }]).pipe(parseJson({target:'target'})).pipe(StreamTest[version].toObjects((error, objects) => {
+          }]).pipe(parseJson({
+            target: 'target'
+          })).pipe(StreamTest[version].toObjects((error, objects) => {
             expect(objects).to.containSubset([{
               target: {
                 "test": "value"
@@ -48,11 +50,13 @@ describe('parse', () => {
             }])
             done(error)
           }))
-        })     
+        })
         it('Should handle custom source field', (done) => {
           StreamTest[version].fromObjects([{
             source: '{"test":"value"}'
-          }]).pipe(parseJson({source:'source'})).pipe(StreamTest[version].toObjects((error, objects) => {
+          }]).pipe(parseJson({
+            source: 'source'
+          })).pipe(StreamTest[version].toObjects((error, objects) => {
             expect(objects).to.containSubset([{
               json: {
                 "test": "value"
@@ -60,7 +64,7 @@ describe('parse', () => {
             }])
             done(error)
           }))
-        })    
+        })
         it('Should not override target by default', (done) => {
           StreamTest[version].fromObjects([{
             content: '{"test":"value"}',
@@ -75,14 +79,16 @@ describe('parse', () => {
             }])
             done(error)
           }))
-        })  
+        })
         it('Should override target when asked', (done) => {
           StreamTest[version].fromObjects([{
             content: '{"test":"value"}',
             json: {
               "test": "another value"
             }
-          }]).pipe(parseJson({override:true})).pipe(StreamTest[version].toObjects((error, objects) => {
+          }]).pipe(parseJson({
+            override: true
+          })).pipe(StreamTest[version].toObjects((error, objects) => {
             expect(objects).to.containSubset([{
               json: {
                 "test": "value"
@@ -90,7 +96,7 @@ describe('parse', () => {
             }])
             done(error)
           }))
-        })              
+        })
       })
     })
   })
