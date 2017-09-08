@@ -27,6 +27,16 @@ describe('parse', () => {
             done(error)
           }))
         })
+        it('Should not set json missing content', (done) => {
+          StreamTest[version].fromObjects([{
+            other: "value"
+          }]).pipe(parseJson()).pipe(StreamTest[version].toObjects((error, objects) => {
+            expect(objects).to.not.containSubset([{
+              json: {}
+            }])
+            done(error)
+          }))
+        })
       })
     })
   })
