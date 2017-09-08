@@ -17,6 +17,23 @@ describe('parse', () => {
             done(error)
           }))
         })
+        it('Should parse multiple yaml documents content', (done) => {
+          StreamTest[version].fromObjects([{
+            content: `---
+test: value1
+---
+test: value2`
+          }]).pipe(parseYaml()).pipe(StreamTest[version].toObjects((error, objects) => {
+            expect(objects).to.containSubset([{
+              yaml: [{
+                "test": "value1"
+              }, {
+                "test": "value2"
+              }]
+            }])
+            done(error)
+          }))
+        })
         it('Should handle missing content', (done) => {
           StreamTest[version].fromObjects([{
             other: "value"

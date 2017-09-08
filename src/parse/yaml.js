@@ -7,7 +7,10 @@ module.exports = (options) => {
   const override = options.override
   return miss.through.obj((message, encoding, cb) => {
     if (message[source] && (!message[target] || override)) {
-      message[target] = yaml.safeLoad(message[source])
+      message[target] = yaml.safeLoadAll(message[source])
+      if (message[target].length == 1) {
+        message[target] = message[target][0]
+      }
     }
     cb(null, message)
   })
