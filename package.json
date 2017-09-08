@@ -27,6 +27,7 @@
     "streamtest": "^1.2.2"
   },
   "dependencies": {
-    "glob-stream": "^6.1.0"
+    "glob-stream": "^6.1.0",
+    "mississippi": "^1.3.0"
   }
 }
