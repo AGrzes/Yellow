@@ -4,10 +4,23 @@ var StreamTest = require('streamtest')
 describe('index', () => {
   it('Should fail if not passed index', (done) => {
     try {
-      index({})
+      index({
+        key: () => null
+      })
       done(new Error("Should fail"))
     } catch (error) {
-      expect(error).not.to.be.undefined
+      expect(error.message).to.be.equals("Index not defined")
+      done()
+    }
+  })
+  it('Should fail if not passed key function', (done) => {
+    try {
+      index({
+        index: {}
+      })
+      done(new Error("Should fail"))
+    } catch (error) {
+      expect(error.message).to.be.equals("Key function not defined")
       done()
     }
   })
