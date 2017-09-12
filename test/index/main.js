@@ -29,7 +29,7 @@ describe('index', () => {
     try {
       index({
         index: {},
-        key:{}
+        key: {}
       })
       done(new Error("Should fail"))
     } catch (error) {
@@ -51,7 +51,7 @@ describe('index', () => {
         })).pipe(StreamTest[version].toObjects((error, objects) => {
           expect(target).to.containSubset({
             key: {
-              value:'value'
+              value: 'value'
             }
           })
           done(error)
