@@ -24,6 +24,19 @@ describe('index', () => {
       done()
     }
   })
+  it('Should fail if not passed function as key', (done) => {
+    try {
+      index({
+        index: {},
+        key:{}
+      })
+      done(new Error("Should fail"))
+    } catch (error) {
+      expect(error.message).to.be.equals("Key is not a function")
+      done()
+    }
+  })
+
   StreamTest.versions.forEach(function (version) {
     describe('for ' + version + ' streams', function () {
 
