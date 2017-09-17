@@ -8,8 +8,8 @@ describe('parse', () => {
         it('Should dump json content', (done) => {
           StreamTest[version].fromObjects([{
             json: {
-                "test": "value"
-              }
+              "test": "value"
+            }
           }]).pipe(dumpJson()).pipe(StreamTest[version].toObjects((error, objects) => {
             expect(objects).to.containSubset([{
               content: '{"test":"value"}'
@@ -92,7 +92,7 @@ describe('parse', () => {
             }])
             done(error)
           }))
-        })    
+        })
       })
     })
   })
