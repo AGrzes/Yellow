@@ -1,0 +1,21 @@
+@startuml
+(Present Campaign Data To My Players) as UC001
+(Define Model Transformation) as UC002
+UC001 --> UC002
+(Hide Selected Data From Players) as UC003
+UC002 --> UC003
+(Define Model Element Relations) as UC004
+UC002 --> UC004
+(Define Model Presentation) as UC005
+UC001 --> UC005
+(Define Presentation Site Map) as UC006
+UC005 --> UC006
+(Define Item Presentation) as UC007
+UC005 --> UC007
+(Load Campaign Data From Disk Model) as UC008
+UC001 --> UC008
+(Load Entities From Disk) as UC009
+UC008 --> UC009
+(Define Disk Model Loading Rules) as UC010
+UC009 --> UC010
+@enduml
