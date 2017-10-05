@@ -1,0 +1,15 @@
+@startuml
+[Config Service] as CS
+CS -up-> (Configuration)
+CS -> (Templates)
+CS -down-> (Assets)
+[Data Service] as DS
+[Navigation UI] as NAV
+NAV -> CS
+[List UI] as LUI
+LUI -> CS
+LUI -> DS
+[Item UI] as IUI
+IUI -> CS
+IUI ->DS
+@enduml
