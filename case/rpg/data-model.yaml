@@ -1,0 +1,100 @@
+type: DataModel
+classes:
+ - name: Entity
+   attributes: 
+    name: 
+      type: string
+    description: 
+      type: string      
+  - name: Character
+    is: Entity
+    attributes:
+      nicknames:
+        type: string
+        multiplicity: '*'
+      relations:
+        type: CharacterRelation
+        multiplicity: '*'      
+      positions:
+        type: CharacterPosition
+        multiplicity: '*'              
+      items:
+        type: Item
+        multiplicity: '*'
+  - name: CharacterPosition
+    attributes:
+      organization: 
+        type: Organization
+  - name: Member
+    is: CharacterPosition
+  - name: Leader
+    is: CharacterPosition
+  - name: Ally
+    is: CharacterPosition    
+  - name: Enemy
+    is: CharacterPosition    
+  - name: CharacterRelation
+    is: Entity  
+    attributes:
+      target: 
+        type: Character
+      reverse:
+        type: string  
+  - name: Location
+    is: Entity
+    attributes:
+      neighbors:
+        type: LocationRelation
+        multiplicity: '*'
+      sublocations:
+        type: LocationRelation
+        multiplicity: '*'        
+  - name: LocationRelation
+    is: Entity
+    attributes:
+      target:
+        type: Location
+  - name: County
+    is: Location
+  - name: Settlement
+    is: Location     
+  - name: Organization
+    is: Entity
+    attributes:
+      units:
+        type: Organization
+  - name: Religion
+    is: Organization  
+  - name: Domain
+    is: Organization
+  - name: Guild
+    is: Organization    
+  - name: Item
+    is: Entity
+    attributes:
+      kind:
+        type: string
+      valu:
+        type: string
+  - name: Session
+    is: Entity
+    attributes:
+      xp:
+        type: int
+      date: 
+        type: date
+      scenes:
+        type: scenes    
+        multiplicity: '*' 
+  - name: Scene
+    is: Entity
+    attributes:
+      inGameDate:
+        type: string
+      inGameTime: 
+        type: string
+      location:
+        type: Location
+      participants:
+        type: Character
+        multiplicity: '*'      
