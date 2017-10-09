@@ -1,0 +1,16 @@
+type: SiteModel
+menu:
+ - name: Reference
+   action: 
+     (View Definition)
+   submenu:
+    - (Menu Item)
+ - name: Characters 
+ - name: Locations
+ - name: Organizations
+   submenu:
+    - name: Religions
+    - name: Domains
+    - name: GuildsS    
+ - name: Items
+ - name: Sessions  
