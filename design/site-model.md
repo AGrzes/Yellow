@@ -1,4 +1,4 @@
-Menu model will be defined as Yaml file.
+Site model will be defined as Yaml file.
 
 The file will have the following structure
 
