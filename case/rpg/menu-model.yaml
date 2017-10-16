@@ -6,11 +6,67 @@ menu:
    submenu:
     - (Menu Item)
  - name: Characters 
+   view:
+    type: ListView
+    selector: 
+      type: TypeSelector
+      selector: Character
+    template:
+      type: FileTemplate
+      file: chatacter-item.mustache
  - name: Locations
+   view:
+    type: ListView
+    selector: 
+       type: TypeSelector
+       selector: Location
+    template:
+      type: FileTemplate
+      file: location-item.mustache 
  - name: Organizations
    submenu:
     - name: Religions
+      view:
+        type: ListView
+        selector: 
+          type: TypeSelector
+          selector: Religion
+        template:
+          type: FileTemplate
+          file: religion-item.mustache     
     - name: Domains
-    - name: GuildsS    
+      view:
+        type: ListView
+        selector: 
+          type: TypeSelector
+          selector: Domain
+        template:
+          type: FileTemplate
+          file: domain-item.mustache      
+    - name: Guilds
+      view:
+        type: ListView
+        selector: 
+          type: TypeSelector
+          selector: Guild
+        template:
+          type: FileTemplate
+          file: guild-item.mustache          
  - name: Items
+    view:
+      type: ListView
+      selector: 
+        type: TypeSelector
+        selector: Item
+      template:
+        type: FileTemplate
+        file: item-item.mustache   
  - name: Sessions  
+    view:
+      type: ListView
+      selector: 
+        type: TypeSelector
+        selector: Session
+      template:
+        type: FileTemplate
+        file: session-item.mustache   
