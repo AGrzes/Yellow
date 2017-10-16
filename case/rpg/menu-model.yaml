@@ -1,10 +1,14 @@
 type: SiteModel
 menu:
  - name: Reference
-   action: 
-     (View Definition)
-   submenu:
-    - (Menu Item)
+   view:
+    type: ListView
+    selector: 
+      type: TypeSelector
+      selector: Reference
+    template:
+      type: FileTemplate
+      file: reference-item.mustache
  - name: Characters 
    view:
     type: ListView
@@ -13,7 +17,7 @@ menu:
       selector: Character
     template:
       type: FileTemplate
-      file: chatacter-item.mustache
+      file: character-item.mustache
  - name: Locations
    view:
     type: ListView
@@ -33,7 +37,7 @@ menu:
           selector: Religion
         template:
           type: FileTemplate
-          file: religion-item.mustache     
+          file: organization-item.mustache     
     - name: Domains
       view:
         type: ListView
@@ -42,7 +46,7 @@ menu:
           selector: Domain
         template:
           type: FileTemplate
-          file: domain-item.mustache      
+          file: organization-item.mustache      
     - name: Guilds
       view:
         type: ListView
@@ -51,7 +55,7 @@ menu:
           selector: Guild
         template:
           type: FileTemplate
-          file: guild-item.mustache          
+          file: organization-item.mustache          
  - name: Items
     view:
       type: ListView
