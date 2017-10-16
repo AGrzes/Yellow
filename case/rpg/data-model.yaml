@@ -74,7 +74,7 @@ classes:
     attributes:
       kind:
         type: string
-      valu:
+      value:
         type: string
   - name: Session
     is: Entity
@@ -84,7 +84,7 @@ classes:
       date: 
         type: date
       scenes:
-        type: scenes    
+        type: Scene    
         multiplicity: '*' 
   - name: Scene
     is: Entity
