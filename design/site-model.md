@@ -6,7 +6,7 @@ The file will have the following structure
 type: SiteModel
 menu:
  - name: (Item Name)
-   action: 
+   view: 
      (View Definition)
    submenu:
     - (Menu Item)
@@ -32,7 +32,7 @@ classes:
  - name: TypeSelector
    is: Selector
    attributes:
-     type:
+     selector:
        type: string
      includeSubtypes: 
        type: boolean

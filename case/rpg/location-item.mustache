@@ -1,0 +1,20 @@
+<div>
+  <h1>{{name}}</h1>
+  {{description}}
+  <div>
+    <h2>Neighbors</h2> 
+    <ul>
+    {{#each neighbors}}
+      <li>{{name}} : {{target.name}} - {{description}}</li>
+    {{/each}}
+    </ul>
+  </div>  
+  <div>
+    <h2>Sub-locations</h2> 
+    <ul>
+    {{#each sublocations}}
+      <li>{{name}} : {{target.name}} - {{description}}</li>
+    {{/each}}
+    </ul>
+  </div>    
+</div>   

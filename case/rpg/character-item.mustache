@@ -1,0 +1,28 @@
+<div>
+  <h1>{{name}}{{#each nicknames}}, {{this}}{{/each}}</h1>
+  {{description}}
+  <div>
+    <h2>Relations</h2> 
+    <ul>
+    {{#each relations}}
+      <li>{{name}} : {{target.name}} - {{description}}</li>
+    {{/each}}
+    </ul>
+  </div>  
+  <div>
+    <h2>Positions</h2>
+    <ul>
+    {{#each positions}}
+      <li>{{name}} : {{target.name}} - {{description}}</li>
+    {{/each}}
+    </ul>
+  </div>    
+  <div>
+    <h2>Items</h2>
+    <ul>
+    {{#each items}}
+      <li>{{name}}</li>
+    {{/each}}
+    </ul>
+  </div>    
+</div>   
