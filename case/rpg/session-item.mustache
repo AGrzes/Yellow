@@ -1,0 +1,16 @@
+<div>
+  <h1>{{name}} - {{date}} - {{xp}} XP</h1> 
+  {{description}}
+  {{#each scene}}
+  <div><h2>{{inGameDate}} - {{inGameTime}} - {{location.name}}</h2>
+    {{description}}
+    <aside>
+      <ul>
+      {{#each participants}}
+        <li>{{name}}</li>
+      {{/each}}
+      </ul>
+    </aside>
+  </div>
+  {{/each}}
+</div>
