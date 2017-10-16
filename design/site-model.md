@@ -32,7 +32,7 @@ classes:
  - name: TypeSelector
    is: Selector
    attributes:
-     type:
+     selector:
        type: string
      includeSubtypes: 
        type: boolean
