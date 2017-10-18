@@ -98,3 +98,5 @@ classes:
       participants:
         type: Character
         multiplicity: '*'      
+  - name: Reference
+    is: Entity
