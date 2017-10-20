@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js http://couchdb.home.agrzes.pl:5984/birthright_test >../../data.yaml"
   },
   "author": "Grzegorz Abramczyk <abramczykg@gmail.com>",
   "license": "MIT",

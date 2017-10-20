@@ -1,6 +1,6 @@
 var PouchDB = require('pouchdb-core')
 var miss = require('mississippi')
-var couchEndpoint = 'http://couchdb.home.agrzes.pl:5984/birthright_test';
+var couchEndpoint = process.argv[2];
 PouchDB.plugin(require('pouchdb-adapter-http'));
 var db = new PouchDB(couchEndpoint);
 var Ouch = require('ouch-stream')
