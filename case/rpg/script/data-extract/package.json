@@ -1,0 +1,20 @@
+{
+  "name": "data-extract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js http://couchdb.home.agrzes.pl:5984/birthright_test >../../data.yaml"
+  },
+  "author": "Grzegorz Abramczyk <abramczykg@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^3.10.0",
+    "lodash": "^4.17.4",
+    "mississippi": "^1.3.0",
+    "ouch-stream": "^1.2.0",
+    "pouchdb-adapter-http": "^6.3.4",
+    "pouchdb-core": "^6.3.4"
+  }
+}
