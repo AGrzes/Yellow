@@ -42,6 +42,26 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         name: _.get(item,'name'),
         description: _.get(item,'description')||_.get(item,'content')
       }]
+      case "character":
+      return [{
+        type: 'Character',
+        name: _.get(item,'name'),
+        description: _.get(item,'description')||_.get(item,'content'),
+        nicknames: _.compact([_.get(item,'title'),_.get(item,'label')]),
+        relations: _(item).get(item,'relations').filter((relation)=>_.startsWith(_.get(relation,'role'),'person:')).map((relation)=>({
+          type: 'CharacterRelation',
+          name:  _.get(relation,'role'),
+          target: _.get(relation,'target'),
+          reverse: _.get(relation,'reverse'),
+          description: _.get(relation,'description')
+        })).value(),
+        positions: _(item).get(item,'relations').filter((relation)=>!_.startsWith(_.get(relation,'role'),'person:')).map((relation)=>({
+          type: 'CharacterRelation',
+          name:  _.get(relation,'role'),
+          organization: _.get(relation,'target'),
+          description: _.get(relation,'description')
+        })).value(),        
+      }]
     }
     return []
   })
