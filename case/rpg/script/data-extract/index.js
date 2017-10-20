@@ -36,6 +36,12 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         name: _.get(item,'name'),
         description: _.get(item,'description')||_.get(item,'content')
       }]
+      case "organization":
+      return [{
+        type: 'Organization',
+        name: _.get(item,'name'),
+        description: _.get(item,'description')||_.get(item,'content')
+      }]
     }
     return []
   })
