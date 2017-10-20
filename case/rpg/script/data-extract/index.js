@@ -20,7 +20,7 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         xp: _.get(item,'awards.xp'),
         date: _.get(item,'date'),
         name: _.get(item,'name'),
-        description: _.get(item,'content')
+        description: _.get(item,'description')||_.get(item,'content')
       }]
       case "item":
       return [{
@@ -28,13 +28,13 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         value: _.get(item,'value'),
         kind: _.get(item,'kind'),
         name: _.get(item,'name'),
-        description: _.get(item,'content')
+        description: _.get(item,'description')||_.get(item,'content')
       }]
       case "reference":
       return [{
         type: 'Reference',
         name: _.get(item,'name'),
-        description: _.get(item,'content')
+        description: _.get(item,'description')||_.get(item,'content')
       }]
     }
     return []
