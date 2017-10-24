@@ -1,34 +1,34 @@
 type: SiteModel
 menu:
- - name: Reference
-   view:
-    type: ListView
-    selector: 
-      type: TypeSelector
-      selector: Reference
-    template:
-      type: FileTemplate
-      file: reference-item.mustache
- - name: Characters 
-   view:
-    type: ListView
-    selector: 
-      type: TypeSelector
-      selector: Character
-    template:
-      type: FileTemplate
-      file: character-item.mustache
- - name: Locations
-   view:
-    type: ListView
-    selector: 
-       type: TypeSelector
-       selector: Location
-    template:
-      type: FileTemplate
-      file: location-item.mustache 
- - name: Organizations
-   submenu:
+  - name: Reference
+    view:
+      type: ListView
+      selector: 
+        type: TypeSelector
+        selector: Reference
+      template:
+        type: FileTemplate
+        file: reference-item.mustache
+  - name: Characters 
+    view:
+      type: ListView
+      selector: 
+        type: TypeSelector
+        selector: Character
+      template:
+        type: FileTemplate
+        file: character-item.mustache
+  - name: Locations
+    view:
+      type: ListView
+      selector: 
+        type: TypeSelector
+        selector: Location
+      template:
+        type: FileTemplate
+        file: location-item.mustache 
+  - name: Organizations
+    submenu:
     - name: Religions
       view:
         type: ListView
@@ -56,7 +56,7 @@ menu:
         template:
           type: FileTemplate
           file: organization-item.mustache          
- - name: Items
+  - name: Items
     view:
       type: ListView
       selector: 
@@ -65,7 +65,7 @@ menu:
       template:
         type: FileTemplate
         file: item-item.mustache   
- - name: Sessions  
+  - name: Sessions  
     view:
       type: ListView
       selector: 
