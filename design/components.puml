@@ -1,17 +1,25 @@
 @startuml
 
-component [Metamodel]
-component [Explorer Config]
-component [Loader Config]
-component [Data Loader]
+cloud {
+  component [Explorer Config]
+  component [Explorer Builder]
+  component [Explorer]
+}
+cloud {
+  component [Loader Config]
+  component [Data Loader]
+  component [Loader Builder]
+}
 component [Data]
-component [Explorer Builder]
-component [Loader Builder]
-component [Explorer]
-component [Exporter]
-component [Exporter Config]
-component [Exporter Builder]
-component [Metamodel Builder]
+cloud {
+  component [Exporter]
+  component [Exporter Config]
+  component [Exporter Builder]
+}
+cloud {
+  component [Metamodel Builder]
+  component [Metamodel]
+}
 
 [Data] ..> [Metamodel] : use
 [Exporter] ..> [Exporter Config] : use
