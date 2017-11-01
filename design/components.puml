@@ -1,0 +1,37 @@
+@startuml
+
+component [Metamodel]
+component [Explorer Config]
+component [Loader Config]
+component [Data Loader]
+component [Data]
+component [Explorer Builder]
+component [Loader Builder]
+component [Explorer]
+component [Exporter]
+component [Exporter Config]
+component [Exporter Builder]
+component [Metamodel Builder]
+
+[Data] ..> [Metamodel] : use
+[Exporter] ..> [Exporter Config] : use
+[Exporter] ..> [Data] : use
+[Exporter Builder] ..> [Exporter Config] : create
+[Loader Builder] ..> [Loader Config] : create
+[Explorer Builder] ..> [Explorer Config] : create
+[Data Loader] ..> [Data] : create
+[Data Loader] ..> [Loader Config] : use
+[Explorer] ..> [Data] : use
+[Explorer] ..> [Explorer Config] : use
+[Metamodel Builder] ..> [Metamodel] : create
+
+[Explorer] ..> [Metamodel] : use
+[Explorer Config] ..> [Metamodel] : use
+[Loader Config] ..> [Metamodel] : use
+[Data Loader] ..> [Metamodel] : use
+[Exporter] ..> [Metamodel] : use
+[Exporter Config] ..> [Metamodel] : use
+[Exporter Builder] ..> [Metamodel] : use
+[Loader Builder] ..> [Metamodel] : use
+[Explorer Builder] ..> [Metamodel] : use
+@enduml
