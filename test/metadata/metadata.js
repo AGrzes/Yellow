@@ -11,5 +11,15 @@ describe('Metadata', () => {
     expect(() => new Metadata({type:'DataModel'})).not.to.throw('Expected type: DataModel')
   })
 
+  it('Should find type by name', function () {
+    const testType = { name: 'test'}
+    const dataModel = new Metadata({
+      type:'DataModel',
+      classes: [
+        testType
+      ]
+    })
+    expect(dataModel.type('test')).to.be.equal(testType)
+  })
 
 })
