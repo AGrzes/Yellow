@@ -21,9 +21,9 @@
     "chai": "^4.1.1",
     "chai-subset": "^1.6.0",
     "coveralls": "^2.13.1",
-    "mocha": "^3.5.0",
+    "mocha": "^4.0.1",
     "mock-fs": "^4.4.1",
-    "nyc": "^11.1.0",
+    "nyc": "^11.3.0",
     "streamtest": "^1.2.2"
   },
   "dependencies": {
