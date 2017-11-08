@@ -1,4 +1,4 @@
-const { Metadata } = require('../../src/metadata/main')
+const { Metadata, Type } = require('../../src/metadata/main')
 const expect = require('chai').use(require('chai-subset')).expect;
 
 describe('Metadata', () => {
@@ -12,14 +12,15 @@ describe('Metadata', () => {
   })
 
   it('Should find type by name', function () {
-    const testType = { name: 'test'}
     const dataModel = new Metadata({
       type:'DataModel',
       classes: [
-        testType
+        { name: 'test'}
       ]
     })
-    expect(dataModel.type('test')).to.be.equal(testType)
+    const testType = dataModel.type('test') 
+    expect(testType).to.be.instanceof(Type)
+    expect(testType).to.have.property('name','test')
   })
 
 })
