@@ -5,4 +5,10 @@ describe('Data', () => {
     it('Should export Data class', function () {
       expect(Data).to.exist
     })
+    it('Should hold model', function () {
+      const model = {}
+
+      expect(new Data(model)).to.have.property('model',model);
+    })
+
 })
