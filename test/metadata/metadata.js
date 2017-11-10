@@ -24,3 +24,9 @@ describe('Metadata', () => {
   })
 
 })
+
+describe('Type', () => {
+  it('Should export Type class', function () {
+    expect(Type).to.exist
+  })
+})
