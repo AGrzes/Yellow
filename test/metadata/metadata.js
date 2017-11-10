@@ -76,4 +76,12 @@ describe('Type', () => {
     })
     expect(testType.attribute.a).to.have.property('type','AAA')
   })
+  it('Should handle default type', function () {
+    const testType = new Type({
+      attributes: {
+        a: {}
+      }
+    })
+    expect(testType.attribute.a).to.have.property('type','string')
+  })
 })
