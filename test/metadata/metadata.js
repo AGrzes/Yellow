@@ -68,4 +68,12 @@ describe('Type', () => {
     })
     expect(testType.attribute.a).to.have.property('multiplicity','1')
   })
+  it('Should handle attribute type', function () {
+    const testType = new Type({
+      attributes: {
+        a: {type:"AAA"}
+      }
+    })
+    expect(testType.attribute.a).to.have.property('type','AAA')
+  })
 })
