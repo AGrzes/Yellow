@@ -63,7 +63,10 @@ describe('Attribute', () => {
   it('Should export Attribute class', function () {
     expect(Attribute).to.exist
   })
-
+  it('Should handle attribute name', function () {
+    const testAttribute = new Attribute('a',{})
+    expect(testAttribute).to.have.property('name','a')
+  })
   it('Should handle attribute multiplicity', function () {
     const testAttribute = new Attribute('a',{
       multiplicity: "*"
