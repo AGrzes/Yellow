@@ -14,6 +14,7 @@ class Type {
   constructor(classDescriptor){
     this.name = classDescriptor.name
     this.attributes = _.map(classDescriptor.attributes,(attributeDescriptor,attributeName)=>new Attribute(attributeName,attributeDescriptor))
+    this.attribute = _(this.attributes).keyBy('name').value()
   }
 }
 class Attribute {

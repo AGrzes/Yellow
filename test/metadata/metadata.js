@@ -43,4 +43,13 @@ describe('Type', () => {
       name: "b"
     }])
   })
+  it('Should find attribute by type', function () {
+    const testType = new Type({
+      attributes: {
+        a: {},
+        b: {}
+      }
+    })
+    expect(testType.attribute.a).to.have.property('name','a')
+  })
 })
