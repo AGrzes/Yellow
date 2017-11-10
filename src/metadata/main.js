@@ -15,6 +15,8 @@ class Type {
     this.name = classDescriptor.name
     this.attributes = _.map(classDescriptor.attributes,(attributeDescriptor,attributeName)=>new Attribute(attributeName,attributeDescriptor))
     this.attribute = _(this.attributes).keyBy('name').value()
+    this.idAttribute = classDescriptor.idAttribute || 'id'
+    this.idTemplate = classDescriptor.idTemplate || `{{${this.idAttribute}}}`
   }
 }
 class Attribute {
@@ -26,3 +28,4 @@ class Attribute {
 }
 exports.Metadata = Metadata
 exports.Type = Type
+exports.Attribute = Attribute
