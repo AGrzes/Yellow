@@ -84,4 +84,10 @@ describe('Type', () => {
     })
     expect(testType.attribute.a).to.have.property('type','string')
   })
+  it('Should handle id attribute', function () {
+    const testType = new Type({
+      idAttribute:"AAA"
+    })
+    expect(testType).to.have.property('idAttribute','AAA')
+  })
 })
