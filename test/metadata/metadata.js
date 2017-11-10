@@ -24,3 +24,23 @@ describe('Metadata', () => {
   })
 
 })
+
+describe('Type', () => {
+  it('Should export Type class', function () {
+    expect(Type).to.exist
+  })
+
+  it('Should list attributes', function () {
+    const testType = new Type({
+      attributes: {
+        a: {},
+        b: {}
+      }
+    })
+    expect(testType.attributes).to.containSubset([{
+      name: "a"
+    }, {
+      name: "b"
+    }])
+  })
+})
