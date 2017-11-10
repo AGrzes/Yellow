@@ -27,3 +27,4 @@ class Attribute {
 }
 exports.Metadata = Metadata
 exports.Type = Type
+exports.Attribute = Attribute
