@@ -64,6 +64,10 @@ describe('Type', () => {
     })
     expect(testType).to.have.property('idAttribute', 'AAA')
   })
+  it('Should handle id attribute default', function () {
+    const testType = new Type({})
+    expect(testType).to.have.property('idAttribute', 'id')
+  })
   it('Should handle id template', function () {
     const testType = new Type({
       idTemplate: "AAA"
