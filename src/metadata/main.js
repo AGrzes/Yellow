@@ -20,7 +20,7 @@ class Type {
 class Attribute {
   constructor(name,attributeDescriptor){
     this.name = name
-    this.multiplicity = attributeDescriptor.multiplicity
+    this.multiplicity = attributeDescriptor.multiplicity || '1'
   }
 }
 exports.Metadata = Metadata
