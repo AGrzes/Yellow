@@ -16,7 +16,7 @@ class Type {
     this.attributes = _.map(classDescriptor.attributes,(attributeDescriptor,attributeName)=>new Attribute(attributeName,attributeDescriptor))
     this.attribute = _(this.attributes).keyBy('name').value()
     this.idAttribute = classDescriptor.idAttribute
-    this.idTemplate = classDescriptor.idTemplate
+    this.idTemplate = classDescriptor.idTemplate || `{{${this.idAttribute}}}`
   }
 }
 class Attribute {
