@@ -18,8 +18,10 @@ class Type {
   }
 }
 class Attribute {
-  constructor(name){
+  constructor(name,attributeDescriptor){
     this.name = name
+    this.multiplicity = attributeDescriptor.multiplicity || '1'
+    this.type = attributeDescriptor.type || 'string'
   }
 }
 exports.Metadata = Metadata
