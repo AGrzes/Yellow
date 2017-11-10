@@ -13,6 +13,12 @@ class Metadata {
 class Type {
   constructor(classDescriptor){
     this.name = classDescriptor.name
+    this.attributes = _.map(classDescriptor.attributes,(attributeDescriptor,attributeName)=>new Attribute(attributeName,attributeDescriptor))
+  }
+}
+class Attribute {
+  constructor(name){
+    this.name = name
   }
 }
 exports.Metadata = Metadata
