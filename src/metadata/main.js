@@ -13,6 +13,15 @@ class Metadata {
         type.ancestors.push(ancestorClass)
         ancestorClass.descendants.push(type)
         ancestorClassName = ancestorClass.baseClass
+        if (!type.idTemplate&&ancestorClass.idTemplate){
+          type.idTemplate = ancestorClass.idTemplate
+          type.idTemplateHandlebars = handlebars.compile(type.idTemplate) 
+        }        
+        if (!type.idAttribute&&ancestorClass.idAttribute){
+          type.idAttribute = ancestorClass.idAttribute
+          type.idTemplate = type.idTemplate? type.idTemplate: `{{${type.idAttribute}}}`
+          type.idTemplateHandlebars = handlebars.compile(type.idTemplate) 
+        }       
       }
     })
   }
@@ -25,10 +34,10 @@ class Type {
     this.name = classDescriptor.name
     this.attributes = _.map(classDescriptor.attributes,(attributeDescriptor,attributeName)=>new Attribute(attributeName,attributeDescriptor))
     this.attribute = _(this.attributes).keyBy('name').value()
-    this.idAttribute = classDescriptor.idAttribute || 'id'
-    this.idTemplate = classDescriptor.idTemplate || `{{${this.idAttribute}}}`
-    this.idTemplateHandlebars = handlebars.compile(this.idTemplate)
     this.baseClass = classDescriptor.is
+    this.idAttribute = classDescriptor.idAttribute || (this.baseClass ? null : 'id')
+    this.idTemplate = classDescriptor.idTemplate || (this.idAttribute ? `{{${this.idAttribute}}}` : null)
+    this.idTemplateHandlebars = this.idTemplate ? handlebars.compile(this.idTemplate) : null
     this.ancestors = []
     this.descendants = []
   }
