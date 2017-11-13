@@ -17,6 +17,7 @@ class Type {
     this.attribute = _(this.attributes).keyBy('name').value()
     this.idAttribute = classDescriptor.idAttribute || 'id'
     this.idTemplate = classDescriptor.idTemplate || `{{${this.idAttribute}}}`
+    this.baseClass = classDescriptor.is
   }
 }
 class Attribute {

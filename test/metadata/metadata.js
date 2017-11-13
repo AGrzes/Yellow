@@ -80,6 +80,12 @@ describe('Type', () => {
     })
     expect(testType).to.have.property('idTemplate', '{{AAA}}')
   }) 
+  it('Should handle base type', function () {
+    const testType = new Type({
+      is: "AAA"
+    })
+    expect(testType).to.have.property('baseClass', 'AAA')
+  })
 })
 describe('Attribute', () => {
   it('Should export Attribute class', function () {
