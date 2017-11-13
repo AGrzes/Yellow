@@ -10,6 +10,7 @@ class Metadata {
       while (ancestorClassName){
         let ancestorClass = this.types[ancestorClassName]
         type.ancestors.push(ancestorClass)
+        ancestorClass.descendants.push(type)
         ancestorClassName = ancestorClass.baseClass
       }
     })

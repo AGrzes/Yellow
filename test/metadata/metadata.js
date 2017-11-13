@@ -58,6 +58,19 @@ describe('Metadata', () => {
     expect(testType.ancestors).to.containSubset([{name:'a'}])
     expect(testType.ancestors).to.containSubset([{name:'b'}])
   })  
+  it('Should populate descendants from base class', function () {
+    const dataModel = new Metadata({
+      type: 'DataModel',
+      classes: [{
+        name: 'a'
+      },{
+        name:'b',
+        is:'a'
+      }]
+    })
+    const testType = dataModel.type('a')
+    expect(testType.descendants).to.containSubset([{name:'b'}])
+  })
 })
 
 describe('Type', () => {
