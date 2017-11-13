@@ -88,6 +88,36 @@ describe('Metadata', () => {
     expect(testType.descendants).to.containSubset([{name:'c'}])
     expect(testType.descendants).to.containSubset([{name:'b'}])
   }) 
+  it('Should inherit id attribute', function () {
+    const dataModel = new Metadata({
+      type: 'DataModel',
+      classes: [{
+        name: 'a',
+        idAttribute:'AAA'
+      },{
+        name:'b',
+        is:'a'
+      }]
+    })
+    const testType = dataModel.type('b')
+    expect(testType.idAttribute).to.be.equals('AAA')
+    expect(testType.idTemplate).to.be.equals('{{AAA}}')
+  })
+  it('Should inherit id template', function () {
+    const dataModel = new Metadata({
+      type: 'DataModel',
+      classes: [{
+        name: 'a',
+        idTemplate:'AAA'
+      },{
+        name:'b',
+        is:'a'
+      }]
+    })
+    const testType = dataModel.type('b')
+    expect(testType.idTemplate).to.be.equals('AAA')
+    expect(testType.idAttribute).to.be.equals('id')
+  })
 })
 
 describe('Type', () => {
@@ -138,6 +168,12 @@ describe('Type', () => {
       idAttribute: "AAA"
     })
     expect(testType).to.have.property('idTemplate', '{{AAA}}')
+  }) 
+  it('Should calculate entity id', function () {
+    const testType = new Type({
+      idAttribute: "AAA"
+    })
+    expect(testType.id({AAA:'BBB'})).to.be.equals('BBB')
   }) 
   it('Should handle base type', function () {
     const testType = new Type({

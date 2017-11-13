@@ -10,6 +10,7 @@ class Data {
           this.byType[derivedType.name] ? this.byType[derivedType.name] : []
         )
       ).value()
+      this.byId = _(model).keyBy((entity)=>this.metadata.types[entity.type].id(entity)).value()
     }
   }
 }
