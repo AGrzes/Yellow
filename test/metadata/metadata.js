@@ -86,6 +86,12 @@ describe('Type', () => {
     })
     expect(testType).to.have.property('baseClass', 'AAA')
   })
+  it('Should handle classes', function () {
+    const testType = new Type({
+      name: "AAA"
+    })
+    expect(testType.classes).to.containSubset([{name:'AAA'}])
+  })
 })
 describe('Attribute', () => {
   it('Should export Attribute class', function () {

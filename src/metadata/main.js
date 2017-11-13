@@ -18,6 +18,7 @@ class Type {
     this.idAttribute = classDescriptor.idAttribute || 'id'
     this.idTemplate = classDescriptor.idTemplate || `{{${this.idAttribute}}}`
     this.baseClass = classDescriptor.is
+    this.classes = [this]
   }
 }
 class Attribute {
