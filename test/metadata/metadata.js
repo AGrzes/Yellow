@@ -28,7 +28,66 @@ describe('Metadata', () => {
     expect(testType).to.be.instanceof(Type)
     expect(testType).to.have.property('name', 'test')
   })
-
+  it('Should populate ancestors from base class', function () {
+    const dataModel = new Metadata({
+      type: 'DataModel',
+      classes: [{
+        name: 'a'
+      },{
+        name:'b',
+        is:'a'
+      }]
+    })
+    const testType = dataModel.type('b')
+    expect(testType.ancestors).to.containSubset([{name:'a'}])
+  })
+  it('Should populate ancestors transitively', function () {
+    const dataModel = new Metadata({
+      type: 'DataModel',
+      classes: [{
+        name: 'a'
+      },{
+        name:'b',
+        is:'a'
+      },{
+        name:'c',
+        is:'b'
+      }]
+    })
+    const testType = dataModel.type('c')
+    expect(testType.ancestors).to.containSubset([{name:'a'}])
+    expect(testType.ancestors).to.containSubset([{name:'b'}])
+  })  
+  it('Should populate descendants from base class', function () {
+    const dataModel = new Metadata({
+      type: 'DataModel',
+      classes: [{
+        name: 'a'
+      },{
+        name:'b',
+        is:'a'
+      }]
+    })
+    const testType = dataModel.type('a')
+    expect(testType.descendants).to.containSubset([{name:'b'}])
+  })
+  it('Should populate descendants transitively', function () {
+    const dataModel = new Metadata({
+      type: 'DataModel',
+      classes: [{
+        name: 'a'
+      },{
+        name:'b',
+        is:'a'
+      },{
+        name:'c',
+        is:'b'
+      }]
+    })
+    const testType = dataModel.type('a')
+    expect(testType.descendants).to.containSubset([{name:'c'}])
+    expect(testType.descendants).to.containSubset([{name:'b'}])
+  }) 
 })
 
 describe('Type', () => {
@@ -80,6 +139,26 @@ describe('Type', () => {
     })
     expect(testType).to.have.property('idTemplate', '{{AAA}}')
   }) 
+  it('Should handle base type', function () {
+    const testType = new Type({
+      is: "AAA"
+    })
+    expect(testType).to.have.property('baseClass', 'AAA')
+  })
+  it('Should handle ancestors', function () {
+    const testType = new Type({
+      name: "AAA"
+    })
+    expect(testType.ancestors).to.exist
+    expect(testType.ancestors).not.to.containSubset([{name:'AAA'}])
+  })
+  it('Should handle descendants', function () {
+    const testType = new Type({
+      name: "AAA"
+    })
+    expect(testType.descendants).to.exist
+    expect(testType.descendants).not.to.containSubset([{name:'AAA'}])
+  })
 })
 describe('Attribute', () => {
   it('Should export Attribute class', function () {
