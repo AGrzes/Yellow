@@ -71,6 +71,23 @@ describe('Metadata', () => {
     const testType = dataModel.type('a')
     expect(testType.descendants).to.containSubset([{name:'b'}])
   })
+  it('Should populate descendants transitively', function () {
+    const dataModel = new Metadata({
+      type: 'DataModel',
+      classes: [{
+        name: 'a'
+      },{
+        name:'b',
+        is:'a'
+      },{
+        name:'c',
+        is:'b'
+      }]
+    })
+    const testType = dataModel.type('a')
+    expect(testType.descendants).to.containSubset([{name:'c'}])
+    expect(testType.descendants).to.containSubset([{name:'b'}])
+  }) 
 })
 
 describe('Type', () => {
