@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const handlebars = require('handlebars')
 class Metadata {
   constructor(dataModel) {
     if (dataModel.type != 'DataModel') {
@@ -26,9 +27,13 @@ class Type {
     this.attribute = _(this.attributes).keyBy('name').value()
     this.idAttribute = classDescriptor.idAttribute || 'id'
     this.idTemplate = classDescriptor.idTemplate || `{{${this.idAttribute}}}`
+    this.idTemplateHandlebars = handlebars.compile(this.idTemplate)
     this.baseClass = classDescriptor.is
     this.ancestors = []
     this.descendants = []
+  }
+  id(entity){
+    return this.idTemplateHandlebars(entity)
   }
 }
 class Attribute {

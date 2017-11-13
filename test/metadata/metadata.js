@@ -139,6 +139,12 @@ describe('Type', () => {
     })
     expect(testType).to.have.property('idTemplate', '{{AAA}}')
   }) 
+  it('Should calculate entity id', function () {
+    const testType = new Type({
+      idAttribute: "AAA"
+    })
+    expect(testType.id({AAA:'BBB'})).to.be.equals('BBB')
+  }) 
   it('Should handle base type', function () {
     const testType = new Type({
       is: "AAA"
