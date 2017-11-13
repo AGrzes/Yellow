@@ -28,7 +28,7 @@ describe('Metadata', () => {
     expect(testType).to.be.instanceof(Type)
     expect(testType).to.have.property('name', 'test')
   })
-  it('Should populate classes from base class', function () {
+  it('Should populate ancestors from base class', function () {
     const dataModel = new Metadata({
       type: 'DataModel',
       classes: [{
@@ -39,9 +39,9 @@ describe('Metadata', () => {
       }]
     })
     const testType = dataModel.type('b')
-    expect(testType.classes).to.containSubset([{name:'a'}])
+    expect(testType.ancestors).to.containSubset([{name:'a'}])
   })
-  it('Should populate classes from ancestors', function () {
+  it('Should populate ancestors transitively', function () {
     const dataModel = new Metadata({
       type: 'DataModel',
       classes: [{
@@ -55,7 +55,8 @@ describe('Metadata', () => {
       }]
     })
     const testType = dataModel.type('c')
-    expect(testType.classes).to.containSubset([{name:'a'}])
+    expect(testType.ancestors).to.containSubset([{name:'a'}])
+    expect(testType.ancestors).to.containSubset([{name:'b'}])
   })  
 })
 
@@ -114,11 +115,12 @@ describe('Type', () => {
     })
     expect(testType).to.have.property('baseClass', 'AAA')
   })
-  it('Should handle classes', function () {
+  it('Should handle ancestors', function () {
     const testType = new Type({
       name: "AAA"
     })
-    expect(testType.classes).to.containSubset([{name:'AAA'}])
+    expect(testType.ancestors).to.exist
+    expect(testType.ancestors).not.to.containSubset([{name:'AAA'}])
   })
   it('Should handle descendants', function () {
     const testType = new Type({

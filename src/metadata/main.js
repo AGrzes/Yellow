@@ -9,7 +9,7 @@ class Metadata {
       let ancestorClassName = type.baseClass
       while (ancestorClassName){
         let ancestorClass = this.types[ancestorClassName]
-        type.classes.push(ancestorClass)
+        type.ancestors.push(ancestorClass)
         ancestorClassName = ancestorClass.baseClass
       }
     })
@@ -26,7 +26,7 @@ class Type {
     this.idAttribute = classDescriptor.idAttribute || 'id'
     this.idTemplate = classDescriptor.idTemplate || `{{${this.idAttribute}}}`
     this.baseClass = classDescriptor.is
-    this.classes = [this]
+    this.ancestors = []
     this.descendants = []
   }
 }
