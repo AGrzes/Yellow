@@ -28,7 +28,19 @@ describe('Metadata', () => {
     expect(testType).to.be.instanceof(Type)
     expect(testType).to.have.property('name', 'test')
   })
-
+  it('Should populate classes from hierarchy', function () {
+    const dataModel = new Metadata({
+      type: 'DataModel',
+      classes: [{
+        name: 'a'
+      },{
+        name:'b',
+        is:'a'
+      }]
+    })
+    const testType = dataModel.type('b')
+    expect(testType.classes).to.containSubset([{name:'a'}])
+  })
 })
 
 describe('Type', () => {

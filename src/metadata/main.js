@@ -5,6 +5,11 @@ class Metadata {
       throw new Error('Expected type: DataModel')
     }
     this.types = _(dataModel.classes).map((aClass)=>new Type(aClass)).keyBy('name').value()
+    _.forEach(this.types,(type)=>{
+      if (type.baseClass){
+        type.classes.push(this.types[type.baseClass])
+      }
+    })
   }
   type(typeName){
     return this.types[typeName]
