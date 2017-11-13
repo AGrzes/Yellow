@@ -38,12 +38,27 @@ describe('Data', () => {
           name: 'a'
         }]
       }))
-      console.log(data.byTypes)
       expect(data.byTypes.a).to.containSubset([{
         name: 'a'
       }]);
       expect(data.byTypes.a).to.containSubset([{
         name: 'b'
       }]);
+    })
+    it('Should find entities by id', function () {
+      const model = { a:{type:'a',name:'a'},b:{type:'b',name:'b'}}
+      const data = new Data(model,new Metadata({
+        type:'DataModel',
+        classes: [{
+          name: 'b',
+          is: 'a'
+        }, {
+          name: 'a',
+          idTemplate:'{{type}}:{{name}}'
+        }]
+      }) )
+      console.log(data.byId)
+      expect(data.byId['a:a']).to.containSubset({name:'a'});
+      expect(data.byId['b:b']).to.containSubset({name:'b'});
     })
 })
