@@ -101,6 +101,7 @@ describe('Metadata', () => {
     })
     const testType = dataModel.type('b')
     expect(testType.idAttribute).to.be.equals('AAA')
+    expect(testType.idTemplate).to.be.equals('{{AAA}}')
   })
   it('Should inherit id template', function () {
     const dataModel = new Metadata({
@@ -115,6 +116,7 @@ describe('Metadata', () => {
     })
     const testType = dataModel.type('b')
     expect(testType.idTemplate).to.be.equals('AAA')
+    expect(testType.idAttribute).to.be.equals('id')
   })
 })
 
