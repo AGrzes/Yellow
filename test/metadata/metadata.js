@@ -120,6 +120,13 @@ describe('Type', () => {
     })
     expect(testType.classes).to.containSubset([{name:'AAA'}])
   })
+  it('Should handle descendants', function () {
+    const testType = new Type({
+      name: "AAA"
+    })
+    expect(testType.descendants).to.exist
+    expect(testType.descendants).not.to.containSubset([{name:'AAA'}])
+  })
 })
 describe('Attribute', () => {
   it('Should export Attribute class', function () {
