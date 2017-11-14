@@ -92,4 +92,33 @@ describe('Data', () => {
         name: 'b'
       });
     })
+    it('Should skip simple attributes when trying to resolve references', function () {
+      const model = {
+        a: {
+          type: 'a',
+          name: 'a',
+          b: 'b:b'
+        },
+        b: {
+          type: 'b',
+          name: 'b'
+        }
+      }
+      const data = new Data(model, new Metadata({
+        type: 'DataModel',
+        classes: [{
+          name: 'b',
+          is: 'a'
+        }, {
+          name: 'a',
+          attributes: {
+            b: {
+              type: 'string'
+            }
+          },
+          idTemplate: '{{type}}:{{name}}'
+        }]
+      }))
+      expect(data.byId['a:a'].b).to.be.equals('b:b');
+    })
 })
