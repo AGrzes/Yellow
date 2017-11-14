@@ -14,8 +14,11 @@ class Data {
       _.forEach(model,(entity)=>{
         const type =this.metadata.types[entity.type]
         _.forEach(type.attributes,(attribute)=>{
-          if (!attribute.simple){
-            entity[attribute.name] = this.byId[entity[attribute.name]]
+          if (!attribute.simple) {
+            const target = this.byId[entity[attribute.name]]
+            if (target) {
+              entity[attribute.name] = target
+            }
           }
         })
       })

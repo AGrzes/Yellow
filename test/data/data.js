@@ -121,4 +121,33 @@ describe('Data', () => {
       }))
       expect(data.byId['a:a'].b).to.be.equals('b:b');
     })
+    it('Should handle missing references', function () {
+      const model = {
+        a: {
+          type: 'a',
+          name: 'a',
+          b: 'b:c'
+        },
+        b: {
+          type: 'b',
+          name: 'b'
+        }
+      }
+      const data = new Data(model, new Metadata({
+        type: 'DataModel',
+        classes: [{
+          name: 'b',
+          is: 'a'
+        }, {
+          name: 'a',
+          attributes: {
+            b: {
+              type: 'b'
+            }
+          },
+          idTemplate: '{{type}}:{{name}}'
+        }]
+      }))
+      expect(data.byId['a:a'].b).to.be.equals('b:c');
+    })
 })
