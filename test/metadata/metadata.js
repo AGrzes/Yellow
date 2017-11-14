@@ -224,4 +224,8 @@ describe('Attribute', () => {
     const testAttribute = new Attribute('a', {})
     expect(testAttribute).to.have.property('type', 'string')
   })
+  it('Should detect simple types', function () {
+    const testAttribute = new Attribute('a', {type:'string'})
+    expect(testAttribute).to.have.property('simple', true)
+  })
 })
