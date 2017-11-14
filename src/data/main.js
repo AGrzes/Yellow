@@ -11,6 +11,21 @@ class Data {
         )
       ).value()
       this.byId = _(model).keyBy((entity)=>this.metadata.types[entity.type].id(entity)).value()
+      _.forEach(model,(entity)=>{
+        const type =this.metadata.types[entity.type]
+        _.forEach(type.attributes,(attribute)=>{
+          if (!attribute.simple) {
+            if (attribute.singular) {
+              const target = this.byId[entity[attribute.name]]
+              if (target) {
+                entity[attribute.name] = target
+              }
+            } else {
+              entity[attribute.name] = _.map(entity[attribute.name],(value)=>this.byId[value]||value)
+            }
+          }
+        })
+      })
     }
   }
 }

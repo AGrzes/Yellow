@@ -224,4 +224,16 @@ describe('Attribute', () => {
     const testAttribute = new Attribute('a', {})
     expect(testAttribute).to.have.property('type', 'string')
   })
+  it('Should detect simple types', function () {
+    const testAttribute = new Attribute('a', {type:'string'})
+    expect(testAttribute).to.have.property('simple', true)
+  })
+  it('Should detect singular types', function () {
+    const testAttribute = new Attribute('a', {multiplicity:'1'})
+    expect(testAttribute).to.have.property('singular', true)
+  })
+  it('Should detect plural types', function () {
+    expect(new Attribute('a', {multiplicity:'2'})).to.have.property('singular', false)
+    expect(new Attribute('a', {multiplicity:'*'})).to.have.property('singular', false)
+  }) 
 })

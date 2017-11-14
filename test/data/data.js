@@ -61,4 +61,155 @@ describe('Data', () => {
       expect(data.byId['a:a']).to.containSubset({name:'a'});
       expect(data.byId['b:b']).to.containSubset({name:'b'});
     })
+    it('Should resolve top level references', function () {
+      const model = {
+        a: {
+          type: 'a',
+          name: 'a',
+          b: 'b:b'
+        },
+        b: {
+          type: 'b',
+          name: 'b'
+        }
+      }
+      const data = new Data(model, new Metadata({
+        type: 'DataModel',
+        classes: [{
+          name: 'b',
+          is: 'a'
+        }, {
+          name: 'a',
+          attributes: {
+            b: {
+              type: 'b'
+            }
+          },
+          idTemplate: '{{type}}:{{name}}'
+        }]
+      }))
+      expect(data.byId['a:a'].b).to.containSubset({
+        name: 'b'
+      });
+    })
+    it('Should skip simple attributes when trying to resolve references', function () {
+      const model = {
+        a: {
+          type: 'a',
+          name: 'a',
+          b: 'b:b'
+        },
+        b: {
+          type: 'b',
+          name: 'b'
+        }
+      }
+      const data = new Data(model, new Metadata({
+        type: 'DataModel',
+        classes: [{
+          name: 'b',
+          is: 'a'
+        }, {
+          name: 'a',
+          attributes: {
+            b: {
+              type: 'string'
+            }
+          },
+          idTemplate: '{{type}}:{{name}}'
+        }]
+      }))
+      expect(data.byId['a:a'].b).to.be.equals('b:b');
+    })
+    it('Should handle missing references', function () {
+      const model = {
+        a: {
+          type: 'a',
+          name: 'a',
+          b: 'b:c'
+        },
+        b: {
+          type: 'b',
+          name: 'b'
+        }
+      }
+      const data = new Data(model, new Metadata({
+        type: 'DataModel',
+        classes: [{
+          name: 'b',
+          is: 'a'
+        }, {
+          name: 'a',
+          attributes: {
+            b: {
+              type: 'b'
+            }
+          },
+          idTemplate: '{{type}}:{{name}}'
+        }]
+      }))
+      expect(data.byId['a:a'].b).to.be.equals('b:c');
+    })
+    it('Should resolve top level array references', function () {
+      const model = {
+        a: {
+          type: 'a',
+          name: 'a',
+          b: ['b:b']
+        },
+        b: {
+          type: 'b',
+          name: 'b'
+        }
+      }
+      const data = new Data(model, new Metadata({
+        type: 'DataModel',
+        classes: [{
+          name: 'b',
+          is: 'a'
+        }, {
+          name: 'a',
+          attributes: {
+            b: {
+              type: 'b',
+              multiplicity:'*'
+            }
+          },
+          idTemplate: '{{type}}:{{name}}'
+        }]
+      }))
+      expect(data.byId['a:a'].b[0]).to.containSubset({
+        name: 'b'
+      });
+    })
+    it('Should handle missing array references', function () {
+      const model = {
+        a: {
+          type: 'a',
+          name: 'a',
+          b: ['b:c']
+        },
+        b: {
+          type: 'b',
+          name: 'b'
+        }
+      }
+      const data = new Data(model, new Metadata({
+        type: 'DataModel',
+        classes: [{
+          name: 'b',
+          is: 'a'
+        }, {
+          name: 'a',
+          attributes: {
+            b: {
+              type: 'b',
+              multiplicity:'*'
+            }
+          },
+          idTemplate: '{{type}}:{{name}}'
+        }]
+      }))
+      expect(data.byId['a:a'].b).to.be.deep.equals(['b:c']);
+    })
 })
