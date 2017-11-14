@@ -15,9 +15,13 @@ class Data {
         const type =this.metadata.types[entity.type]
         _.forEach(type.attributes,(attribute)=>{
           if (!attribute.simple) {
-            const target = this.byId[entity[attribute.name]]
-            if (target) {
-              entity[attribute.name] = target
+            if (attribute.singular) {
+              const target = this.byId[entity[attribute.name]]
+              if (target) {
+                entity[attribute.name] = target
+              }
+            } else {
+              entity[attribute.name] = _.map(entity[attribute.name],(value)=>this.byId[value]||value)
             }
           }
         })
