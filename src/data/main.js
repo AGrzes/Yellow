@@ -11,6 +11,12 @@ class Data {
         )
       ).value()
       this.byId = _(model).keyBy((entity)=>this.metadata.types[entity.type].id(entity)).value()
+      _.forEach(model,(entity)=>{
+        const type =this.metadata.types[entity.type]
+        _.forEach(type.attributes,(attribute)=>{
+          entity[attribute.name] = this.byId[entity[attribute.name]]
+        })
+      })
     }
   }
 }

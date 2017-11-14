@@ -61,4 +61,35 @@ describe('Data', () => {
       expect(data.byId['a:a']).to.containSubset({name:'a'});
       expect(data.byId['b:b']).to.containSubset({name:'b'});
     })
+    it('Should resolve top level references', function () {
+      const model = {
+        a: {
+          type: 'a',
+          name: 'a',
+          b: 'b:b'
+        },
+        b: {
+          type: 'b',
+          name: 'b'
+        }
+      }
+      const data = new Data(model, new Metadata({
+        type: 'DataModel',
+        classes: [{
+          name: 'b',
+          is: 'a'
+        }, {
+          name: 'a',
+          attributes: {
+            b: {
+              type: 'b'
+            }
+          },
+          idTemplate: '{{type}}:{{name}}'
+        }]
+      }))
+      expect(data.byId['a:a'].b).to.containSubset({
+        name: 'b'
+      });
+    })
 })
