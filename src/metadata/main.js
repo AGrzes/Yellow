@@ -52,6 +52,7 @@ class Attribute {
     this.multiplicity = attributeDescriptor.multiplicity || '1'
     this.type = attributeDescriptor.type || 'string'
     this.simple = simpleTypes.has(this.type)
+    this.singular = this.multiplicity == '1'
   }
 }
 exports.Metadata = Metadata
