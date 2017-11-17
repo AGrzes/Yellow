@@ -138,13 +138,30 @@ menu:
           file: organization-item.mustache          
   - name: Items
     view:
-      type: ListView
-      selector: 
-        type: TypeSelector
-        selector: Item
-      template:
-        type: FileTemplate
-        file: item-item.mustache   
+      type: DeclarativeView
+      contents:
+        - type: List
+          list:
+            selector: 
+              type: TypeSelector
+              selector: Item
+          style: plain
+          item:
+            type: Card
+            contents:
+              - type: Field
+                field: kind
+                slot: header
+              - type: Field
+                field: name
+                slot: header                
+              - type: Badge
+                field: value
+                slot: header                
+              - type: Field
+                field: description
+                format: markdown
+                slot: content 
   - name: Sessions  
     view:
       type: ListView
