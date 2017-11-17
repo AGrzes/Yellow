@@ -162,12 +162,33 @@ menu:
                 field: description
                 format: markdown
                 slot: content 
-  - name: Sessions  
+  - name: Sessions
     view:
-      type: ListView
-      selector: 
-        type: TypeSelector
-        selector: Session
-      template:
-        type: FileTemplate
-        file: session-item.mustache   
+      type: DeclarativeView
+      contents:
+        - type: List
+          list:
+            selector: 
+              type: TypeSelector
+              selector: Session
+            order:
+              field: name  
+          style: plain
+          item:
+            type: Card
+            contents:
+              - type: Field
+                field: date
+                format: date
+                slot: header
+              - type: Field
+                field: name
+                slot: header                
+              - type: Badge
+                field: xp
+                pattern: '{{this}} XP'
+                slot: header                
+              - type: Field
+                field: description
+                format: markdown
+                slot: content 
