@@ -3,26 +3,92 @@ menu:
   - name: News
     view:
       type: DeclarativeView
-      content:
-        type: List
-        selector: 
-          type: TypeSelector
-          selector: Change
-        order:
-          field: date
-          direction: descending
-        style: plain
-        item:
-          type: Card
-          contents:
-            - type: Field
+      contents:
+        - type: List
+          list:
+            selector: 
+              type: TypeSelector
+              selector: Change
+            order:
               field: date
-              format: date
-              slot: header
-            - type: Field
-              field: description
-              format: markdown
-              slot: content  
+              direction: descending
+          style: plain
+          item:
+            type: Card
+            contents:
+              - type: Field
+                field: date
+                format: date
+                slot: header
+              - type: Field
+                field: description
+                format: markdown
+                slot: content 
+  - name: Reference
+    view:
+      type: DeclarativeView
+      contents: 
+        - type: MesterDetail
+          master:
+            - type: TOC
+              data:
+                selector: 
+                  type: ExpressionSelector
+                  selector: this.type == 'Category' || this.type == 'Reference'    
+                order:
+                  field: name
+              item:
+                type: DetailsLink
+                label: 
+                  field: name    
+          detail:
+            - type: Switch
+              case:
+                field: type
+              when:
+                Category:
+                  type: Card
+                  contents:
+                    - type: Field
+                      field: name
+                      slot: header
+                    - type: LinkList
+                      data: 
+                        constructor: this.children
+                      label:
+                        fiels: name                
+                Reference:
+                  type: Card
+                  contents:
+                    - type: Field
+                      field: name
+                      slot: header
+                    - type: Field
+                      field: description
+                      format: markdown
+                      slot: content 
+                God:   
+                  type: Card
+                  contents:
+                    - type: Field
+                      field: name
+                      slot: header
+                    - type: Property
+                      field: character
+                      label: Character
+                      slot: content 
+                    - type: Property
+                      field: domain
+                      label: Domain
+                      slot: content    
+                    - type: Property
+                      field: symbol
+                      label: Symbol
+                      slot: content                                                                 
+                    - type: Field
+                      field: description
+                      format: markdown
+                      slot: content                          
   - name: Characters 
     view:
       type: ListView
