@@ -1,14 +1,28 @@
 type: SiteModel
 menu:
-  - name: Reference
+  - name: News
     view:
-      type: ListView
-      selector: 
-        type: TypeSelector
-        selector: Reference
-      template:
-        type: FileTemplate
-        file: reference-item.mustache
+      type: DeclarativeView
+      content:
+        type: List
+        selector: 
+          type: TypeSelector
+          selector: Change
+        order:
+          field: date
+          direction: descending
+        style: plain
+        item:
+          type: Card
+          contents:
+            - type: Field
+              field: date
+              format: date
+              slot: header
+            - type: Field
+              field: description
+              format: markdown
+              slot: content  
   - name: Characters 
     view:
       type: ListView
