@@ -89,15 +89,39 @@ menu:
                       field: description
                       format: markdown
                       slot: content                          
-  - name: Characters 
+  - name: Organization
     view:
-      type: ListView
-      selector: 
-        type: TypeSelector
-        selector: Character
-      template:
-        type: FileTemplate
-        file: character-item.mustache
+      type: DeclarativeView
+      contents: 
+        - type: MesterDetail
+          master:
+            - type: TOC
+              data:
+                selector: 
+                  type: ExpressionSelector
+                  selector: this.type == 'Organization' || !this.parent    
+                order:
+                  field: name
+              children: this.children    
+              item:
+                type: DetailsLink
+                label: 
+                  field: name    
+          detail:
+            type: Card
+            contents:
+              - type: Field
+                field: name
+                slot: header
+              - type: Field
+                field: description
+                format: markdown
+                slot: content             
+              - type: LinkList
+                data: 
+                  constructor: this.children
+                label:
+                  fiels: name                
   - name: Locations
     view:
       type: ListView
