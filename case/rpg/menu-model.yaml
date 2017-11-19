@@ -89,7 +89,50 @@ menu:
                       field: description
                       format: markdown
                       slot: content                          
-  - name: Organizations
+  - name: Characters
+    view:
+      type: DeclarativeView
+      contents: 
+        - type: MesterDetail
+          master:
+            - type: TOC
+              data:
+                selector: 
+                  type: ExpressionSelector
+                  selector: this.type == 'Location' || !this.parent    
+              children: this.sublocations    
+              item:
+                type: DetailsLink
+                label: 
+                  field: name    
+          detail:  
+            - type: Field
+              field: name
+              slot: header       
+              pattern: People of {{this}}   
+            - type: List
+              list:
+                selector: 
+                  type: ExpressionSelector
+                  selector: this.type == 'Character' || this.location == location
+                  parameters:
+                    location: this
+              style: list
+              item:
+                type: ListItem
+                contents:
+                  - type: Field
+                    field: name
+                    slot: header
+                  - type: Field
+                    field: nickname
+                    slot: sub-header                    
+                  - type: Field
+                    field: description
+                    format: markdown
+                    slot: content  
+              #TODO define character lists                          
+  - name: Organization
     view:
       type: DeclarativeView
       contents: 
