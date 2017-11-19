@@ -89,7 +89,7 @@ menu:
                       field: description
                       format: markdown
                       slot: content                          
-  - name: Organization
+  - name: Organizations
     view:
       type: DeclarativeView
       contents: 
@@ -124,42 +124,44 @@ menu:
                   fiels: name                
   - name: Locations
     view:
-      type: ListView
-      selector: 
-        type: TypeSelector
-        selector: Location
-      template:
-        type: FileTemplate
-        file: location-item.mustache 
-  - name: Organizations
-    submenu:
-    - name: Religions
-      view:
-        type: ListView
-        selector: 
-          type: TypeSelector
-          selector: Religion
-        template:
-          type: FileTemplate
-          file: organization-item.mustache     
-    - name: Domains
-      view:
-        type: ListView
-        selector: 
-          type: TypeSelector
-          selector: Domain
-        template:
-          type: FileTemplate
-          file: organization-item.mustache      
-    - name: Guilds
-      view:
-        type: ListView
-        selector: 
-          type: TypeSelector
-          selector: Guild
-        template:
-          type: FileTemplate
-          file: organization-item.mustache          
+      type: DeclarativeView
+      contents: 
+        - type: MesterDetail
+          master:
+            - type: TOC
+              data:
+                selector: 
+                  type: ExpressionSelector
+                  selector: this.type == 'Location' || !this.parent    
+                order:
+                  field: name
+              children: this.sublocations    
+              item:
+                type: DetailsLink
+                label: 
+                  field: name    
+          detail:
+            type: Card
+            contents:
+              - type: Field
+                field: name
+                slot: header
+              - type: Field
+                field: description
+                format: markdown
+                slot: content             
+              - type: LinkList
+                header: Sub-Locations
+                data: 
+                  constructor: this.sublocations
+                label:
+                  fiels: name     
+              - type: LinkList
+                header: Neighbors
+                data: 
+                  constructor: this.neighbors
+                label:
+                  fiels: name                           
   - name: Items
     view:
       type: DeclarativeView
