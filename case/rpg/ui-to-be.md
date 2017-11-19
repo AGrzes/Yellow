@@ -32,7 +32,7 @@
 * Unit Name as list item
 * Link to Unit page in list item
 
-# Organizations
+# Locations
 * On the left side navigation tree
 * TOC based on location hierarchy
 * On the right side single Location

@@ -1,76 +1,263 @@
 type: SiteModel
 menu:
+  - name: News
+    view:
+      type: DeclarativeView
+      contents:
+        - type: List
+          list:
+            selector: 
+              type: TypeSelector
+              selector: Change
+            order:
+              field: date
+              direction: descending
+          style: plain
+          item:
+            type: Card
+            contents:
+              - type: Field
+                field: date
+                format: date
+                slot: header
+              - type: Field
+                field: description
+                format: markdown
+                slot: content 
   - name: Reference
     view:
-      type: ListView
-      selector: 
-        type: TypeSelector
-        selector: Reference
-      template:
-        type: FileTemplate
-        file: reference-item.mustache
-  - name: Characters 
+      type: DeclarativeView
+      contents: 
+        - type: MesterDetail
+          master:
+            - type: TOC
+              data:
+                selector: 
+                  type: ExpressionSelector
+                  selector: this.type == 'Category' || this.type == 'Reference'    
+                order:
+                  field: name
+              item:
+                type: DetailsLink
+                label: 
+                  field: name    
+          detail:
+            - type: Switch
+              case:
+                field: type
+              when:
+                Category:
+                  type: Card
+                  contents:
+                    - type: Field
+                      field: name
+                      slot: header
+                    - type: LinkList
+                      data: 
+                        constructor: this.children
+                      label:
+                        fiels: name                
+                Reference:
+                  type: Card
+                  contents:
+                    - type: Field
+                      field: name
+                      slot: header
+                    - type: Field
+                      field: description
+                      format: markdown
+                      slot: content 
+                God:   
+                  type: Card
+                  contents:
+                    - type: Field
+                      field: name
+                      slot: header
+                    - type: Property
+                      field: character
+                      label: Character
+                      slot: content 
+                    - type: Property
+                      field: domain
+                      label: Domain
+                      slot: content    
+                    - type: Property
+                      field: symbol
+                      label: Symbol
+                      slot: content                                                                 
+                    - type: Field
+                      field: description
+                      format: markdown
+                      slot: content                          
+  - name: Characters
     view:
-      type: ListView
-      selector: 
-        type: TypeSelector
-        selector: Character
-      template:
-        type: FileTemplate
-        file: character-item.mustache
+      type: DeclarativeView
+      contents: 
+        - type: MesterDetail
+          master:
+            - type: TOC
+              data:
+                selector: 
+                  type: ExpressionSelector
+                  selector: this.type == 'Location' || !this.parent    
+              children: this.sublocations    
+              item:
+                type: DetailsLink
+                label: 
+                  field: name    
+          detail:  
+            - type: Field
+              field: name
+              slot: header       
+              pattern: People of {{this}}   
+            - type: List
+              list:
+                selector: 
+                  type: ExpressionSelector
+                  selector: this.type == 'Character' || this.location == location
+                  parameters:
+                    location: this
+              style: list
+              item:
+                type: ListItem
+                contents:
+                  - type: Field
+                    field: name
+                    slot: header
+                  - type: Field
+                    field: nickname
+                    slot: sub-header                    
+                  - type: Field
+                    field: description
+                    format: markdown
+                    slot: content  
+              #TODO define character lists                          
+  - name: Organization
+    view:
+      type: DeclarativeView
+      contents: 
+        - type: MesterDetail
+          master:
+            - type: TOC
+              data:
+                selector: 
+                  type: ExpressionSelector
+                  selector: this.type == 'Organization' || !this.parent    
+                order:
+                  field: name
+              children: this.children    
+              item:
+                type: DetailsLink
+                label: 
+                  field: name    
+          detail:
+            type: Card
+            contents:
+              - type: Field
+                field: name
+                slot: header
+              - type: Field
+                field: description
+                format: markdown
+                slot: content             
+              - type: LinkList
+                data: 
+                  constructor: this.children
+                label:
+                  fiels: name                
   - name: Locations
     view:
-      type: ListView
-      selector: 
-        type: TypeSelector
-        selector: Location
-      template:
-        type: FileTemplate
-        file: location-item.mustache 
-  - name: Organizations
-    submenu:
-    - name: Religions
-      view:
-        type: ListView
-        selector: 
-          type: TypeSelector
-          selector: Religion
-        template:
-          type: FileTemplate
-          file: organization-item.mustache     
-    - name: Domains
-      view:
-        type: ListView
-        selector: 
-          type: TypeSelector
-          selector: Domain
-        template:
-          type: FileTemplate
-          file: organization-item.mustache      
-    - name: Guilds
-      view:
-        type: ListView
-        selector: 
-          type: TypeSelector
-          selector: Guild
-        template:
-          type: FileTemplate
-          file: organization-item.mustache          
+      type: DeclarativeView
+      contents: 
+        - type: MesterDetail
+          master:
+            - type: TOC
+              data:
+                selector: 
+                  type: ExpressionSelector
+                  selector: this.type == 'Location' || !this.parent    
+                order:
+                  field: name
+              children: this.sublocations    
+              item:
+                type: DetailsLink
+                label: 
+                  field: name    
+          detail:
+            type: Card
+            contents:
+              - type: Field
+                field: name
+                slot: header
+              - type: Field
+                field: description
+                format: markdown
+                slot: content             
+              - type: LinkList
+                header: Sub-Locations
+                data: 
+                  constructor: this.sublocations
+                label:
+                  fiels: name     
+              - type: LinkList
+                header: Neighbors
+                data: 
+                  constructor: this.neighbors
+                label:
+                  fiels: name                           
   - name: Items
     view:
-      type: ListView
-      selector: 
-        type: TypeSelector
-        selector: Item
-      template:
-        type: FileTemplate
-        file: item-item.mustache   
-  - name: Sessions  
+      type: DeclarativeView
+      contents:
+        - type: List
+          list:
+            selector: 
+              type: TypeSelector
+              selector: Item
+          style: plain
+          item:
+            type: Card
+            contents:
+              - type: Field
+                field: kind
+                slot: header
+              - type: Field
+                field: name
+                slot: header                
+              - type: Badge
+                field: value
+                slot: header                
+              - type: Field
+                field: description
+                format: markdown
+                slot: content 
+  - name: Sessions
     view:
-      type: ListView
-      selector: 
-        type: TypeSelector
-        selector: Session
-      template:
-        type: FileTemplate
-        file: session-item.mustache   
+      type: DeclarativeView
+      contents:
+        - type: List
+          list:
+            selector: 
+              type: TypeSelector
+              selector: Session
+            order:
+              field: name  
+          style: plain
+          item:
+            type: Card
+            contents:
+              - type: Field
+                field: date
+                format: date
+                slot: header
+              - type: Field
+                field: name
+                slot: header                
+              - type: Badge
+                field: xp
+                pattern: '{{this}} XP'
+                slot: header                
+              - type: Field
+                field: description
+                format: markdown
+                slot: content 
