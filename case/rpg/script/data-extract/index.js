@@ -6,6 +6,7 @@ var db = new PouchDB(couchEndpoint);
 var Ouch = require('ouch-stream')
 var yaml = require('js-yaml')
 var _ = require('lodash')
+var moment = require('moment')
 var buffer = [];
 new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
   delete chunk._rev
@@ -18,7 +19,7 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
       return [{
         type: 'Session',
         xp: _.get(item,'awards.xp'),
-        date: _.get(item,'date'),
+        date: moment(_.get(item,'date'),'DD.MM.YYYY').toISOString(),
         name: _.get(item,'name'),
         description: _.get(item,'events')||_.get(item,'content')
       }]
