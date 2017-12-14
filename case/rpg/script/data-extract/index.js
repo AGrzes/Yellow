@@ -92,6 +92,18 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         name: _.get(item,'name'),
         description: _.get(item,'description')||_.get(item,'content')
       }]
+      case "province":
+      return [{
+        type: 'County',
+        name: _.get(item,'name'),
+        description: _.get(item,'description')||_.get(item,'content'),
+        neighbors:_(item).get('neighbors',[]).map((neighbors)=>({
+          type: 'LocationRelation',
+          target:  _.get(neighbors,'name'),
+          name: _.get(neighbors,'direction'),
+          description: _.get(neighbors,'border')
+        }))
+      }]
     }
     return []
   })
