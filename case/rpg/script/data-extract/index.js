@@ -37,6 +37,16 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         name: _.get(item,'name'),
         description: _.get(item,'description')||_.get(item,'content')
       }]
+      case "god":
+      return [{
+        type: 'God',
+        name: _.get(item,'name'),
+        domain: _.get(item,'domain'),
+        character: _.get(item,'character'),
+        name: _.get(item,'name'),
+        nicknames: _([_.get(item,'title'),_.get(item,'label')]).flatten().compact().value(),
+        description: _.get(item,'description')||_.get(item,'content')
+      }]
       case "organization":
       return [{
         type: 'Organization',
