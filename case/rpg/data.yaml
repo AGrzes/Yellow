@@ -1,3 +1,289 @@
+- type: Change
+  date: '2016-11-19T00:00:00.000Z'
+  description: |
+    * Implemented news
+    * Published events of the session 5
+    * Published events of the session 6
+- type: Change
+  date: '2017-02-27T00:00:00.000Z'
+  description: |
+    * Added new character options
+- type: Change
+  date: '2016-11-20T00:00:00.000Z'
+  description: |
+    * Fixed NPC display
+    * Published events of the session 16
+- type: Change
+  date: '2016-11-22T00:00:00.000Z'
+  description: |
+    * Published events of the session 7
+- type: Change
+  date: '2016-11-23T00:00:00.000Z'
+  description: |
+    * Published events of the session 8 and 9
+- type: Change
+  date: '2016-11-28T00:00:00.000Z'
+  description: |
+    * Published events of the session 10, 11 and 17
+- type: Change
+  date: '2016-11-30T00:00:00.000Z'
+  description: |
+    * Published events of the session 12 and 13
+- type: Change
+  date: '2016-12-01T00:00:00.000Z'
+  description: |
+    * Published events of the session 14 and 15
+- type: Change
+  date: '2016-12-02T00:00:00.000Z'
+  description: |
+    * Added events in between live sessions
+- type: Change
+  date: '2016-12-18T00:00:00.000Z'
+  description: |
+    * Added events of session 18
+- type: Domain
+  name: Aerenwe
+  provinces:
+    - 'province:banien-s-deep'
+    - 'province:calrie'
+    - 'province:dhoenel'
+    - 'province:halried'
+    - 'province:northvale'
+    - 'province:shadowgreen'
+    - 'province:westmarch'
+- type: Domain
+  name: Diemed
+  provinces:
+    - 'province:aerele'
+    - 'province:bliene'
+    - 'province:ciliene'
+    - 'province:duene'
+    - 'province:moere'
+    - 'province:tier'
+- type: Domain
+  name: Ghoere
+  provinces:
+    - 'province:achiese'
+    - 'province:bhalaene'
+    - 'province:bheline'
+    - 'province:conallier'
+    - 'province:danaroene'
+    - 'province:ghiere'
+    - 'province:rhumannen'
+    - 'province:thoralinar'
+    - 'province:tireste'
+    - 'province:tornilen'
+- type: Domain
+  name: Ilien
+  provinces:
+    - 'province:ilien'
+- type: Domain
+  name: Medoere
+  provinces:
+    - 'province:alamie'
+    - 'province:braeme'
+    - 'province:caerwil'
+- type: Domain
+  name: Mieres
+  provinces:
+    - 'province:brenlie'
+    - 'province:crenier'
+    - 'province:dhalier'
+    - 'province:ghaele'
+    - 'province:lathier'
+    - 'province:mielien'
+    - 'province:seaward'
+    - 'province:serien'
+- type: Domain
+  name: Roesone
+  provinces:
+    - 'province:abbatuor'
+    - 'province:bellam'
+    - 'province:caercas'
+    - 'province:duerlin'
+    - 'province:edlin'
+    - 'province:fairfield'
+    - 'province:ghoried'
+- type: God
+  name: Avani
+  domain: Light
+  character: Lawful Nautral
+  nicknames:
+    - Goddess of the Sun
+    - Lady of Reason
+  description: >
+    Avani is the wife of Erik, the matron of the Basarji, and the successor of
+    the old goddess Basaia.
+
+    At Deismaar, her new-found powers helped to put the forces of evil to
+    flight.
+
+    Avani is now the sun goddess and lady of reason and logic, the counterpart
+    to the mysterious moon god Ruornil.
+- type: God
+  name: Belinik
+  domain: War
+  character: Chaotic Evil
+  nicknames:
+    - Prince of Terror
+    - Lord of Strife
+  description: >
+    Belinik was the chosen champion of Azrai and the warrior-king who led the
+    Vos into the War of Shadow at the dark lord's command.
+
+    Much of Azrai's raw power descended to Belinik at Mount Deismaar, elevating
+    the brutal tyrant to the ranks of godhood.
+
+    Belinik embodies the Vos belief that might makes right; those who follow him
+    believe that strength and savagery are all a true warrior needs.
+- type: God
+  name: Cuiraecen
+  domain: Tempest
+  character: Chaotic Good
+  nicknames:
+    - Stormlord
+    - God of Battle
+    - Haelyn's Champion
+  description: >
+    Cuiraecen (koo-RAY-eh-ken) is the god of storms and conflict, but he is
+    perceived as a force for change and good rather than destruction.
+
+    He is the son of Haelyn and the sea-goddess Nesirie, and was not present at
+    Deismaar. Cuiraecen is the patron of young and reckless warriors everywhere
+    who plunge boldly into battle in search of personal glory and honor.
+- type: God
+  name: Eloele
+  domain: Trickery
+  character: Chaotic Neutral
+  nicknames:
+    - Goddess of Night
+    - Sister of Thieves
+  description: >
+    Eloele (eh-LOW-eh-lay) is the daughter of Sera and Ruornil.
+
+    She was born in the early centuries following Deismaar and became the lady
+    of thieves, deceit, and stealth.
+
+    She is generally not a malicious power, but she is capricious and selfish;
+    she loves to embarrass or trick her enemies, sometimes with lethal results.
+- type: God
+  name: Erik
+  domain: Nature
+  character: Neutral
+  nicknames:
+    - Old Father of the Forests
+  description: >
+    Erik is the guardian of the wilderness, the protector of the forest, and the
+    patron of Cerilia's animals.
+
+    He does not oppose human logging or hunting, but it is his law that no one
+    shall take more than he needs or more than the land can bear to lose.
+
+    Erik was a Rjuven warrior in the entourage of Reynir at Mount Deismaar, and
+    he still considers the Rjurik to be his people.
+- type: God
+  name: Haylen
+  domain:
+    - War
+    - Light
+  character: Lawful good
+  nicknames: []
+  description: >
+    Haelyn is the ruler of the gods, the lord of courage, justice, and chivalry,
+    and the patron of kings and warriors.
+
+    In his mortal life, Haelyn was the leader of the Anuireans, the brother of
+    Roele, and the halfbrother of Raesene.
+
+    He was the champion of the old god Anduiras at Deismaar, and he inherited
+    his patron's powers.
+- type: God
+  name: Kriesha
+  domain: Winter
+  character: Lawful Evil
+  nicknames:
+    - The Ice Lady
+    - the Winter Witch
+  description: >
+    When Azrai was destroyed at Mount Deismaar, his champions ascended to claim
+    his position.
+
+    Kriesha was a Vos high priestess who absorbed the portfolios of cruelty,
+    despair, and cold.
+
+    Along with Belinik, she is the guardian of the Vos.
+
+    Kriesha stands for strength through hardship and tests the Vos with harsh
+    winters and savage conflict to weed out the weak.
+- type: God
+  name: Laerme
+  domain: Love
+  character: Chaotic Good
+  nicknames:
+    - 'Goodness of Bire, Beauty, and Art'
+  description: >
+    The daughter of Erik and Avani, Laerme appeared in the years after Deismaar.
+
+    She is a fiery goddess of beauty and love and patroness of the arts.
+
+    She is not jealous or vain, and freely rewards any who create beauty
+    regardless of whether they worship her.
+
+    However, Laerme can be moved to heated anger by any who deny love or who
+    delight in destroying things of beauty.
+- type: God
+  name: Nesirie
+  domain: Sea
+  character: Nautral Good
+  nicknames:
+    - Goddess of the Sea
+    - Lady of Mourning
+  description: >
+    Nesirie (neh-SEE-ree-eh) is the patroness of mariners and explorers.
+
+    Nesirie inherited Masela's power after that goddess perished, but their
+    people—the Masetians—passed into history in a few short centuries following
+    the War of Shadow.
+
+    Nesirie mourns for them still, and any who know grief call on her.
+
+    She is the wife of Haelyn.
+
+    Nesirie frequently roams the coastal waters
+- type: God
+  name: Ruornil
+  domain: Knowledge
+  character: Nautral
+  nicknames:
+    - The Moon God
+    - the Silver Prince
+  description: >
+    Ruornil is the god of magic—the guardian of the world's arcane forces and
+    places of mystical power.
+
+    Ruornil was an Anuirean who followed the old god of magic, Vorynn, after
+    Azrai swayed the Vos away from Vorynn.
+
+    When Vorynn perished at Deismaar, Ruornil inherited his power.
+
+    All Cerilian mages acknowledge Ruornil's power, even if they do not worship
+    him.
+- type: God
+  name: Sera
+  domain: Luck
+  character: Chaotic Nautral
+  nicknames:
+    - 'Lady of Fortune,'
+    - Goddess of Wealth
+  description: >
+    Sera is the inheritor of Brenna's power, and has assumed the old goddess's
+    role as the patroness of the Brecht people.
+
+    She is the wife of Ruornil and the goddess of commerce, wealth, and both
+    good and ill fortune.
+
+    Sera embodies the adage that a man makes his own luck; she rewards diligence
+    and hard work, but she occasionally smiles on the fool.
 - type: Organization
   name: The Church of the Celestial Spell
   description: "\_Medoere's major faith and official religion is Ruornil's Celestial Spell. By far, this is the most organized and powerful church dedicated to the Silver Prince. As a theocracy, Medoere's official religion serves as the law of the land as well as the keeper of the faith. The primary cathedral is the grand Temple of the Celestial Spell, located in Alamier City. A second major cathedral, the Temple of the Ninth Spell, is in the capital city of Braeme. It's a smaller but no less beautiful version of the Alamier complex.\n\nThe Celestial Spell has other temples, churches, and shrines throughout the three provinces. The theocracy controls all nine levels of temple in the domain. Although other faiths are tolerated, none have been allowed to establish any kind of holdings in the domain. (One is trying, though.)\n\nThe Celestial Archpriest serves as the leader of the church, though individual temples have local leaders who answer to the regent. The church dominates the three provinces as far as the power of faith is concerned. Because the theocracy is also in charge of foreign affairs and keeping the domain intact, it hasn't made many inroads into other realms. Indeed, the church isn't that interested in crossing political borders. After all, Ruornil specifically directed his faithful to settle the lands that became Medoere, so that's the region the church concentrates its efforts on.\n\nThat doesn't mean the church's influence hasn't spread. Due to the good relationship Medoere has with Roesone, shrines dedicated to Ruornil have been established in a few of Roesone's larger cities and towns. In the province of Caercas, however, Ruornil's Celestial Spell commands about 25% of the population's faith (the church has a level 1 holding in Caercas). Most of this is concentrated in the Temple of the Silver Moon, located in the city of Proudglaive."
@@ -186,7 +472,7 @@
     as the regent is able to use magic to determine the candidate's motives
     before appointment.
   nicknames:
-    - - Lord Mayor
+    - Lord Mayor
   relations: []
   positions: []
 - type: Character
@@ -199,14 +485,14 @@
   name: Alliene Tilrentor
   description: "3rd-level Anuirean priest of Nesirie, unblooded\n\nS: D: C: I: W: Ch: AC: hp: MV: THACO: #AT: Dmg: 10 12 15 12 16 14 6 18 12 20 1 Id6\n\nEquipment: Spear +1, scale mail, holy symbol, ring of free action, potion of extra-healing\n\nSpells/Day: 4/3\n\nPreferred Spells: 1st level - cure light wounds, protection from evil, remove fear, sanctuary; 2nd level - detect charm, know alignment, obscurement\n\nDescription/History: Alliene is a fiery-spirited young woman who has brought inspiration to the Eastern Temple of Nesirie. She is a knowledgeable woman who always has something to say in the great hall. Herself being of common roots, Alliene has a special place in her heart for the simple people of Ilien. Alliene spends much of her free time in the Common Ward helping out the poor, which has made her exceedingly popular with many of the city's common factions.\n\n*   Lost mother at the age of 6 and was raised by single father\n*   Was raised among servants at the Iliens count castle\n*   She spend much of her time on the streets of the common and port ward and from earliest years learned to fight for her own\n*   She found support in Nesire faith and small temple in port ward, she learned tents of the faith and found consolation in her grief\n*   When she was a teenager the faith of Nesire in Ilien experienced crisis, she found herself much seal to fight for her faith survival\n*   She gained much experience in political maneuvers and developed very sharp tongue, despite her age she also gained some aura majesty and authority\_\n*   She is extremely energetic and industrious person, and is often torn between compassion and ruthlessness\n*   She is a woman behind a woman in the Iliens temple of Nesire, a respected priest without formal authority over temple but in practice dictating temple stance and politics. And everything at the age of 25 - before her father became count of ilien\n*   She grown up to become beautiful woman but find it hard to form a romantic relation - for which she is looking forward but without much hurry\n*   She is from time to time strut by melancholy and bouts of dark humorous"
   nicknames:
-    - - Lady
-      - of Nesirie
+    - Lady
+    - of Nesirie
   relations: []
   positions: []
 - type: Character
   name: Altaweir Enlien
   nicknames:
-    - - Patriarch of the Ninth Spell
+    - Patriarch of the Ninth Spell
   relations: []
   positions: []
 - type: Character
@@ -216,7 +502,7 @@
     scholar and important lawman, now shadow of his former self, manipulated and
     mistreated by his subordinates lead by his own secretary.
   nicknames:
-    - - The Magistrate
+    - The Magistrate
   relations: []
   positions:
     - type: CharacterRelation
@@ -226,7 +512,7 @@
   name: Arron Vaumel
   description: "Arron Vaumel (MA; T5; Br, minor, 17; NE), a scheming little wretch, seems more interested in personal gain than in serving as Governor of Mieres. Unfortunately for him, his domain lies across the Straits of Aerele from the Anuirean mainland. That's nowhere near the center of politics, so he spends his time plotting ever-greater control over his lands. Vaumel completely controls guild activity in\_ Mieres. He brooks no competitors for the gold the network brings him; those who try opposing him usually wash up sooner or later on the former colony's sandy shores. The governor feels less than concerned about the law; everyone knows that if they try anything, his squad of thugs will make examples of them.\n\nThe Prince of Avanil has the governor's sworn fealty. Darien Avan occasionally sends troops down to make sure Vaumel is not involved in any dishonest or illegal schemes—but of course, Mieres's regent always stays one step ahead, cleaning up his act (and his territory) before the investigators arrive.\n\n*   **Lieutenants**: Vaumel does not trust anyone enough to use as a lieutenant. Even his own children can not gain his confidence, so they, like everyone else, plot behind his back to seize control of the domain. One day he might rely on someone, though doing so could prove his downfall. Still, his bureaucracy takes care of day-to-day matters for him (and they're as corrupt a bunch as one cares to meet).  \n    Those who don't know the correct people to bribe or the right way to deliver a payoff can forget about getting anything done here."
   nicknames:
-    - - Governor of Mieres
+    - Governor of Mieres
   relations: []
   positions: []
 - type: Character
@@ -266,7 +552,7 @@
     two sons and a daughter, all of whom he looks to marry to families of
     stately standing.
   nicknames:
-    - - Lord
+    - Lord
   relations: []
   positions: []
 - type: Character
@@ -282,7 +568,7 @@
     a connection between Beldere and el-Hadid, but any relationship is well
     hidden from scrutiny.
   nicknames:
-    - - Lord
+    - Lord
   relations: []
   positions: []
 - type: Character
@@ -352,7 +638,7 @@
     immediately sacked and imprisoned. In retribution, the regent appointed
     Naentas the new chamberlain of the district.
   nicknames:
-    - - Chamberlain
+    - Chamberlain
   relations: []
   positions: []
 - type: Character
@@ -365,21 +651,21 @@
     on many occasions, he accepted control of the Castle Ward following his
     predecessor's resignation.
   nicknames:
-    - - Chamberlain
+    - Chamberlain
   relations: []
   positions: []
 - type: Character
   name: Crennia Ylian
   description: "The Eastern Temple of Nesirie is a level 3 temple holding under the control of the Council of Nesirie headed by\_Priestess Crennia Ylian (FA; Pr8; An, tainted, 11) and the Council of Seven including Alliene Tilgentor."
   nicknames:
-    - - Priestess
+    - Priestess
   relations: []
   positions: []
 - type: Character
   name: Cur Kaldish
   description: "Crimes like shoplifting and petty theft are controlled through the efforts of\_Constable Cur Kaldish (MV; F5; unblooded), a huge man of Vos ancestry. Cur's network of rogues and spies keep him updated on illegal activities in the Market Ward and much of the rest of the Free City. The Constable's oftentimes harsh sense of justice is an excellent deterrent to crime, though it is somewhat of a ruse. Cur is really a kind and caring man, and can often be seen giving beggars and the homeless a crown or two."
   nicknames:
-    - - Constable
+    - Constable
   relations: []
   positions: []
 - type: Character
@@ -452,7 +738,7 @@
     ago, and now he seeks only to protect the people he has learned to love in
     his years as regent.
   nicknames:
-    - - The Mhor of Mhoried
+    - The Mhor of Mhoried
   relations: []
   positions:
     - type: CharacterRelation
@@ -477,7 +763,7 @@
     that he could be the best thing to happen to Anuire since Roele himself.
     None dare to gainsay him.
   nicknames:
-    - - Prince of Avanil
+    - Prince of Avanil
   relations: []
   positions: []
 - type: Character
@@ -610,7 +896,7 @@
     herders receive fair prices for cattle they bring to Ilien, Goewhyn, or
     Tennien.
   nicknames:
-    - - Guildlord
+    - Guildlord
   relations: []
   positions:
     - type: CharacterRelation
@@ -619,7 +905,7 @@
 - type: Character
   name: Elenir Goerin
   nicknames:
-    - - Grand Curate
+    - Grand Curate
   relations: []
   positions: []
 - type: Character
@@ -661,7 +947,7 @@
 
     She act as de-facto security chief in province
   nicknames:
-    - - The First Mate of The Royal Captain's Crew
+    - The First Mate of The Royal Captain's Crew
   relations: []
   positions:
     - type: CharacterRelation
@@ -693,7 +979,7 @@
     matter whether he feels furious or calm, angry or joyful, his face wears the
     same expression.
   nicknames:
-    - - Baron of Ghoere
+    - Baron of Ghoere
   relations: []
   positions: []
 - type: Character
@@ -764,7 +1050,7 @@
     own daughter, Lasica (FA; W5; Br, major, 42; LN), works as one of these
     spies.
   nicknames:
-    - - Baron of Diemed
+    - Baron of Diemed
   relations: []
   positions:
     - type: CharacterRelation
@@ -779,7 +1065,7 @@
   name: Hubaere Armiendin
   description: "The disciples of Haelyn in the Free City of Ilien answer to the\_High Prefect Hubaere Armiendin (MA; P11; Re, major, 27), the most powerful Haelynite in the realms of Ilien, Roesone, and Medoere. The High Prefect is often sought as a diplomatic mediator between rival lords in major disputes."
   nicknames:
-    - - High Prefect
+    - High Prefect
   relations: []
   positions: []
 - type: Character
@@ -810,14 +1096,14 @@
   name: Kathaen Abeth
   description: "The current chancellors are\_Kathaen Abeth (MA; T3; unblooded), Minister of Trade"
   nicknames:
-    - - Chancellor
+    - Chancellor
   relations: []
   positions: []
 - type: Character
   name: Klon Malcene
   description: "Peace is kept by the Guard Watch of the River Ward under the supervision of\_Constable Klon Malcene (MA; F4; unblooded), and it is a difficult job indeed."
   nicknames:
-    - - Constable
+    - Constable
   relations: []
   positions: []
 - type: Character
@@ -830,13 +1116,13 @@
     of the easiest spots along the border to move large amounts of troops
     across.
   nicknames:
-    - - Patriarch
+    - Patriarch
   relations: []
   positions: []
 - type: Character
   name: Kotrin Skirvin
   nicknames:
-    - - Lord
+    - Lord
   relations: []
   positions: []
 - type: Character
@@ -851,7 +1137,7 @@
     regents might give in to one or the other, she works to ensure that she
     takes no missteps that might cause her people to suffer.
   nicknames:
-    - - Duchess of Tuornen
+    - Duchess of Tuornen
   relations: []
   positions: []
 - type: Character
@@ -873,7 +1159,7 @@
   name: Liliene Swordwraith
   description: "An indirect descendant of Roele, Liliene Swordwraith (FA; R10; An, major, 31; NG), is Queen of Aerenwe. She rose from obscurity in one of the forgotten towns of the domain, winning the favor of the people away from the harsh king before her. Eventually, she deposed the tyrant and forced the kingdom into modern times.\n\nThe aged queen has the absolute loyalty of her people, and they're all willing to give their lives in defense of her kingdom. If she asked, they would march into even the Gorgon's lair. However, she has no designs on expanding her kingdom; Liliene Swordwraith and her people-feel content with their corner of the land.\n\n*   **Lieutenants**: The queen places much of the burden of rulership on her two advisers, twins named Cole and Cale Alwier. The two 4th-tevel half-elf fighter-mages left the safety of the Aelvinnwode to follow the regent back to\_ Aerenwe. The queen trusts them implicitly, and some say the two of them have begin running the kingdom for years now. They also provide some aid to the embattled Baroness of Roesone against Diemed's incursions, for a reason known only to the three of them,"
   nicknames:
-    - - Queen of Aerenwe
+    - Queen of Aerenwe
   relations: []
   positions: []
 - type: Character
@@ -887,7 +1173,7 @@
     moving through the city in disguise, and gave him the position of
     chamberlain soon thereafter.
   nicknames:
-    - - Chamberlain
+    - Chamberlain
   relations: []
   positions: []
 - type: Character
@@ -946,7 +1232,7 @@
     polished of the nobles alike. Her people feel no great love for her, but
     neither do they find her taxes and her laws too oppressive.
   nicknames:
-    - - The Baroness of Roesone
+    - The Baroness of Roesone
   relations: []
   positions: []
 - type: Character
@@ -963,7 +1249,7 @@
   name: Molien Darest
   description: "The fanatic priest-superior\_Patriarch Molien Darest (MA; P5; Re, minor, 11) leads the community, and a full dozen celestial marshals serve as his lieutenants. In addition to the monastery and dormitories, a small keep overlooks the compound. The trade road that leads to Alamier runs past the town, but few merchants stop here. The community has a shroud of purpose hanging over it that is too intense for those who aren't a part of it - the town is in a state of readiness for war. Darest keeps his warrior-priests in battle condition, inspiring them with sermons designed to hone them to a fever pitch. Lady Suris believed that this was the best place for Darest and his order, but such a powerful weapon should be watched closely and kept on a short chain."
   nicknames:
-    - - Patriarch
+    - Patriarch
   relations: []
   positions: []
 - type: Character
@@ -978,7 +1264,7 @@
     The current chancellors are Moro Mentier (MA; F2; Ma, tainted, 5), Minister
     of Affairs
   nicknames:
-    - - Chancellor
+    - Chancellor
   relations: []
   positions: []
 - type: Character
@@ -1058,14 +1344,14 @@
   name: Roannea Urdaen
   description: "The Market Ward is overseen by\_Roannea Urdaen (FA; W1; unblooded), the only female chamberlain in the Free City. Roannea is a former student of Moeran's, but as she is not a blooded scion she can never wield true magic. Having a keen mind and firm loyalties, she was given the position of chamberlain.\_The Seadrake is suspected in the disappearance of her predecessor, as he never returned from a trip to Aenier along the Straits of Aerele."
   nicknames:
-    - - Chamberlain
+    - Chamberlain
   relations: []
   positions: []
 - type: Character
   name: Rogr Aglondier
   description: "Rogr Aglondier (MA; W3; Ma, minor, 21; NG) was an exceptional commoner once, a trusted adviser and apprentice to the blooded count before him, Moeran Aglondier. However, he did not descend from the ancient bloodlines. Rogr never felt so astonished as the morning he woke up to discover he had inherited the old man's bloodline, his royal name, and the Free County of Ilien. The count rules Ilien wisely and well, doing his best not to make the mistakes of the regents around him. Neither ambitious nor proud, he's willing to admit his faults. His people enthusiastically support him, for he keeps their loyalty high and their taxes low. Aglondier claims Ilien is neutral, a statement that strays a bit from the truth. He's good friends with the rulers from both Medoere and Roesone—without their tolerance, his domain wouldn't exist. Still, the nonpartisan illusion persists, so other rulers use the Free County of Ilien as a neutral meeting spot; regents have forged numerous treaties there.\n\n*   Lieutenants: Despite his many good qualities, Aglondier isn't really the trusting sort. His only lieutenant is his daughter and heir, the Lady Alliene (FA; Pr3, Nesirie; CG). Together, the two can react to nearly any emergency that arises in the kingdom.\n\n3rd-level Anuirean Wizard\n\nS: 14\n\nD: 14\n\nC: 11\n\nI: 16\n\nW: 14\n\nCh: 16\n\nBloodline: Masela, minor, 21\n\nBlood Abilities: Detect lie, enhanced sense (major ability; see rule book)\n\nEquipment: Robes, quarterstaff +2\n\nSpells/Day: 2/1\n\nPreferred Spells: 1st level—charm person, sleep;\n\n2nd level—stinking cloud\n\nDescription/History: Rogr Tilgentor has been the apprentice, supporter and friend of Moeran Aglondier for the past decade. Rogr was a com- moner, fascinated by magic, when he met the Count and became his pupil. He studied magic, though as an unblooded human had no chance of rising far in the ranks of true magic spellcasting. Moeran took him as an apprentice, and having no other family, made plans to pass the regency on to Rogr. Now, with Moeran's untimely death, the fledgling Rogr is thrust into the regency of Ilien unexpectedly.\n\nRogr is an extremely intelligent individual, and the power he possesses coupled with the teachings of the old Count and his own growing skill makes him a formidable ruler. Rogr is the only known wizard in Ilien.\n\nRogr is a widower, his wife having died during the birth of his daughter Alliene. Alliene is a member of the Eastern Temple of Nesirie, and Rogr's only trusted lieutenant.\n\nThe suspected assassination of Moeran has unnerved the new regent of the land. Despite the assurances of Seneschal Godene, Rogr remains extremely paranoid about a potential assassin loose in the Free City.\n\n*   Rogr was born as a son of simple craftsman and had fairly rough childhood\n*   He shown signs of great intellect was educated on the Moeran Aglondier stipend, and in time bacome clerk, apprentice, advisor and friend of count\n*   He became father early - at 17 and widower at 23\_\n*   In his magic he is great at practice - he is able to perform spell perfectly after reading it-s description once - but not so great at theory, abstraction and synthesis.\n*   He have a talent to combine magical and mundane means and knack for finding solutions that most mages would not think of.\n*   He see himself as a servant of the people of Ilien and legacy of Aglondier counts, he will ignore personal attacks but fight fierce when city is threatened\n*   He is not accustomed to political maneuvering, he knows it happen but until recently he was focusing on finding best solutions not making them pass amid resistance\n*   He likes cooking and do not think to stop even when he is a count\n*   He was accustomed to work directly with the count and do not know who of the numerous advisors and officials can he trust and with what\n*   He often wears old hat - a gift from late wife - as remembrance of her - even when it is not very fitting occasion"
   nicknames:
-    - - Count of Ilien
+    - Count of Ilien
   relations: []
   positions:
     - type: CharacterRelation
@@ -1136,7 +1422,7 @@
   name: Suris Enlien
   description: "The Archpriest of Ruornil's Celestial Spell, Suris Enlien (FA; Pr4, Ruornil; Re, major, 32; NG) keeps a close watch over this land, controlling her theocracy with a velvet fist. Unfortunately, her control is not as absolute as she would like, so she enforces her edicts a little more harshly than she should.\n\nAs a priestess of the god of moon and magic, Enlien spends most of her days abed and works under the moon at night. Therefore she takes care of most of her courtly work at night also, giving her capital city of Braeme a different schedule than the rest of the kingdom.\n\n*   **Lieutenants**: The high priestess has one lieutenant, the commander of Medoere's tiny army. Lord Kotrin Skirvin (MR; F3; An, minor, 18; CG) has a\_ little blood of his own, so the regent keeps a close eye on him, knowing that his ambition might strip away his common sense. Other than that one flaw, she has chosen her commander well, and the two see eye to eye on policy matters.\n\nSiiris Enlien, became a priestess of Ruornil, seized the provinces of Caerwil, Braeme, and Alamier from Diemed, and forged the domain of Medoere when she was only 16 years old. To stop the persecution of the followers of the Celestial Spell and save hundreds of innocents from slaughter, she was forced to kill her own father, Dalien, count of the eastern provinces. She was seen as the Moon God's Sacred Voice, and the people of the new realm adored her.\n\nIn the eight years since that fateful day, Medoere has flourished as a theocracy.\n\nOnly 24, Suris is a beautiful woman who is totally devoted to her faith and her god. She has hair as dark as night, large gray eyes, and skin the color of pale moonlight. Wispy thin and only of average height, Suris nevertheless has a presence\n\n4th-level Anuirean priest\n\nS:\n\nD:\n\nC:\n\nI:\n\nW:\n\nCh: 11\n\n12\n\n9\n\n16\n\n17\n\n17\n\nAC:\n\nhp:\n\nMV:\n\nTHACO:\n\n#AT:\n\nDmg: 8(10)\n\n22\n\n12\n\n18\n\n1\n\nld6+2\n\nBloodline: Reynir,\n\nmajor, 32\n\nBlood Abilities: Enhanced sense (minor), heal-\n\ning (minor)\n\nEquipment: ring of protection +2, footman's mace\n\n+ 1, holy symbol of quality"
   nicknames:
-    - - The Archpriest of Ruornil's Celestial Spell
+    - The Archpriest of Ruornil's Celestial Spell
   relations: []
   positions: []
 - type: Character
@@ -1171,7 +1457,7 @@
     as fairly clever but thoroughly bored and disinterested person. He indulges
     in the pleasure  and dream of something that finally excites him.
   nicknames:
-    - - The Royal Captain
+    - The Royal Captain
   relations: []
   positions:
     - type: CharacterRelation
@@ -1195,7 +1481,7 @@
   name: Tallow
   description: "Castle Tallow, which guards the grassland pass one mile north of the town, is commanded by\_Lord Tallow (MA; F4; unblooded) and houses 30 seasoned soldiers who have been loyal to the noble since the realm was part of Diemed. There are a number of common folk who worship at the Shrine of the Heart, a small temple dedicated to the Impregnable Heart of Haelyn, but the majority of people follow the teachings of the Celestial Spell."
   nicknames:
-    - - Lord
+    - Lord
   relations: []
   positions: []
 - type: Character
@@ -1332,7 +1618,7 @@
   name: Thuer
   description: "*   A man of about 50 - high, thin, with tonsure and well combed long hair around it.\n*   A true belier and posing as blunt instrument of his God's will - underneath hides sharp intellect and pointy tongue\n*   Very experienced warrior without showing signs of his age\n*   Likes to wake up with the sun and proselytize until dusk.\n*   Thinks of Haelyn as a leader of the gods but see the place for the other gods underneath him.\n*   Thinks that if you don't follow Haelyns teaching you are simply hurting yourself\n*   Hates Ortodox Temple of Haelyn with deep fiery hate and talk about it worse than followers of Belnik and Kreiha\n*   Have a mace called Faith and a shield called Devotion with him - a\_ family heritage\n*   Is of noble origin but unbloodied and without inheritance - his family came from Mohrheid\n*   Had formal education in Imperial city of Anuerie\n\n## Relations\n\n*   Opposes The Mouse as the leader of largest whorehouse in Abbadiel and suspected cleric of some mischievous good\n*   Oposes The Woodcutters Leader against importing clerics of Ortodox Temple of Haelyn"
   nicknames:
-    - - Father
+    - Father
   relations: []
   positions: []
 - type: Character
@@ -1350,7 +1636,7 @@
     Magistrate Ubael is a firm but fair adjudicator who tends to hand out
     staunch sentences to repeat offenders.
   nicknames:
-    - - Magistrate
+    - Magistrate
   relations: []
   positions: []
 - type: Character
@@ -1393,9 +1679,28 @@
   name: Wynn Zoest
   description: "The Golden Plumes are led by\_General Wynn Zoest (MA; F6; An, tainted, 10), an aged veteran of the Guard Watch of nearly 40 years. General Zoest reports only to Chamberlain Ja'teem, the Lord Mayor, and Ilien's regent. Should the Free City ever be under siege, Zoest would be commanding the city's defenses."
   nicknames:
-    - - General
+    - General
   relations: []
   positions: []
+- type: County
+  name: Ilien
+  neighbors:
+    - type: LocationRelation
+      target: Braeme
+      name: west
+      description: the Adele river
+    - type: LocationRelation
+      target: Abbatuor
+      name: East
+      description: the Spider river
+    - type: LocationRelation
+      target: Duerlin
+      name: noarth-east
+      description: the Spider river
+    - type: LocationRelation
+      target: Caercas
+      name: north
+      description: the Spider river
 - type: Reference
   name: Avani
 - type: Reference
@@ -4689,6 +4994,168 @@
     day for that and War-chief accepted.
 
     He summoned Hormund for celebration.
+- type: Session
+  xp: 2400
+  date: '2017-12-02T23:00:00.000Z'
+  name: Session 32
+  description: >
+    # 30.09.1524 HC
+
+    ## Night - Vos Fortress on The Isle of Tamale
+
+    The Vos cellebrated Hormund's arena victories.
+
+    They drank to their strength.
+
+    They drank to their glory.
+
+    They drank to their loot.
+
+    They drank to damnation of their enemies.
+
+
+    After much of drinking one Vos challenged heritage of Hormund who defended
+    himself skilfully.
+
+    After more drinking another Vow challenged Hormund to drinking contest -
+    Hormund won but not without showing serious signs of intoxication.
+
+    After even more drinking one more Vos challenged Hormund youth and manliness
+    - Hormund defended himself and one of Vos womand offered to take him to a
+    ride and settle question of manliness.
+
+    They drank once again and Hormund passed out.
+
+
+    In the meantime Ormus and Dunmro looked for safe place to sleep.
+
+    They looked into Vos barracks but after that they found slaves enclosure.
+
+    They meet tow slaves on the lookout for the Vos Livia and Albert.
+
+    Ormus being himself instantly persuaded that they can not be Vos.
+
+    Dunmro and Ormus questioned the slaves about their situation and asked for a
+    place to stay.
+
+    They were lead by Livia into a hidding place created inside the wall that
+    allowed them to sleep undisturbed.
+
+    # 31.09.1524 HC
+
+    ## Night - Vos Fortress on The Isle of Tamale
+
+    Ormus dreamed that he is flying through the shadow.
+
+    He landed on an stone tower that he recognized as a Sun Spire after few
+    moments.
+
+    A voice in back of his head asked him how far he is ready to go to gain the
+    knowledge he covets and then the dream has ended.
+
+    ## Night - Vos Fortress on The Isle of Tamale
+
+    Dunmro dreamt that he wander in the shadowy representation of elven ruins.
+
+    He found a path that led him to a stone decorated with glowing runes and his
+    dream has ended.
+
+    ## Morning - Vos Fortress on The Isle of Tamale
+
+    Hormind was woken by the Vos woman who told hiom priest are looking for him,
+    and is expecting him on the stone pillar in the middle of arena.
+
+    He went there expecting Dunmro but met the Vos priest instead.
+
+    The Vos priest tried to sell a vision of glorious future with Hormund
+    leading the Vos to scourge anuerian coast.
+
+    Hormund remained skeptical but did not tell that to the Priest.
+
+    After finishing the talk Hormund was led by the Vos woman to the "kitchen"
+    for a breakfast.
+
+    He learned that the woman was called Ludmilla.
+
+
+    Dunmro and Ormus woke up queried the slaves and scouted the slave enclosure
+    ant then the whole fortress.
+
+    They encountered Hormund and Dunmro proposed to go to the ruins because he
+    have to check something there.
+
+    ## Afternoon - The Isle of Tamale
+
+    The party moved to the ruins and located the stone from Dunmro dream.
+
+    They found a staircase leading down into the rock.
+
+    They discussed plans for the evening fight and dealing with the Vos priest.
+
+    Dunmro and Ormus studied runes decorating the walls while Hormund pressed
+    ahead and opened sealed doors by blindly pressing runes.
+
+
+    They found a large chamber with three elven figures frozen in poses
+    indicating they were weaving some spell.
+
+    The figures were surrounded by magical runes and discarded magical component
+    and items.
+
+    Ormus used fly spell to avid touching runes on the floor and the party
+    examined the bodies.
+
+    They found a magical dagger, ring and an amulet.
+
+    They encountered a side chamber and magically sealed passage.
+
+
+    Ormus discovered that that password written on the walls of the staircase
+    also opens and closes the entry doors.
+
+    ## Evening - Vos Fortress on The Isle of Tamale
+
+    After returning to the Vos Fortress Hormund was warned by Ludmila that the
+    Priest ordered to have them watched constantly.
+
+    Hormund faced the Chief Boris on the arena.
+
+    Boris fought fiercely but luck was not on his side and after breaking his ax
+    on Hormund and unsuccessfully trying to wrestle him he was beaten
+    unconsciously.
+
+
+    After making short work of the tribe chief Hormund was celebrated as a
+    champion by Vos.
+
+    There was a lot of chearing and a lot more of drinking.
+
+
+    Dunmro noticed that they are watched by a group of about then Vos.
+
+    # 01.10.1524 HC
+
+    ## Night - Vos Fortress on The Isle of Tamale
+
+    Dunmro removed alcohol effects from Hormund who in turn took a barrel of
+    booze and drunk the remaining watchers unconsciously.
+
+    He misinterpreted effect of the priest spell and needed another cleansing to
+    be ready for action.
+
+
+    The three heroes attacked the Vos priest temple from three sides using rope
+    bridges.
+
+    Ormus used a spell to conjure foh and hide their approach.
+
+    The priest reacted quickly and retreated into narrow crevasse inside stone
+    pillar.
+
+    Dunmro and Hormund went after the Priest but they blocked each other in the
+    narrow space.
+
+    Eventually Hormund went first and pursued their target in darkness.
 - type: Session
   date: '2015-12-10T23:00:00.000Z'
   name: Session 4
