@@ -48,7 +48,7 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         type: 'Character',
         name: _.get(item,'name'),
         description: _.get(item,'description')||_.get(item,'content'),
-        nicknames: _.compact([_.get(item,'title'),_.get(item,'label')]),
+        nicknames: _([_.get(item,'title'),_.get(item,'label')]).flatten().compact().value(),
         relations: _(item).get('relations',[]).filter((relation)=>_.startsWith(_.get(relation,'role'),'person:')).map((relation)=>({
           type: 'CharacterRelation',
           name:  _.get(relation,'role'),
