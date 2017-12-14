@@ -103,8 +103,9 @@ classes:
   - name: God
     is: Reference
     attributes:
-      nickname:
+      nicknames:
         type: string
+        multiplicity: '*'  
       character: 
         type: string
       domain: 
