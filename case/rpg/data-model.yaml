@@ -67,6 +67,10 @@ classes:
     is: Organization  
   - name: Domain
     is: Organization
+    attributes:
+      provinces:
+        type: County  
+        multiplicity: '*'  
   - name: Guild
     is: Organization    
   - name: Item
