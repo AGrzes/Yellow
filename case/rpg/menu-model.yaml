@@ -6,9 +6,7 @@ menu:
       contents:
         - type: List
           list:
-            selector: 
-              type: TypeSelector
-              selector: Change
+            selector: this.type == 'Change'
             order:
               field: date
               direction: descending
@@ -224,9 +222,10 @@ menu:
               - type: Field
                 field: name
                 slot: header                
-              - type: Badge
+              - type: Field
                 field: value
-                slot: header                
+                slot: header   
+                decoration: badge              
               - type: Field
                 field: description
                 format: markdown
@@ -237,26 +236,33 @@ menu:
       contents:
         - type: List
           list:
-            selector: 
-              type: TypeSelector
-              selector: Session
+            selector: this.type == 'Session'
             order:
-              field: name  
+              field: date  
           style: plain
           item:
             type: Card
+            hint:
+             - collapse
             contents:
               - type: Field
                 field: date
                 format: date
+                dateFormat: 'DD.MM.YYYY'
                 slot: header
+              - type: Static
+                html: " - "
+                slot: header              
               - type: Field
                 field: name
                 slot: header                
-              - type: Badge
+              - type: Field
                 field: xp
                 pattern: '{{this}} XP'
-                slot: header                
+                slot: header  
+                decoration: badge 
+                hint: 
+                  - right             
               - type: Field
                 field: description
                 format: markdown
