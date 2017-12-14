@@ -6,6 +6,12 @@ classes:
         type: string
       description: 
         type: string      
+  - name: Change
+    attributes: 
+      date: 
+        type: date
+      description: 
+        type: string           
   - name: Character
     is: Entity
     attributes:
@@ -67,6 +73,10 @@ classes:
     is: Organization  
   - name: Domain
     is: Organization
+    attributes:
+      provinces:
+        type: County  
+        multiplicity: '*'  
   - name: Guild
     is: Organization    
   - name: Item
@@ -103,8 +113,9 @@ classes:
   - name: God
     is: Reference
     attributes:
-      nickname:
+      nicknames:
         type: string
+        multiplicity: '*'  
       character: 
         type: string
       domain: 

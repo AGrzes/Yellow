@@ -15,6 +15,12 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
 },(done)=>{
   var data = _.flatMap(buffer,(item)=>{
     switch(item.$type){
+      case "changelog":
+      return [{
+        type: 'Change',
+        date: moment(_.get(item,'date')).toISOString(),
+        description: _.get(item,'changes')
+      }]
       case "session":
       return [{
         type: 'Session',
@@ -37,18 +43,35 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         name: _.get(item,'name'),
         description: _.get(item,'description')||_.get(item,'content')
       }]
+      case "god":
+      return [{
+        type: 'God',
+        name: _.get(item,'name'),
+        domain: _.get(item,'domain'),
+        character: _.get(item,'character'),
+        name: _.get(item,'name'),
+        nicknames: _([_.get(item,'title'),_.get(item,'label')]).flatten().compact().value(),
+        description: _.get(item,'description')||_.get(item,'content')
+      }]
       case "organization":
       return [{
         type: 'Organization',
         name: _.get(item,'name'),
         description: _.get(item,'description')||_.get(item,'content')
       }]
+      case "domain":
+      return [{
+        type: 'Domain',
+        name: _.get(item,'name'),
+        description: _.get(item,'description')||_.get(item,'content'),
+        provinces: _.get(item,'provinces')
+      }]
       case "person":
       return [{
         type: 'Character',
         name: _.get(item,'name'),
         description: _.get(item,'description')||_.get(item,'content'),
-        nicknames: _.compact([_.get(item,'title'),_.get(item,'label')]),
+        nicknames: _([_.get(item,'title'),_.get(item,'label')]).flatten().compact().value(),
         relations: _(item).get('relations',[]).filter((relation)=>_.startsWith(_.get(relation,'role'),'person:')).map((relation)=>({
           type: 'CharacterRelation',
           name:  _.get(relation,'role'),
@@ -68,6 +91,18 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         type: 'Location',
         name: _.get(item,'name'),
         description: _.get(item,'description')||_.get(item,'content')
+      }]
+      case "province":
+      return [{
+        type: 'County',
+        name: _.get(item,'name'),
+        description: _.get(item,'description')||_.get(item,'content'),
+        neighbors:_(item).get('neighbors',[]).map((neighbors)=>({
+          type: 'LocationRelation',
+          target:  _.get(neighbors,'name'),
+          name: _.get(neighbors,'direction'),
+          description: _.get(neighbors,'border')
+        }))
       }]
     }
     return []
