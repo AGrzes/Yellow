@@ -1,11 +1,11 @@
 type: DataModel
 classes:
- - name: Entity
-   attributes: 
-    name: 
-      type: string
-    description: 
-      type: string      
+  - name: Entity
+    attributes: 
+      name: 
+        type: string
+      description: 
+        type: string      
   - name: Character
     is: Entity
     attributes:
@@ -103,7 +103,11 @@ classes:
   - name: God
     is: Reference
     attributes:
-      inGameDate:
+      nickname:
         type: string
-      inGameTime: 
+      character: 
+        type: string
+      domain: 
+        type: string        
+      symbol: 
         type: string
