@@ -15,6 +15,12 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
 },(done)=>{
   var data = _.flatMap(buffer,(item)=>{
     switch(item.$type){
+      case "changelog":
+      return [{
+        type: 'Change',
+        date: moment(_.get(item,'date')).toISOString(),
+        description: _.get(item,'changes')
+      }]
       case "session":
       return [{
         type: 'Session',
@@ -59,7 +65,7 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         name: _.get(item,'name'),
         description: _.get(item,'description')||_.get(item,'content'),
         provinces: _.get(item,'provinces')
-      },{}]
+      }]
       case "person":
       return [{
         type: 'Character',

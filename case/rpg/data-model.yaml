@@ -6,6 +6,12 @@ classes:
         type: string
       description: 
         type: string      
+  - name: Change
+    attributes: 
+      date: 
+        type: date
+      description: 
+        type: string           
   - name: Character
     is: Entity
     attributes:
