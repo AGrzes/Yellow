@@ -18,6 +18,7 @@ menu:
                 field: date
                 format: date
                 slot: header
+                dateFormat: 'DD.MM.YYYY'
               - type: Field
                 field: description
                 format: markdown
@@ -26,13 +27,11 @@ menu:
     view:
       type: DeclarativeView
       contents: 
-        - type: MesterDetail
+        - type: MasterDetail
           master:
             - type: TOC
               data:
-                selector: 
-                  type: ExpressionSelector
-                  selector: this.type == 'Category' || this.type == 'Reference'    
+                selector: this.type == 'Category' || this.type == 'Reference' || this.type == 'God'     
                 order:
                   field: name
               item:
@@ -54,7 +53,7 @@ menu:
                       data: 
                         constructor: this.children
                       label:
-                        fiels: name                
+                        field: name                
                 Reference:
                   type: Card
                   contents:
@@ -71,15 +70,15 @@ menu:
                     - type: Field
                       field: name
                       slot: header
-                    - type: Property
+                    - type: Field
                       field: character
                       label: Character
                       slot: content 
-                    - type: Property
+                    - type: Field
                       field: domain
                       label: Domain
                       slot: content    
-                    - type: Property
+                    - type: Field
                       field: symbol
                       label: Symbol
                       slot: content                                                                 
@@ -91,13 +90,11 @@ menu:
     view:
       type: DeclarativeView
       contents: 
-        - type: MesterDetail
+        - type: MasterDetail
           master:
             - type: TOC
               data:
-                selector: 
-                  type: ExpressionSelector
-                  selector: this.type == 'Location' || !this.parent    
+                selector: (this.type == 'Location'||this.type == 'County'||this.type == 'Province') && !this.parent    
               children: this.sublocations    
               item:
                 type: DetailsLink
@@ -110,11 +107,7 @@ menu:
               pattern: People of {{this}}   
             - type: List
               list:
-                selector: 
-                  type: ExpressionSelector
-                  selector: this.type == 'Character' || this.location == location
-                  parameters:
-                    location: this
+                selector:  this.type == 'Character' || this.location == location
               style: list
               item:
                 type: ListItem
@@ -134,13 +127,11 @@ menu:
     view:
       type: DeclarativeView
       contents: 
-        - type: MesterDetail
+        - type: MasterDetail
           master:
             - type: TOC
               data:
-                selector: 
-                  type: ExpressionSelector
-                  selector: this.type == 'Organization' || !this.parent    
+                selector: this.type == 'Organization' && !this.parent    
                 order:
                   field: name
               children: this.children    
@@ -162,18 +153,16 @@ menu:
                 data: 
                   constructor: this.children
                 label:
-                  fiels: name                
+                  field: name                
   - name: Locations
     view:
       type: DeclarativeView
       contents: 
-        - type: MesterDetail
+        - type: MasterDetail
           master:
             - type: TOC
               data:
-                selector: 
-                  type: ExpressionSelector
-                  selector: this.type == 'Location' || !this.parent    
+                selector: (this.type == 'Location'||this.type == 'County'||this.type == 'Province') && !this.parent    
                 order:
                   field: name
               children: this.sublocations    
@@ -196,13 +185,13 @@ menu:
                 data: 
                   constructor: this.sublocations
                 label:
-                  fiels: name     
+                  expression: "{{name}} : {{target}}" 
               - type: LinkList
                 header: Neighbors
                 data: 
                   constructor: this.neighbors
                 label:
-                  fiels: name                           
+                  expression: "{{name}} : {{target}}"                          
   - name: Items
     view:
       type: DeclarativeView
