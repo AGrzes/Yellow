@@ -53,3 +53,36 @@ Not implemented because of missing location tree.
 Missing data (parent) to fill the list
 ## No accordion 
 Different UI library 
+# Closing Gaps
+## Styling
+Leave As Is
+## Data Generation
+Change data model to match existing data - where needed
+## Publishing process
+Implement publishing process 
+## Double entries
+Filter out unwanted entries on the transformation side
+## No grouping pages
+* Adjust data model
+* Adjust data transformation
+* Implement TOC construction
+## Missing symbol
+* Add to data
+* Implement display
+## Wrong markdown table handling
+Switch or configure markdown library
+## No nicknames
+* Implement array field handling
+* Configure nicknames field
+## Missing location tree
+* Adjust data model to match data
+* Generate location entries
+* Skip existing
+* Generate location relations
+* Generate character - location relations
+* Implement TOC construction
+## List not showing
+* Adjust data model to match data
+* Generate character - location relations
+## No accordion 
+Leave As Is
