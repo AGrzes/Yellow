@@ -71,6 +71,11 @@ menu:
                       field: name
                       slot: header
                     - type: Field
+                      field: nicknames
+                      slot: header    
+                      hint:
+                       - small                  
+                    - type: Field
                       field: character
                       label: Character
                       slot: content 
