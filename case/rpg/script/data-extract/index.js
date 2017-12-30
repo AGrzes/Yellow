@@ -48,6 +48,7 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         type: 'God',
         name: _.get(item,'name'),
         domain: _.get(item,'domain'),
+        symbol: _.get(item,'symbol'),
         character: _.get(item,'character'),
         name: _.get(item,'name'),
         nicknames: _([_.get(item,'title'),_.get(item,'label')]).flatten().compact().value(),
