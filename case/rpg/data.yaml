@@ -107,6 +107,7 @@
 - type: God
   name: Avani
   domain: Light
+  symbol: Setting sun
   character: Lawful Nautral
   nicknames:
     - Goddess of the Sun
@@ -123,6 +124,7 @@
 - type: God
   name: Belinik
   domain: War
+  symbol: Crossed axes
   character: Chaotic Evil
   nicknames:
     - Prince of Terror
@@ -139,6 +141,7 @@
 - type: God
   name: Cuiraecen
   domain: Tempest
+  symbol: Sword and lightning
   character: Chaotic Good
   nicknames:
     - Stormlord
@@ -154,6 +157,7 @@
 - type: God
   name: Eloele
   domain: Trickery
+  symbol: Black dagger
   character: Chaotic Neutral
   nicknames:
     - Goddess of Night
@@ -169,6 +173,7 @@
 - type: God
   name: Erik
   domain: Nature
+  symbol: Oak tree
   character: Neutral
   nicknames:
     - Old Father of the Forests
@@ -186,6 +191,7 @@
   domain:
     - War
     - Light
+  symbol: Sword and sunburst
   character: Lawful good
   nicknames: []
   description: >
@@ -200,6 +206,7 @@
 - type: God
   name: Kriesha
   domain: Winter
+  symbol: White hand
   character: Lawful Evil
   nicknames:
     - The Ice Lady
@@ -218,6 +225,7 @@
 - type: God
   name: Laerme
   domain: Love
+  symbol: Harp and flame
   character: Chaotic Good
   nicknames:
     - 'Goodness of Bire, Beauty, and Art'
@@ -234,6 +242,7 @@
 - type: God
   name: Nesirie
   domain: Sea
+  symbol: Wave and trident
   character: Nautral Good
   nicknames:
     - Goddess of the Sea
@@ -253,6 +262,7 @@
 - type: God
   name: Ruornil
   domain: Knowledge
+  symbol: Crescent moon
   character: Nautral
   nicknames:
     - The Moon God
@@ -271,6 +281,7 @@
 - type: God
   name: Sera
   domain: Luck
+  symbol: Scales
   character: Chaotic Nautral
   nicknames:
     - 'Lady of Fortune,'
