@@ -4,43 +4,53 @@
     * Implemented news
     * Published events of the session 5
     * Published events of the session 6
+  id: 'change:'
 - type: Change
   date: '2017-02-27T00:00:00.000Z'
   description: |
     * Added new character options
+  id: 'change:'
 - type: Change
   date: '2016-11-20T00:00:00.000Z'
   description: |
     * Fixed NPC display
     * Published events of the session 16
+  id: 'change:'
 - type: Change
   date: '2016-11-22T00:00:00.000Z'
   description: |
     * Published events of the session 7
+  id: 'change:'
 - type: Change
   date: '2016-11-23T00:00:00.000Z'
   description: |
     * Published events of the session 8 and 9
+  id: 'change:'
 - type: Change
   date: '2016-11-28T00:00:00.000Z'
   description: |
     * Published events of the session 10, 11 and 17
+  id: 'change:'
 - type: Change
   date: '2016-11-30T00:00:00.000Z'
   description: |
     * Published events of the session 12 and 13
+  id: 'change:'
 - type: Change
   date: '2016-12-01T00:00:00.000Z'
   description: |
     * Published events of the session 14 and 15
+  id: 'change:'
 - type: Change
   date: '2016-12-02T00:00:00.000Z'
   description: |
     * Added events in between live sessions
+  id: 'change:'
 - type: Change
   date: '2016-12-18T00:00:00.000Z'
   description: |
     * Added events of session 18
+  id: 'change:'
 - type: Domain
   name: Aerenwe
   provinces:
@@ -51,6 +61,7 @@
     - 'province:northvale'
     - 'province:shadowgreen'
     - 'province:westmarch'
+  id: 'domain:aerenwe'
 - type: Domain
   name: Diemed
   provinces:
@@ -60,6 +71,7 @@
     - 'province:duene'
     - 'province:moere'
     - 'province:tier'
+  id: 'domain:diemed'
 - type: Domain
   name: Ghoere
   provinces:
@@ -73,16 +85,19 @@
     - 'province:thoralinar'
     - 'province:tireste'
     - 'province:tornilen'
+  id: 'domain:ghoere'
 - type: Domain
   name: Ilien
   provinces:
     - 'province:ilien'
+  id: 'domain:ilien'
 - type: Domain
   name: Medoere
   provinces:
     - 'province:alamie'
     - 'province:braeme'
     - 'province:caerwil'
+  id: 'domain:medoere'
 - type: Domain
   name: Mieres
   provinces:
@@ -94,6 +109,7 @@
     - 'province:mielien'
     - 'province:seaward'
     - 'province:serien'
+  id: 'domain:mieres'
 - type: Domain
   name: Roesone
   provinces:
@@ -104,24 +120,29 @@
     - 'province:edlin'
     - 'province:fairfield'
     - 'province:ghoried'
+  id: 'domain:roesone'
 - name: Heartlands
   type: Region
   children:
     - 'domain:avanil'
     - 'domain:mhoried'
     - 'domain:tuornen'
+  id: 'region:heartlands'
 - name: Avanil
   type: Domain
   children: []
   parent: 'region:heartlands'
+  id: 'domain:avanil'
 - name: Mhoried
   type: Domain
   children: []
   parent: 'region:heartlands'
+  id: 'domain:mhoried'
 - name: Tuornen
   type: Domain
   children: []
   parent: 'region:heartlands'
+  id: 'domain:tuornen'
 - name: Southern Coast
   type: Region
   children:
@@ -133,48 +154,59 @@
     - 'domain:mieres'
     - 'domain:roesone'
     - 'location:isle-of-tamle'
+  id: 'region:southern-coast'
 - name: Aerenwe
   type: Domain
   children: []
   parent: 'region:southern-coast'
+  id: 'domain:aerenwe'
 - name: Diemed
   type: Domain
   children: []
   parent: 'region:southern-coast'
+  id: 'domain:diemed'
 - name: Ghoere
   type: Domain
   children: []
   parent: 'region:southern-coast'
+  id: 'domain:ghoere'
 - name: Ilien
   type: Domain
   children: []
   parent: 'region:southern-coast'
+  id: 'domain:ilien'
 - name: Medoere
   type: Domain
   children: []
   parent: 'region:southern-coast'
+  id: 'domain:medoere'
 - name: Mieres
   type: Domain
   children: []
   parent: 'region:southern-coast'
+  id: 'domain:mieres'
 - name: Roesone
   type: Domain
   children:
     - 'province:abbatour'
   parent: 'region:southern-coast'
+  id: 'domain:roesone'
 - name: Abbatour
   type: Province
   children: []
   parent: 'domain:roesone'
+  id: 'province:abbatour'
 - name: Isle Of Tamle
   type: Location
   children:
     - 'location:vos-fortress'
   parent: 'region:southern-coast'
+  id: 'location:isle-of-tamle'
 - name: Vos Fortress
   type: Location
   children: []
   parent: 'location:isle-of-tamle'
+  id: 'location:vos-fortress'
 - type: God
   name: Avani
   domain: Light
@@ -192,6 +224,7 @@
 
     Avani is now the sun goddess and lady of reason and logic, the counterpart
     to the mysterious moon god Ruornil.
+  id: 'god:avani'
 - type: God
   name: Belinik
   domain: War
@@ -209,6 +242,7 @@
 
     Belinik embodies the Vos belief that might makes right; those who follow him
     believe that strength and savagery are all a true warrior needs.
+  id: 'god:belinik'
 - type: God
   name: Cuiraecen
   domain: Tempest
@@ -225,6 +259,7 @@
     He is the son of Haelyn and the sea-goddess Nesirie, and was not present at
     Deismaar. Cuiraecen is the patron of young and reckless warriors everywhere
     who plunge boldly into battle in search of personal glory and honor.
+  id: 'god:cuiraecen'
 - type: God
   name: Eloele
   domain: Trickery
@@ -241,6 +276,7 @@
 
     She is generally not a malicious power, but she is capricious and selfish;
     she loves to embarrass or trick her enemies, sometimes with lethal results.
+  id: 'god:eloele'
 - type: God
   name: Erik
   domain: Nature
@@ -257,6 +293,7 @@
 
     Erik was a Rjuven warrior in the entourage of Reynir at Mount Deismaar, and
     he still considers the Rjurik to be his people.
+  id: 'god:erik'
 - type: God
   name: Haylen
   domain:
@@ -274,6 +311,7 @@
 
     He was the champion of the old god Anduiras at Deismaar, and he inherited
     his patron's powers.
+  id: 'god:haylen'
 - type: God
   name: Kriesha
   domain: Winter
@@ -293,6 +331,7 @@
 
     Kriesha stands for strength through hardship and tests the Vos with harsh
     winters and savage conflict to weed out the weak.
+  id: 'god:kriesha'
 - type: God
   name: Laerme
   domain: Love
@@ -310,6 +349,7 @@
 
     However, Laerme can be moved to heated anger by any who deny love or who
     delight in destroying things of beauty.
+  id: 'god:laerme'
 - type: God
   name: Nesirie
   domain: Sea
@@ -330,6 +370,7 @@
     She is the wife of Haelyn.
 
     Nesirie frequently roams the coastal waters
+  id: 'god:nesirie'
 - type: God
   name: Ruornil
   domain: Knowledge
@@ -349,6 +390,7 @@
 
     All Cerilian mages acknowledge Ruornil's power, even if they do not worship
     him.
+  id: 'god:ruornil'
 - type: God
   name: Sera
   domain: Luck
@@ -366,15 +408,19 @@
 
     Sera embodies the adage that a man makes his own luck; she rewards diligence
     and hard work, but she occasionally smiles on the fool.
+  id: 'god:sera'
 - type: Organization
   name: The Church of the Celestial Spell
   description: "\_Medoere's major faith and official religion is Ruornil's Celestial Spell. By far, this is the most organized and powerful church dedicated to the Silver Prince. As a theocracy, Medoere's official religion serves as the law of the land as well as the keeper of the faith. The primary cathedral is the grand Temple of the Celestial Spell, located in Alamier City. A second major cathedral, the Temple of the Ninth Spell, is in the capital city of Braeme. It's a smaller but no less beautiful version of the Alamier complex.\n\nThe Celestial Spell has other temples, churches, and shrines throughout the three provinces. The theocracy controls all nine levels of temple in the domain. Although other faiths are tolerated, none have been allowed to establish any kind of holdings in the domain. (One is trying, though.)\n\nThe Celestial Archpriest serves as the leader of the church, though individual temples have local leaders who answer to the regent. The church dominates the three provinces as far as the power of faith is concerned. Because the theocracy is also in charge of foreign affairs and keeping the domain intact, it hasn't made many inroads into other realms. Indeed, the church isn't that interested in crossing political borders. After all, Ruornil specifically directed his faithful to settle the lands that became Medoere, so that's the region the church concentrates its efforts on.\n\nThat doesn't mean the church's influence hasn't spread. Due to the good relationship Medoere has with Roesone, shrines dedicated to Ruornil have been established in a few of Roesone's larger cities and towns. In the province of Caercas, however, Ruornil's Celestial Spell commands about 25% of the population's faith (the church has a level 1 holding in Caercas). Most of this is concentrated in the Temple of the Silver Moon, located in the city of Proudglaive."
+  id: 'organization:the-church-of-the-celestial-spell'
 - type: Organization
   name: The Eastern Temple of Nesirie
   description: "The faith of Nesirie is popular among commoners, mariners, and the poor of Ilien. Things such as political intrigue and personal power are of no interest to the Temple of Nesirie, focusing more on actions than machination. This is significantly noted in the temple's holdings in the River Ward of the Free City. While walking through the ward, anyone not native to the city would most likely walk past the temple and not even know it. The leaders of the Nesiriean faith use their money for things other than elaborate cathedrals and elegant dress. Hence, their dwellings consist of renovated warehouses and century-old domiciles.\n\nA few years ago the Eastern Temple in Ilien fell upon some hard times. Many of the faithful of the Free City had gone to worship at the Impregnable Heart of Haelyn following their part in curing the plague in 546 MR. In the course of the next few months, the Eastern Temple was ready to pull out of Ilien and concede defeat to the Heart were it not for the zealous faith of Alliene Tilgentor. This young disciple refused to admit the citizens of Ilien cared nothing for the Goddess of the Sea, and began taking the teachings of Nesirie to the streets of the River Ward. Alliene's impassioned beliefs brought many of her fellow priests back from the brink of desperation, giving them the new hope and confidence the Eastern Temple needed to survive. The Eastern Temple of Nesirie is a level 3 temple holding under the control of the Council of Nesirie headed by\_Priestess Crennia Ylian (FA; Pr8; An, tainted, 11) and the Council of Seven including Alliene Tilgentor.\n\nThe Eastern Temple has strong ties to the trading community, and many merchants and mariners leave large offerings to Nesirie for her protection while traveling through the Straits of Aerele and the seas beyond. Even the guildlord el-Hadid contributes vast amounts of gold regularly to the Eastern Temple to insure the Lady of Mourning's protection. Though the faithful of the Eastern Temple of Nesirie are fewer than those of the Impregnable Heart, they have great influence in Ilien's large commerce network. Since the Heart concentrates its efforts with the nobility and rich in the castle ward, the Eastern Temple is the spiritual home of the poor and those finding themselves in hard times. New immigrants to the city have been increasing and the majority of them are counted among the poor."
+  id: 'organization:the-eastern-temple-of-nesirie'
 - type: Organization
   name: The Golden Plumes
   description: "The Golden Plumes have been fiercely loyal to the regent of Ilien since their founding in 531 MR. Warriors of the Plumes are highly skilled fighters and archers who are feared by criminals and praised by the folk they've sworn to protect. For the common soldier, there is no greater honor than to become a member of this corps. Nine skilled warriors of the Golden Plumes are chosen to be the personal guard of the Count of Ilien when he is outside the castle. The Golden Plumes are led by\_General Wynn Zoest (MA; F6; An, tainted, 10), an aged veteran of the Guard Watch of nearly 40 years. General Zoest reports only to Chamberlain Ja'teem, the Lord Mayor, and Ilien's regent. Should the Free City ever be under siege, Zoest would be command- ing the city's defenses."
+  id: 'organization:the-golden-plumes'
 - type: Organization
   name: The House Bellamie
   description: >-
@@ -397,6 +443,7 @@
     Bellamies to change allegiances to his domain, an act that would certainly
     provoke a major war. He is offering to give the Bellamies rule of additional
     provinces if they come over to his side.
+  id: 'organization:the-house-bellamie'
 - type: Organization
   name: The House Isilviere
   description: >-
@@ -414,11 +461,14 @@
     become a great outdoorsman in his leisure time. Vaesin was Derian's only
     son, and he has four sons of his own, plus no less than a dozen
     grandchildren. His son Daerin has only recently come to rule Fairfield.
+  id: 'organization:the-house-isilviere'
 - type: Organization
   name: The House Roesone
   description: "The baron's line is descended from Daen Roesone, the Black Baron. Daen Roesone built a kingdom with his courage and his wits, and lived to pass it on to his heirs - one of the rarest and most difficult feats of statesmanship.\n\nThe House Roesone now consists of anyone directly descended from Daen Roesone. The direct descendent of Roesone's oldest child is the baron by virtue of senior rank; all other members of the house are lords or ladies.\n\n**The Family Today**: The oldest Roesone living today is Darliene, the Black Baron's daughter who was married to the Bellamie family. She is a spry 78 years of age; she inherited some part of her father's indomitable will and carefully watches over her son Sedrie's management of the county of Bellamie.\n\nRaederic Roesone (MA; Fl; Br, major, 24), the brother of Teried, and his wife Marsiye are the uncle and aunt of Marlae. If something should happen to both the baron and the baron's brother Daenal, Raederic is third in line for the throne. Raederic lives comfortably on a spacious ranch in central Edlin; he appears to have no aspirations to the throne. His daughter is\_Shielin (FA; F3; Br, major, 24), cousin to the baron. She is a beautiful young woman with a crusader's fire, constantly involving herself in issue after issue.\n\nThe black sheep of the Roesone line is the bastard son of Raemel, the Black Baron's first son. His mother is not known, but it is suspected that she was a servant in Raemel's household. Arvuor (MA; Fl; Br, tainted, 12) is a seasoned adventurer who has had to fend for himself for many years; his father was murdered when he was only five years old, and no Roesone was anxious to look after Raemel's indiscretion. Arvuor currently holds the title of Lord of Cariemas, one of Raemel's old titles that he assumed without challenge.\n\nLast but not least, Marlae has a younger brother by the name of Daenal (MA; F/Tl; Br, major, 24) who is the heir apparent until the reigning baron produces a legitimate child. Daenal is an excitable fellow with a short attention span; he likes to travel and often disappears from sight for weeks at a time. His title, Lord of Highglen, is reserved for the heir apparent.\n\n**The Roesone Bloodline**: The Black Baron's descendants have inherited a major bloodline derived from the goddess Brenna. This probably predates Daen Roesone's birth, but it's also possible that he activated or enhanced the bloodline by forging his kingdom. Several members of the family have manifested abilities tied with Brenna's blood, such as the ability to speak with cats or see through their eyes."
+  id: 'organization:the-house-roesone'
 - type: Organization
   name: Ilien
+  id: 'organization:ilien'
 - type: Organization
   name: The Impregnable Heart of Haelyn
   description: >-
@@ -503,6 +553,7 @@
     There are also several monasteries hidden in the most inaccessible reaches
     of Roesone, where the cloistered priests of Haelyn withdraw for silence and
     contemplation.
+  id: 'organization:the-impregnable-heart-of-haelyn'
 - type: Organization
   name: The Port of Call Exchange
   description: >-
@@ -534,6 +585,7 @@
     relationship, with the well-being of the domain hanging in the balance. But
     even though some of el-Hadid's dealings are suspected of being felonious,
     much of what he does is well within the law.
+  id: 'organization:the-port-of-call-exchange'
 - type: Organization
   name: The Spider River Traders
   description: >-
@@ -543,6 +595,7 @@
     Spiderfell's wood made it a very profitable venture. Siele's father expanded
     the guild to include the bargemen of the upper Spider, and handed a network
     of interests and investments to her when he retired.
+  id: 'organization:the-spider-river-traders'
 - type: Character
   name: Adash Cedrune
   description: >-
@@ -558,6 +611,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:adash-cedrune'
 - type: Character
   name: Aeliran Gendril
   description: "Tennien is governed by an agent of the count named\_Aeliran Gendril (MA; F4; unblooded). Aeliran insures that the trade route remains open and good relations are kept with contacts in Roesone. Aeliran also keeps a close eye on el-Hadid's men, making sure they pay the appropriate tariffs and taxes, pay the farmers a fair price for their goods, and do not cheat or otherwise upset foreign merchants."
@@ -565,6 +619,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:aeliran-gendril'
 - type: Character
   name: Alliene Tilrentor
   description: "3rd-level Anuirean priest of Nesirie, unblooded\n\nS: D: C: I: W: Ch: AC: hp: MV: THACO: #AT: Dmg: 10 12 15 12 16 14 6 18 12 20 1 Id6\n\nEquipment: Spear +1, scale mail, holy symbol, ring of free action, potion of extra-healing\n\nSpells/Day: 4/3\n\nPreferred Spells: 1st level - cure light wounds, protection from evil, remove fear, sanctuary; 2nd level - detect charm, know alignment, obscurement\n\nDescription/History: Alliene is a fiery-spirited young woman who has brought inspiration to the Eastern Temple of Nesirie. She is a knowledgeable woman who always has something to say in the great hall. Herself being of common roots, Alliene has a special place in her heart for the simple people of Ilien. Alliene spends much of her free time in the Common Ward helping out the poor, which has made her exceedingly popular with many of the city's common factions.\n\n*   Lost mother at the age of 6 and was raised by single father\n*   Was raised among servants at the Iliens count castle\n*   She spend much of her time on the streets of the common and port ward and from earliest years learned to fight for her own\n*   She found support in Nesire faith and small temple in port ward, she learned tents of the faith and found consolation in her grief\n*   When she was a teenager the faith of Nesire in Ilien experienced crisis, she found herself much seal to fight for her faith survival\n*   She gained much experience in political maneuvers and developed very sharp tongue, despite her age she also gained some aura majesty and authority\_\n*   She is extremely energetic and industrious person, and is often torn between compassion and ruthlessness\n*   She is a woman behind a woman in the Iliens temple of Nesire, a respected priest without formal authority over temple but in practice dictating temple stance and politics. And everything at the age of 25 - before her father became count of ilien\n*   She grown up to become beautiful woman but find it hard to form a romantic relation - for which she is looking forward but without much hurry\n*   She is from time to time strut by melancholy and bouts of dark humorous"
@@ -574,6 +629,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:alliene-tilrentor'
 - type: Character
   name: Altaweir Enlien
   nicknames:
@@ -581,6 +637,7 @@
   relations: []
   positions: []
   location: 'domain:medoere'
+  id: 'character:altaweir-enlien'
 - type: Character
   name: Ansen Lermael
   description: >-
@@ -595,6 +652,7 @@
       description: He is completely dependent on his secretary
   positions: []
   location: 'province:abbatour'
+  id: 'character:ansen-lermael'
 - type: Character
   name: Arron Vaumel
   description: "Arron Vaumel (MA; T5; Br, minor, 17; NE), a scheming little wretch, seems more interested in personal gain than in serving as Governor of Mieres. Unfortunately for him, his domain lies across the Straits of Aerele from the Anuirean mainland. That's nowhere near the center of politics, so he spends his time plotting ever-greater control over his lands. Vaumel completely controls guild activity in\_ Mieres. He brooks no competitors for the gold the network brings him; those who try opposing him usually wash up sooner or later on the former colony's sandy shores. The governor feels less than concerned about the law; everyone knows that if they try anything, his squad of thugs will make examples of them.\n\nThe Prince of Avanil has the governor's sworn fealty. Darien Avan occasionally sends troops down to make sure Vaumel is not involved in any dishonest or illegal schemes—but of course, Mieres's regent always stays one step ahead, cleaning up his act (and his territory) before the investigators arrive.\n\n*   **Lieutenants**: Vaumel does not trust anyone enough to use as a lieutenant. Even his own children can not gain his confidence, so they, like everyone else, plot behind his back to seize control of the domain. One day he might rely on someone, though doing so could prove his downfall. Still, his bureaucracy takes care of day-to-day matters for him (and they're as corrupt a bunch as one cares to meet).  \n    Those who don't know the correct people to bribe or the right way to deliver a payoff can forget about getting anything done here."
@@ -603,6 +661,7 @@
   relations: []
   positions: []
   location: 'domain:mieres'
+  id: 'character:arron-vaumel'
 - type: Character
   name: Barel Hestean
   description: >-
@@ -644,6 +703,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:barel-hestean'
 - type: Character
   name: Beldere Enderaine
   description: >-
@@ -661,6 +721,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:beldere-enderaine'
 - type: Character
   name: Blaese Virtol
   description: >-
@@ -670,6 +731,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:blaese-virtol'
 - type: Character
   name: Braedonnal Tuare
   description: >-
@@ -684,6 +746,7 @@
       target: 'person:laela-flaertes'
   positions: []
   location: 'domain:tuornen'
+  id: 'character:braedonnal-tuare'
 - type: Character
   name: Calder Moroe
   description: >-
@@ -699,6 +762,7 @@
         tell what
   positions: []
   location: 'province:abbatour'
+  id: 'character:calder-moroe'
 - type: Character
   name: Cesare Cabiliano
   description: >-
@@ -718,6 +782,7 @@
         and his strength
   positions: []
   location: 'province:abbatour'
+  id: 'character:cesare-cabiliano'
 - type: Character
   name: Chylae Naentas
   description: >-
@@ -736,6 +801,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:chylae-naentas'
 - type: Character
   name: Conor Ja'teem
   description: >-
@@ -750,6 +816,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:conor-jateem'
 - type: Character
   name: Crennia Ylian
   description: "The Eastern Temple of Nesirie is a level 3 temple holding under the control of the Council of Nesirie headed by\_Priestess Crennia Ylian (FA; Pr8; An, tainted, 11) and the Council of Seven including Alliene Tilgentor."
@@ -758,6 +825,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:crennia-ylian'
 - type: Character
   name: Cur Kaldish
   description: "Crimes like shoplifting and petty theft are controlled through the efforts of\_Constable Cur Kaldish (MV; F5; unblooded), a huge man of Vos ancestry. Cur's network of rogues and spies keep him updated on illegal activities in the Market Ward and much of the rest of the Free City. The Constable's oftentimes harsh sense of justice is an excellent deterrent to crime, though it is somewhat of a ruse. Cur is really a kind and caring man, and can often be seen giving beggars and the homeless a crown or two."
@@ -766,6 +834,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:cur-kaldish'
 - type: Character
   name: Curan Ondier
   description: >-
@@ -813,6 +882,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:curan-ondier'
 - type: Character
   name: Daeric Mhoried
   description: >-
@@ -844,6 +914,7 @@
       target: 'person:michael-mhoried'
   positions: []
   location: 'domain:mhoried'
+  id: 'character:daeric-mhoried'
 - type: Character
   name: Darien Avan
   description: >-
@@ -867,6 +938,7 @@
   relations: []
   positions: []
   location: 'domain:avanil'
+  id: 'character:darien-avan'
 - type: Character
   name: Delvin Boria
   description: >-
@@ -883,6 +955,7 @@
       description: He has a crush on Cesare Cabiliano
   positions: []
   location: 'province:abbatour'
+  id: 'character:delvin-boria'
 - type: Character
   name: Dheraene Bhailie
   description: >-
@@ -897,6 +970,7 @@
       target: 'person:darien-avan'
   positions: []
   location: 'domain:avanil'
+  id: 'character:dheraene-bhailie'
 - type: Character
   name: Dietric Deuter
   description: >-
@@ -920,6 +994,7 @@
         more intimate relationship with her
   positions: []
   location: 'province:abbatour'
+  id: 'character:dietric-deuter'
 - type: Character
   name: Droene Eradiel
   description: >-
@@ -930,6 +1005,7 @@
   relations: []
   positions: []
   location: 'province:abbatour'
+  id: 'character:droene-eradiel'
 - type: Character
   name: El-Hadid
   description: >-
@@ -1008,6 +1084,7 @@
       name: Guildlord
       organization: 'organization:port-of-call-exchange'
   location: 'domain:ilien'
+  id: 'character:el-hadid'
 - type: Character
   name: Elenir Goerin
   nicknames:
@@ -1015,6 +1092,7 @@
   relations: []
   positions: []
   location: 'domain:medoere'
+  id: 'character:elenir-goerin'
 - type: Character
   name: Erin ...
   nicknames:
@@ -1022,6 +1100,7 @@
   relations: []
   positions: []
   location: 'province:abbatour'
+  id: 'character:erin'
 - type: Character
   name: Erin Manero
   nicknames:
@@ -1029,6 +1108,7 @@
   relations: []
   positions: []
   location: 'province:abbatour'
+  id: 'character:erin-manero'
 - type: Character
   name: Francesco Labiano
   description: >-
@@ -1048,6 +1128,7 @@
       description: Hates Father Thuer because he blocks arrival of Imperial Temple priests
   positions: []
   location: 'province:abbatour'
+  id: 'character:francesco-labiano'
 - type: Character
   name: Gael
   description: >-
@@ -1071,6 +1152,7 @@
         but does not like him
   positions: []
   location: 'province:abbatour'
+  id: 'character:gael'
 - type: Character
   name: Gavin Tael
   description: >-
@@ -1094,6 +1176,7 @@
   relations: []
   positions: []
   location: 'domain:ghoere'
+  id: 'character:gavin-tael'
 - type: Character
   name: Gilberto Garetto
   description: >-
@@ -1114,6 +1197,7 @@
       description: Controls The logging company leg-breaker and lesser thugs
   positions: []
   location: 'province:abbatour'
+  id: 'character:gilberto-garetto'
 - type: Character
   name: Giuseppe Tarel
   description: >-
@@ -1137,6 +1221,7 @@
       organization: Delvin Boria
       description: Sometimes collaborates sometime clashes with The Ship Capitan
   location: 'province:abbatour'
+  id: 'character:giuseppe-tarel'
 - type: Character
   name: Heirl Diem
   description: >-
@@ -1171,12 +1256,14 @@
       target: 'person:lasica-diem'
   positions: []
   location: 'domain:diemed'
+  id: 'character:heirl-diem'
 - type: Character
   name: Hermedhie
   nicknames: []
   relations: []
   positions: []
   location: 'domain:medoere'
+  id: 'character:hermedhie'
 - type: Character
   name: Hubaere Armiendin
   description: "The disciples of Haelyn in the Free City of Ilien answer to the\_High Prefect Hubaere Armiendin (MA; P11; Re, major, 27), the most powerful Haelynite in the realms of Ilien, Roesone, and Medoere. The High Prefect is often sought as a diplomatic mediator between rival lords in major disputes."
@@ -1185,6 +1272,7 @@
   relations: []
   positions: []
   location: 'region:southern-coast'
+  id: 'character:hubaere-armiendin'
 - type: Character
   name: Jonathan Miechale
   description: >-
@@ -1200,6 +1288,7 @@
       target: 'person:gavin-tael'
   positions: []
   location: 'domain:ghoere'
+  id: 'character:jonathan-miechale'
 - type: Character
   name: Karina
   description: Anuerian woman in her early thirties.
@@ -1211,6 +1300,7 @@
       target: 'person:dunmro'
   positions: []
   location: 'province:abbatour'
+  id: 'character:karina'
 - type: Character
   name: Kathaen Abeth
   description: "The current chancellors are\_Kathaen Abeth (MA; T3; unblooded), Minister of Trade"
@@ -1219,6 +1309,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:kathaen-abeth'
 - type: Character
   name: Klon Malcene
   description: "Peace is kept by the Guard Watch of the River Ward under the supervision of\_Constable Klon Malcene (MA; F4; unblooded), and it is a difficult job indeed."
@@ -1227,6 +1318,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:klon-malcene'
 - type: Character
   name: Konour
   description: >-
@@ -1241,6 +1333,7 @@
   relations: []
   positions: []
   location: 'domain:medoere'
+  id: 'character:konour'
 - type: Character
   name: Kotrin Skirvin
   nicknames:
@@ -1248,6 +1341,7 @@
   relations: []
   positions: []
   location: 'domain:medoere'
+  id: 'character:kotrin-skirvin'
 - type: Character
   name: Laela Flaertes
   description: >-
@@ -1264,6 +1358,7 @@
   relations: []
   positions: []
   location: 'domain:tuornen'
+  id: 'character:laela-flaertes'
 - type: Character
   name: Lasica Diem
   description: 'Lasica (FA; W5;Br, major, 42; LN)'
@@ -1271,6 +1366,7 @@
   relations: []
   positions: []
   location: 'domain:diemed'
+  id: 'character:lasica-diem'
 - type: Character
   name: Lia Hohen
   description: >-
@@ -1281,6 +1377,7 @@
   relations: []
   positions: []
   location: 'province:abbatour'
+  id: 'character:lia-hohen'
 - type: Character
   name: Liliene Swordwraith
   description: "An indirect descendant of Roele, Liliene Swordwraith (FA; R10; An, major, 31; NG), is Queen of Aerenwe. She rose from obscurity in one of the forgotten towns of the domain, winning the favor of the people away from the harsh king before her. Eventually, she deposed the tyrant and forced the kingdom into modern times.\n\nThe aged queen has the absolute loyalty of her people, and they're all willing to give their lives in defense of her kingdom. If she asked, they would march into even the Gorgon's lair. However, she has no designs on expanding her kingdom; Liliene Swordwraith and her people-feel content with their corner of the land.\n\n*   **Lieutenants**: The queen places much of the burden of rulership on her two advisers, twins named Cole and Cale Alwier. The two 4th-tevel half-elf fighter-mages left the safety of the Aelvinnwode to follow the regent back to\_ Aerenwe. The queen trusts them implicitly, and some say the two of them have begin running the kingdom for years now. They also provide some aid to the embattled Baroness of Roesone against Diemed's incursions, for a reason known only to the three of them,"
@@ -1289,6 +1386,7 @@
   relations: []
   positions: []
   location: 'domain:aerenwe'
+  id: 'character:liliene-swordwraith'
 - type: Character
   name: Londael Gant
   description: >-
@@ -1304,6 +1402,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:londael-gant'
 - type: Character
   name: Lucia Arele
   description: >-
@@ -1317,6 +1416,7 @@
       target: 'person:trevan-arele'
   positions: []
   location: 'province:abbatour'
+  id: 'character:lucia-arele'
 - type: Character
   name: Maele Dis
   description: >-
@@ -1344,6 +1444,7 @@
         representative but in fact ignores him
   positions: []
   location: 'province:abbatour'
+  id: 'character:maele-dis'
 - type: Character
   name: Marlae Roesone
   description: >-
@@ -1366,6 +1467,7 @@
   relations: []
   positions: []
   location: 'domain:roesone'
+  id: 'character:marlae-roesone'
 - type: Character
   name: Michael Mhoried
   description: >-
@@ -1377,6 +1479,7 @@
   relations: []
   positions: []
   location: 'domain:mhoried'
+  id: 'character:michael-mhoried'
 - type: Character
   name: Molien Darest
   description: "The fanatic priest-superior\_Patriarch Molien Darest (MA; P5; Re, minor, 11) leads the community, and a full dozen celestial marshals serve as his lieutenants. In addition to the monastery and dormitories, a small keep overlooks the compound. The trade road that leads to Alamier runs past the town, but few merchants stop here. The community has a shroud of purpose hanging over it that is too intense for those who aren't a part of it - the town is in a state of readiness for war. Darest keeps his warrior-priests in battle condition, inspiring them with sermons designed to hone them to a fever pitch. Lady Suris believed that this was the best place for Darest and his order, but such a powerful weapon should be watched closely and kept on a short chain."
@@ -1385,6 +1488,7 @@
   relations: []
   positions: []
   location: 'domain:medoere'
+  id: 'character:molien-darest'
 - type: Character
   name: Molreyn Perium III
   description: "This inn is known for the nightly performances of\_Molreyn Perium III (MA; B7; unblooded), an aging bard who has played his lute for more than two dozen regents across Cerilia. Molreyn ended his traveling days following a goblin attack that cost him full use of his right leg, and chose Caette as his retirement home. Many say Molreyn's music is the most beautiful in all Anuire, and for this reason alone there is not often an empty seat to be found in the Lonely Traveler on any given night."
@@ -1392,6 +1496,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:molreyn-perium-iii'
 - type: Character
   name: Moro Mentier
   description: >-
@@ -1402,6 +1507,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:moro-mentier'
 - type: Character
   name: Norvien Hanard
   description: >-
@@ -1417,6 +1523,7 @@
       description: Gives commands to The logging company enforcers boss
   positions: []
   location: 'province:abbatour'
+  id: 'character:norvien-hanard'
 - type: Character
   name: Nunziena Opalodakis
   description: >-
@@ -1427,6 +1534,7 @@
   relations: []
   positions: []
   location: 'province:abbatour'
+  id: 'character:nunziena-opalodakis'
 - type: Character
   name: Onwen Faerle
   description: >-
@@ -1448,6 +1556,7 @@
       description: Gets orders from Orthien Thane throught his delegate but resent him.
   positions: []
   location: 'province:abbatour'
+  id: 'character:onwen-faerle'
 - type: Character
   name: Parkel Dargon
   description: >-
@@ -1460,6 +1569,7 @@
   relations: []
   positions: []
   location: 'domain:medoere'
+  id: 'character:parkel-dargon'
 - type: Character
   name: Parniel Moroe
   description: >-
@@ -1469,6 +1579,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:parniel-moroe'
 - type: Character
   name: Raederic Roesone
   description: >-
@@ -1481,6 +1592,7 @@
   relations: []
   positions: []
   location: 'domain:roesone'
+  id: 'character:raederic-roesone'
 - type: Character
   name: Roannea Urdaen
   description: "The Market Ward is overseen by\_Roannea Urdaen (FA; W1; unblooded), the only female chamberlain in the Free City. Roannea is a former student of Moeran's, but as she is not a blooded scion she can never wield true magic. Having a keen mind and firm loyalties, she was given the position of chamberlain.\_The Seadrake is suspected in the disappearance of her predecessor, as he never returned from a trip to Aenier along the Straits of Aerele."
@@ -1489,6 +1601,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:roannea-urdaen'
 - type: Character
   name: Rogr Aglondier
   description: "Rogr Aglondier (MA; W3; Ma, minor, 21; NG) was an exceptional commoner once, a trusted adviser and apprentice to the blooded count before him, Moeran Aglondier. However, he did not descend from the ancient bloodlines. Rogr never felt so astonished as the morning he woke up to discover he had inherited the old man's bloodline, his royal name, and the Free County of Ilien. The count rules Ilien wisely and well, doing his best not to make the mistakes of the regents around him. Neither ambitious nor proud, he's willing to admit his faults. His people enthusiastically support him, for he keeps their loyalty high and their taxes low. Aglondier claims Ilien is neutral, a statement that strays a bit from the truth. He's good friends with the rulers from both Medoere and Roesone—without their tolerance, his domain wouldn't exist. Still, the nonpartisan illusion persists, so other rulers use the Free County of Ilien as a neutral meeting spot; regents have forged numerous treaties there.\n\n*   Lieutenants: Despite his many good qualities, Aglondier isn't really the trusting sort. His only lieutenant is his daughter and heir, the Lady Alliene (FA; Pr3, Nesirie; CG). Together, the two can react to nearly any emergency that arises in the kingdom.\n\n3rd-level Anuirean Wizard\n\nS: 14\n\nD: 14\n\nC: 11\n\nI: 16\n\nW: 14\n\nCh: 16\n\nBloodline: Masela, minor, 21\n\nBlood Abilities: Detect lie, enhanced sense (major ability; see rule book)\n\nEquipment: Robes, quarterstaff +2\n\nSpells/Day: 2/1\n\nPreferred Spells: 1st level—charm person, sleep;\n\n2nd level—stinking cloud\n\nDescription/History: Rogr Tilgentor has been the apprentice, supporter and friend of Moeran Aglondier for the past decade. Rogr was a com- moner, fascinated by magic, when he met the Count and became his pupil. He studied magic, though as an unblooded human had no chance of rising far in the ranks of true magic spellcasting. Moeran took him as an apprentice, and having no other family, made plans to pass the regency on to Rogr. Now, with Moeran's untimely death, the fledgling Rogr is thrust into the regency of Ilien unexpectedly.\n\nRogr is an extremely intelligent individual, and the power he possesses coupled with the teachings of the old Count and his own growing skill makes him a formidable ruler. Rogr is the only known wizard in Ilien.\n\nRogr is a widower, his wife having died during the birth of his daughter Alliene. Alliene is a member of the Eastern Temple of Nesirie, and Rogr's only trusted lieutenant.\n\nThe suspected assassination of Moeran has unnerved the new regent of the land. Despite the assurances of Seneschal Godene, Rogr remains extremely paranoid about a potential assassin loose in the Free City.\n\n*   Rogr was born as a son of simple craftsman and had fairly rough childhood\n*   He shown signs of great intellect was educated on the Moeran Aglondier stipend, and in time bacome clerk, apprentice, advisor and friend of count\n*   He became father early - at 17 and widower at 23\_\n*   In his magic he is great at practice - he is able to perform spell perfectly after reading it-s description once - but not so great at theory, abstraction and synthesis.\n*   He have a talent to combine magical and mundane means and knack for finding solutions that most mages would not think of.\n*   He see himself as a servant of the people of Ilien and legacy of Aglondier counts, he will ignore personal attacks but fight fierce when city is threatened\n*   He is not accustomed to political maneuvering, he knows it happen but until recently he was focusing on finding best solutions not making them pass amid resistance\n*   He likes cooking and do not think to stop even when he is a count\n*   He was accustomed to work directly with the count and do not know who of the numerous advisors and officials can he trust and with what\n*   He often wears old hat - a gift from late wife - as remembrance of her - even when it is not very fitting occasion"
@@ -1503,6 +1616,7 @@
       name: regent
       organization: 'domain:ilien'
   location: 'domain:ilien'
+  id: 'character:rogr-aglondier'
 - type: Character
   name: Sami Lehmann
   description: >-
@@ -1521,6 +1635,7 @@
       description: As a cleric of Eloele plots to undermine the Father Thuer position
   positions: []
   location: 'province:abbatour'
+  id: 'character:sami-lehmann'
 - type: Character
   name: Shaemes Legwine
   description: >-
@@ -1548,6 +1663,7 @@
   relations: []
   positions: []
   location: 'province:abbatour'
+  id: 'character:shaemes-legwine'
 - type: Character
   name: Shielin Roesone
   description: >-
@@ -1558,6 +1674,7 @@
   relations: []
   positions: []
   location: 'domain:roesone'
+  id: 'character:shielin-roesone'
 - type: Character
   name: Sonya Yukolevic
   description: "*   A young Vos scion of ancient Yukolevic bloodline\n*   Average height, average build, medium long blond hair, no eyes - skin in place of sockets.\n*   Blessed with gift of seeing future but cursed with lack of eyesight\n*   Lost mother to plague that struck Ilien few years ago\n*   Isolated from wider community of Ilien and inside Vos sub-community treated with reverence but also with distance\n*   Always had knowledge that mother and grandmother may be watching her every move\n*   Had limited ability to see in space and time\n*   Many times ability to predict future made her re-live unpleasant moments time and time again\n*   With full force of Yukolevic bloodline she now can see far and wide but still have to discover limits of her abilities\n*   The precision of vision is directly proportional to difficult to change\_prophesied outcome\n*   There are also other dangers of looking far and wide still unknown to Sonya\n\n# Blood Powers\n\n*   Blind-sight 120 ft,\n*   Advantage to Dex, Int, Wis, Cha, checks and saving throws, and disadvantage to attacks against.\n*   Limited ability to \"see\" distant present, past or future, to share visions with others and to divine the destiny.\n\nYukolevic Curse\n\nThe Yukolevics was ancient Vos seers and archmages - they was seduced by the shadow by the promise of even more power and insight but betrayed the Shadow just before the final battle taking valuable knowledge and artifacts with them - or perhaps they siding with him was deception from the start.\n\nAzrai cursed them saying none of them will see the light of the following day - they managed to deflect it by sacrificing they sight but replacing it with heightened magical senses.\n\nAzrai cursed them again saying that there will be no more Yukolevics ever - they asked Voryn for help and he managed to use wording of the curse to state that there will be no more male Yukolevics\n\nAzray did not curse them third time buy sent his minions to kill them all promising great prize for this deed - they died, and died and eventually they crafted spell to protect a last of them - woman pregnant with child - sacrificing the remaining member of the house in process\n\nThe Shadow is no more but his minions still hunt with a sight on the promised prize - ant the spell is still working - but can effectively protect only two Yukolevics - usually mother and daughter"
@@ -1565,6 +1682,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:sonya-yukolevic'
 - type: Character
   name: Suris Enlien
   description: "The Archpriest of Ruornil's Celestial Spell, Suris Enlien (FA; Pr4, Ruornil; Re, major, 32; NG) keeps a close watch over this land, controlling her theocracy with a velvet fist. Unfortunately, her control is not as absolute as she would like, so she enforces her edicts a little more harshly than she should.\n\nAs a priestess of the god of moon and magic, Enlien spends most of her days abed and works under the moon at night. Therefore she takes care of most of her courtly work at night also, giving her capital city of Braeme a different schedule than the rest of the kingdom.\n\n*   **Lieutenants**: The high priestess has one lieutenant, the commander of Medoere's tiny army. Lord Kotrin Skirvin (MR; F3; An, minor, 18; CG) has a\_ little blood of his own, so the regent keeps a close eye on him, knowing that his ambition might strip away his common sense. Other than that one flaw, she has chosen her commander well, and the two see eye to eye on policy matters.\n\nSiiris Enlien, became a priestess of Ruornil, seized the provinces of Caerwil, Braeme, and Alamier from Diemed, and forged the domain of Medoere when she was only 16 years old. To stop the persecution of the followers of the Celestial Spell and save hundreds of innocents from slaughter, she was forced to kill her own father, Dalien, count of the eastern provinces. She was seen as the Moon God's Sacred Voice, and the people of the new realm adored her.\n\nIn the eight years since that fateful day, Medoere has flourished as a theocracy.\n\nOnly 24, Suris is a beautiful woman who is totally devoted to her faith and her god. She has hair as dark as night, large gray eyes, and skin the color of pale moonlight. Wispy thin and only of average height, Suris nevertheless has a presence\n\n4th-level Anuirean priest\n\nS:\n\nD:\n\nC:\n\nI:\n\nW:\n\nCh: 11\n\n12\n\n9\n\n16\n\n17\n\n17\n\nAC:\n\nhp:\n\nMV:\n\nTHACO:\n\n#AT:\n\nDmg: 8(10)\n\n22\n\n12\n\n18\n\n1\n\nld6+2\n\nBloodline: Reynir,\n\nmajor, 32\n\nBlood Abilities: Enhanced sense (minor), heal-\n\ning (minor)\n\nEquipment: ring of protection +2, footman's mace\n\n+ 1, holy symbol of quality"
@@ -1573,6 +1691,7 @@
   relations: []
   positions: []
   location: 'domain:medoere'
+  id: 'character:suris-enlien'
 - type: Character
   name: Sven Dahrmond
   description: >-
@@ -1599,6 +1718,7 @@
       target: 'person:hormund-dahrmond'
   positions: []
   location: 'province:abbatour'
+  id: 'character:sven-dahrmond'
 - type: Character
   name: Tael Brosuine
   description: >-
@@ -1627,6 +1747,7 @@
         royal captain
   positions: []
   location: 'province:abbatour'
+  id: 'character:tael-brosuine'
 - type: Character
   name: Tallow
   description: "Castle Tallow, which guards the grassland pass one mile north of the town, is commanded by\_Lord Tallow (MA; F4; unblooded) and houses 30 seasoned soldiers who have been loyal to the noble since the realm was part of Diemed. There are a number of common folk who worship at the Shrine of the Heart, a small temple dedicated to the Impregnable Heart of Haelyn, but the majority of people follow the teachings of the Celestial Spell."
@@ -1635,6 +1756,7 @@
   relations: []
   positions: []
   location: 'domain:medoere'
+  id: 'character:tallow'
 - type: Character
   name: The Seadrake
   description: >-
@@ -1766,6 +1888,7 @@
   relations: []
   positions: []
   location: 'region:southern-coast'
+  id: 'character:the-seadrake'
 - type: Character
   name: Thuer
   description: "*   A man of about 50 - high, thin, with tonsure and well combed long hair around it.\n*   A true belier and posing as blunt instrument of his God's will - underneath hides sharp intellect and pointy tongue\n*   Very experienced warrior without showing signs of his age\n*   Likes to wake up with the sun and proselytize until dusk.\n*   Thinks of Haelyn as a leader of the gods but see the place for the other gods underneath him.\n*   Thinks that if you don't follow Haelyns teaching you are simply hurting yourself\n*   Hates Ortodox Temple of Haelyn with deep fiery hate and talk about it worse than followers of Belnik and Kreiha\n*   Have a mace called Faith and a shield called Devotion with him - a\_ family heritage\n*   Is of noble origin but unbloodied and without inheritance - his family came from Mohrheid\n*   Had formal education in Imperial city of Anuerie\n\n## Relations\n\n*   Opposes The Mouse as the leader of largest whorehouse in Abbadiel and suspected cleric of some mischievous good\n*   Oposes The Woodcutters Leader against importing clerics of Ortodox Temple of Haelyn"
@@ -1774,6 +1897,7 @@
   relations: []
   positions: []
   location: 'province:abbatour'
+  id: 'character:thuer'
 - type: Character
   name: Trevan Arele
   description: >-
@@ -1784,6 +1908,7 @@
   relations: []
   positions: []
   location: 'province:abbatour'
+  id: 'character:trevan-arele'
 - type: Character
   name: Ubael
   description: >-
@@ -1794,6 +1919,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:ubael'
 - type: Character
   name: Vaesil Enderaine
   description: >-
@@ -1811,6 +1937,7 @@
       target: 'person:beldere-enderaine'
   positions: []
   location: 'domain:ilien'
+  id: 'character:vaesil-enderaine'
 - type: Character
   name: Wilhem Zweliger
   description: >-
@@ -1832,6 +1959,7 @@
       organization: 'organization:the-southern-anuire-shipping-and-imports'
       description: Formally represents organization in Abbtour
   location: 'province:abbatour'
+  id: 'character:wilhem-zweliger'
 - type: Character
   name: Wynn Zoest
   description: "The Golden Plumes are led by\_General Wynn Zoest (MA; F6; An, tainted, 10), an aged veteran of the Guard Watch of nearly 40 years. General Zoest reports only to Chamberlain Ja'teem, the Lord Mayor, and Ilien's regent. Should the Free City ever be under siege, Zoest would be commanding the city's defenses."
@@ -1840,6 +1968,7 @@
   relations: []
   positions: []
   location: 'domain:ilien'
+  id: 'character:wynn-zoest'
 - type: County
   name: Ilien
   neighbors:
@@ -1859,10 +1988,13 @@
       target: Caercas
       name: north
       description: the Spider river
+  id: 'county:ilien'
 - type: Reference
   name: Avani
+  id: 'reference:avani'
 - type: Reference
   name: Belinik
+  id: 'reference:belinik'
 - type: Reference
   name: Bloodlines
   description: >
@@ -2085,6 +2217,7 @@
 
 
     Anything that DM agrees on.
+  id: 'reference:bloodlines'
 - type: Reference
   name: Calendar
   description: >
@@ -2172,6 +2305,7 @@
     | -1488 | -515 | 0 |
 
     | 551MR | 1524 | 2039 |
+  id: 'reference:calendar'
 - type: Reference
   name: Character Options
   description: >
@@ -2220,18 +2354,25 @@
     options](http://media.wizards.com/2017/dnd/downloads/20170213_Wizrd_Wrlck_UAv2_i48nf.pdf)
 
     * [Feats](http://media.wizards.com/2016/downloads/DND/UA-Feats-V1.pdf)
+  id: 'reference:character-options'
 - type: Reference
   name: Cuiraecen
+  id: 'reference:cuiraecen'
 - type: Reference
   name: Eloele
+  id: 'reference:eloele'
 - type: Reference
   name: Erik
+  id: 'reference:erik'
 - type: Reference
   name: Gods
+  id: 'reference:gods'
 - type: Reference
   name: Kriesha
+  id: 'reference:kriesha'
 - type: Reference
   name: Laerme
+  id: 'reference:laerme'
 - type: Reference
   name: Languages
   description: >
@@ -2287,8 +2428,10 @@
     *   Druidic
 
     *   Ancient Vos
+  id: 'reference:languages'
 - type: Reference
   name: Nesirie
+  id: 'reference:nesirie'
 - type: Reference
   name: Races
   description: |
@@ -2314,14 +2457,18 @@
     *   Gnome
     *   Tiefling
     *   Dragonborn
+  id: 'reference:races'
 - type: Reference
   name: Ruornil
+  id: 'reference:ruornil'
 - type: Reference
   name: Sera
+  id: 'reference:sera'
 - type: Session
   date: '2015-10-01T22:00:00.000Z'
   name: Session 1
   description: "# 28.07.1524 HC\n## Around Noon - Ilien River Ward\nHormund Dahrmond and Ormus Al-Hazred disembarked from ships in Ilien County port and had gone through customs.\n## Early Afternoon - Ilien River Ward\nHormund Dahrmond was target of pickpockets in the prot but captured one rascal and forced him to be his guide around the town.\n## Early Afternoon - Ilien Common Ward\nGuide led Hormund Dahrmond deep into the town and escaped. He was noticed by\_Carel Borno and invited for a meal.\n## Afternoon - Non-descriptive pub in Ilien Common Ward\nDuring a meal Carel Borno sprinkled Hormund Dahrmond meal with sedative but Hormund did not show any signs of sleepiness.\n## Afternoon - Ilien Common Ward\nPromising to guide him to his destination Carel Borno lead Hormund Dahrmond to a dark alley where Borno comrades beat Hormund unconscious.\n## Early Afternoon - The Port Of Call Exchange Headquarter in Ilien River Ward\nOrmus Al-Hazred went to the Port Of Call Exchange Headquarter to find out his cousin (twice removed) Malik Al-Hazred.\nHe get to know Ahmed - an Anuirean man who tried to imitate customs of Khinasi to suck-up to his masters at The Port and failed miserably at that imitation.\nThen he met Blaese Virtol anuirean woman who was much better Khinasi speeker than Ahmed, did not try to imitate anybody, was much better trader and provided Ormus with valueable information about the city.\nOrmus tried to pay back by beguiling next client to buy something from the woman, he failed but his attempt went unnoticed.\n## Afternoon - The Siren's Head Tavern in Ilien Market Ward\nFollowing advice from Blaese Virtol, Ormus Al-Hazred ate dinner at The Siren's Head Tavern - upstanding establishment that specialized with fish and seafood.\nAfter leaving the tavern he was greeted by messenger who told him that his cousin Malik is expecting him.\n## Afternoon - Ilien Common Ward\nThe messenger led Ormus Al-Hazred to a house in common wars.\nHe was slightly suspicious but went in where he was attacked by unknown assailants.\nHe was almost able to escape to the street but was subdued at the last moment.\n## After Dusk - Warehouse in Ilien River Ward\nHormund Dahrmond and Ormus Al-Hazred found themselves bound - and in case of Ormus gagged - in some warehouse near the water.\nThere was another man Vaesil Enderaine held together with them.\nThey heard their captors talking in Vos language none of them known but they also managed to listen to conversation between Vos and Carel Borno from which they learned the boat to take them will arrive next day.\nThey manage to escape their bounds, force open boards blocking the window and escape jumping into port's waters.\nThey were pursued by their captors, Vaesil Enderaine split from them and escaped on his own, when they almost reached city guard post the pursuers caught up with them.\nOrmus ran to the guard post while Hormund tried to delay the pursuer, he was badly outmatched but his adversary backed of when he noticed that Ormus reached the guards.    \n"
+  id: 'session:session-1'
 - type: Session
   date: '2016-06-18T22:00:00.000Z'
   name: Session 10
@@ -2382,25 +2529,30 @@
     with their champion.
 
     The champion turned out to be mountain of a man but Hormund won easily.
+  id: 'session:session-10'
 - type: Session
   date: '2016-07-02T22:00:00.000Z'
   name: Session 11
   description: "\n# 05.08.1524 HC\n## Evening - Port in Abbadiel\nOrmus, Hormund and Dunmro helped to take fallen Hormund adversary back to his ship.\nThey went to the Syren's Tail and asked for Shaemas.\nThe storm broke and they looked for Shaemas in the downpour.\nThey visited another tavern and ate fish for supper.\nThey met the Port Master and got information that Shaemas have some kind of hut in the warehouse district.\n## Evening - Warehouse District in  Abbadiel\nOrmus, Hormund and Dunmro looked and asked for Shaemas for sometime and eventually he found them.\nHe guided them to his hut and shared the news about **The Scrolls of Taegas** with Dunmro\n# 06.08.1524 HC\n## Morning - The Haelyn Temple in Abbadiel\nDunmro went to The Haelyn Temple and meet Father Thruer.\nThe cleric greeted his brother and invited him for a tour of the city.\n## Morning - Abbadiel\nDunmro and Father Thruer visited the fishermen quarter, the marketplace, the main street, the woodcutters quarter and got back to the warehouse district.\n## Morning - Abbadiel\nHormund went to the marketplace to buy a hare and then went to the temple hill and baited a falcon wit his hare.\nHe asked the falcon to deliver a message to Ilien in exchange for a hare and one  more when he will get back.\nHormund went to the marketplace to buy a second hare and waited for the falcon to get back on a temple hill slope.\n## Morning - Port in Abbadiel\nOrmus went to the port to talk with the Port Master.\nHe found Port Master's wife in Port Master's office.\nFrom the woman he got information that port master is resolving some argument in the port.\nHe observer as the port master administers some compromise leaving both parties unhappy with it.\nOrmus approached the port master and talked with him about the logging company.\nThey noticed that new ship arrived and disembarked a group of people who looked like they swam recently with their clothes on.\nA woman from the group approached the port master and related a tale - their badge was attacked by goblins, another ship approached, chased out the goblins and people from the ship sunk the barge.\nThe captain of the ship joined conversation stressing out that the ship was sunk by goblins and it would be best for everybody to understand that.\nThe woman insisted that the barge was sunk by the ship's crew and went to the Port Master's office to write down her testimony.\n## Afternoon - The Haelyn Temple in Abbadiel\nOrmus met Father Thruer and Dunmro on the slope of temple hill and they went for a meal together in the vicarage behind the temple.\nOrmus related the events from the port and Dunmro recognized the woman from the ship as his wife.\n## Afternoon - Port in Abbadiel\nDunmro and Ormus went to the port taking Hormund with them.\nFrom port master's wife they got information that the Dunmro's wife went with Port Master to deliver accusation to the magistrate.\n## Afternoon - Main Street in Abbadiel\nDunmro, Hormund and Ormus met the wife and Port Master on thew way to the magistrate and got information that Magistrate Secretary sent them away.\n## Afternoon - Magistrate Building in Abbadiel\nDunmro, Dunmro's Wife, Hormund and Ormus went to the magistrate but were also sent away by the Magistrate Secretary.\nOrmus used his magic to enlist the involuntary help of the secretary.\nThey filed charges against the ship captain.\n## Afternoon - Abbadiel\nDunmro, Hormund and Ormus were looking for the ship captain.\nThey checked Port Master's office then The Southern Anuire Shipping and Imports Headquarter and then the Fire.\n## Afternoon - The Fire in Abbadiel\nThe staff of the Fire was already informed who they are and what are they looking for.\nThe captain came to meet the party.\nDunmro challenged the captain to a duel.\nDespite the help from Ormus who distracted the captain with his mind voice Dunmro was defeated.\nDunmro was taken back to the Fire and healed by The Mouse - after that Father Thuer dragged him back to the temple.\nHormund challenged the captain again to duel in one hour.\n## Afternoon - The Fire in Abbadiel\nThe captain was back in hour with other captains from his band and about a hundred sailors.\nHormund easily won the duel humiliating the captain.\n## Evening - The Marketplace in Abbadiel\nOrmus bought a map from the marketplace and tried to compare it with map from goblins.\n## Evening - The Temple Hill in Abbadiel\nHormund waited for his falcon without success.\n## Evening - Shemas' Hut  in Abbadiel\nShaemas asked Hormund to beat up Cesare Cabiliano\_who was making trouble for Shaemas associates.\n## Evening - Woodcutters District in Abbadiel\nOrmus, Hormund and Shaemas found Cesare Cabiliano and Hormund challenged him to a duel.\nHormund won the duel with his enemy crying like little girl because of fractured hand.\n## Dusk - Shemas' Hut  in Abbadiel\nOrmus, Hormund and Shaemas decided to sail to Ilien to enable Shemas to buy more exotic supplies for Sven.\n## Evening - The Haelyn Temple in Abbadiel\nAfter purifying rituals Father Thuer enlisted Dunmro as his second in command in Abbadiel.\nHe demanded a promise to be more cautious and do not take other harsh steps in his wife case without consultation.\n"
+  id: 'session:session-11'
 - type: Session
   xp: 800
   date: '2016-07-29T22:00:00.000Z'
   name: Session 12
   description: "# 07.08.1524 HC - 11.08.1524 HC\n## Ilien\nOrmus persuaded El-Hadid to explore avenues to displace Orthien Thane dominant position in Abbatour.\nEl-Hadid agreed to send Malik to probe the grounds with 10 elite mercenaries as escort and operation funds of around 10 000 gp.\nHe also promised to concentrate some reinforcements in Aenier - just half hour by boat from Abbadiel.\n\nOrmus gathered information and learned that\n* The Port Of Call suffered serious losses caused by sabotage by Vaesil Endarine people during the riots.\n* Vaesil Endarine works for Orthien Thane.\n* The riots ended and situation is fairly calm now.\n* The Impregnable Heart of Haelyn lost position in city in favor of The Estern Temple of Nesirie.\nThe former incited the riots and the later helped to diffuse them.\n\nHe complemented his wardrobe. He shared the news about the rift in Erbanien and The Crow with the Count of Ilien.\nHe copied some spells from the count library.\nHe studied the Vos runes.\nHe investigated the information about the Sun Spire but did not found anything significant.\n## Ilien\nHormund notified the Count of Ilien about The Crow death.\nHe investigated political situation and found out there are a few powers that may have interest in Abbatour\n\n* The queen Aerenwe controls most of Erbanien and protect it decidedly.\n* Diemed previously controlled lands of Roesone and may want to control them again.\n* The baron of Ghoere have ambition to be an emperor and will try to conquer neighbors on the way to the throne.\n* The Baroness of Roesone may want to intervene because logging was not supported by any of her predecessors and lack of control in province make her appear weak.\n\nHe also gathered information about three main merchant guilds in the area\n\n* The Spider River Traders thought to be most honest and well meaning but also the weakest in part because it\n* The Port of Call Exchange known for dirty tricks but mostly focused on making money through legal activity.\n* The Southern Anuire Shipping and Imports acting as a facade for bandit lord Orthien Thane and his thugs.\n\n# 12.08.1524 HC\n## Ilien\nOrmus and Hormund learned that local merchant try to take back some of the market from The Port Of Call Exchange.\nOrmus and Hormund got information that pirate ship called The Vulture is attacking shipping near Ilien and that it avoids interception through some unnatural means.\nAs The Port ship was attacked, Malik asked Ormus if he could help resolve the problem.\n\nOrmus and Hormund went to the Port headquarter and to the guard barracks to gather information about the pirate ship activity.\nThey attempted\_ to get audience with the Count but was denied.\nThe Count's daughter offered some help and asked to meet at the Nesire Temple in the evening.\nOrmus and Hormund tried to get help in the Haelyn Temple but their attempt was interrupted by arrival of Michael Mhoried and his entourage that captured all attention.\nThey asked the temple to send some cleric to meet them at the guard barracks but none arrived as Michael arrival turned into full blown fete.\n\nOn the way to the temple of Nessire Ormus used spell to disrupt the livestock transport by merchants competing with the The Port Of Call Exchange.\n\nAlliene Tilrentor divined answers to their questions identifying next ship to be attacked and locating the pirate hideout on the the west end of the Isle of Tamale.\n# 13.08.1524 HC\n## Straits of Aerele\nThe Port organized hunting party of two galleys and sailing ship to hunt for The Vulture.\nOrmus and Hormund joined the crew of the sailing ship.\nHormund used his ability to look through beast eyes to scout using seagull eyes, after few hours he noticed the pirate ship and the target.\nThey pursued the pirate ship and intercepted it after pirates already pillaged their prey.\n\nThe pirate ship almost escaped due to unnatural wind but Ormus managed to stop them by burning enemy sails.\nTwo ships collided and the enemy mage directed the wind to the Port ship causing some people to fly of the deck.\nHormund was first to board enemy ship but was paralyzed by enemy mage.\nThe Guild Mercenaries managed to clear the pirate ship without breaking a sweat.\nThe enemy mage tried to escape running on top of the waves but Hormund delayed him so the mercenaries managed to shoot him dead with their crossbows.\n"
+  id: 'session:session-12'
 - type: Session
   xp: 900
   date: '2016-08-06T22:00:00.000Z'
   name: Session 13
   description: "# 13.08.1524 HC\n## Straits of Aerele\nOrmus examined the enemy magic user body while the galleys towed damaged ships back to Ilien.\n## Ilien\nThe pirates was arrested by the city guard and  Hormund got 10gp share of the prize on the pirates.\n# 14.08.1524 HC\n## Ilien\nOrmus and Hormund once again tried to get audience with the count and once again was denied.\nThey once again sabotaged livestock transfer through the city.\n## Abbadiel\nHormund traveled to Abbadiel with Shaemas.\nThey left their boat in the forest and moved to the city on foot.\nHormund prepared Shaemas hut for escape in case of fire.\n# 15.08.1524 HC\n## Morning - Abbadiel\nMalik arrived with Ormus and 10 guards.\nMalik rented whole top floor in the Inn on the market square.\nOrmus contacted Dunmro and asked for help with a plot to take over the city for The Port.\nDunmro asked Ormus about strange magical happenings on the night sky.\n## Afternoon - The Fire in Abbadiel Warehouse District\nOrmus and Hormund set up the fighting challenge.  \nOrmus persuaded the acting manager of the Fire that it will be mutually beneficial.\_\nIn the first fight the enemy was cheap and did not want to wager whole 10gp and escaped after three hits.\nIn the second fight the enemy was much tougher and after the defeat invited Hormund for a drink.\nOrmus noticed that the skin and features of the Hormund adversary are characteristic to Massetians.\nHe inquired for more details and learned that he and his compatriots are rowing a galley of somebody named El-Zseif around the area.\n## Afternoon - The Haelyn Temple in Abbadiel\nThe Fire Madamevisited and teased Dunmro.\nShe also told him that Hormund made big enemy of captain he beaten up.\n## Evening - An Inn on the Marketplace in Abbadiel\nOrmus, Malik, Dunmro and Hormund discussed situation in the city.\nOrmus and Hormund ate supper at the common room in the inn.\nThey saw new woman arrivng in town but did not approached her.\n## Evening - Warehouse District in Abbadiel\nHormund was jumped in the warehouse district by several thugs.\nHe managed to fend off all attackers.\n## Night - Warehouse District in Abbadiel\nHormund and Shaemas was attacked in Seaemas hut that was set on fire.\nThey they managed to escape hut and take one of attackers prisoner.\n## Night - Temple Hill in Abbadiel\nOrmus and Dunmro observed the magical happening in the sky.\nOrmus determined it is an active ley-line transferring huge energies east.\n"
+  id: 'session:session-13'
 - type: Session
   xp: 900
   date: '2016-09-30T22:00:00.000Z'
   name: Session 14
   description: "# 15.08.1524 HC\n## Night - An Inn on the Marketplace in Abbadiel\nHormund arrived with Shaemas and a prisioner in tow.\nHe asked Ormus to come out and interrogate captured thug in dark alley.\nThey learned that prisoner is called Fabio Meranto, son of Marco and Dia Meranto and was recruited in Diemed by Orthien Thane organization.\nQuestioning was interrupted by loud woman's scream.\nOrmus and Hormund rushed inside inn and found Erin Manero held at knife point in her room.\nOther assailants searched room for letter of office.\nMalik arrived with guards and together they manage to capture all attackers who tried to escape with letter.\nOrmus calmed down the innkeeper and requested to notify the temple and to put the unselfconscious burglars in a room back.\nOrmus, Hormund  and Malik discussed whole situation with the Erin Manero who turned out to be Tax Comptroller sent to audit the High Captain books.\nFather Thruer arrived, healed Hormund and the\_assailant in worst conditions.\nHe demanded explanations and discussed situation with Ormus, Hormund  and Malik.\nInnkeeper was furious because one of his rooms was ransacked but Father Thruer calmed him.\n# 16.08.1524 HC\n## Day - Abbatuor\nDunmro was sent to handle marriage preparation in hamlet north of Abbadiel.\nThe preparation went smoothly but took most of the day.\n## Afternoon - The Fire in Abbadiel Warehouse District\nHormund waited for challengers but nobody volunteered.\nAfter Ormund arrived the Madame invited them inside.\nThey ate dinner and she shared some interesting information.\nShe asked them to meet her associate whose curiosity they arouse and offered to arrange a fight with the leader of Logging Company enforcers called Gilberto Garetto.\nShe immediately sent a messenger and before end of the meal they got a challenge to duel for 100 gp at midnight.\nHormund accepted the challenge but requested then to meet earlier the same evening.\n## Afternoon - An Inn on the Marketplace in Abbadiel\nOrmus and Hormund interrogated Fabio Meranto learning that his boss is named Gilberto Garetto\nOrmus loaned 50 gp from Malik for wager.\n## Afternoon - the Marketplace in Abbadiel\nOrmus and Hormund  noticed\_ Spat between Father Thruer and Francesco Labiano.\nHormund intervened on the Father Thruer side.\nHormund asked father Thruer for Haelyn's blessing for his fight\n## Afternoon -  The Haelyn Temple in Abbadiel\nFather Thruer performed rites and gave the Haelyn blessings to Hormund.\n## Evening - The Haelyn Temple in Abbadiel\nDunmro was visited by Madame who shared with him information that magistrate plan to summon his wife to testify in 10 days hoping to dismiss the case when she fails to show up in time.\nShe asked him to join Hormund and Ormus in meeting with her associate.\n## Evening - The Fire in Abbadiel Warehouse District\nWhen the duel hour arrived a big crowd of around 300-400 people gathered at the fight site.\nGilberto Garetto arrived at right time and got crowd cheering him right away.\nHormund wanted to put the wager on hands of the Madame but she was nowhere to be seen.\nThe adversary proposed that each side keeps they money for now.\nThe fightt was long and bloody - Ormus used his powers to disturb the enemy but Hormund won only narrowly after switching from hammer to wrestling and grapple.\nThe crowd went silent after their favorite was knocked down.\nThe both fighters were badly beaten at the end.\nThe enemy thrown his wager to Hormus, gave a mysterious ring without explanation and left.\n"
+  id: 'session:session-14'
 - type: Session
   xp: 1200
   date: '2016-10-29T22:00:00.000Z'
@@ -2636,6 +2788,7 @@
     and arrested Hormund under charge of two murders.
 
     Hormund went voluntarily, leaving his cape and weapon in Fire.
+  id: 'session:session-15'
 - type: Session
   xp: 1200
   date: '2016-11-19T23:00:00.000Z'
@@ -2876,6 +3029,7 @@
 
     They sent him to Sven with request for assistance and to organize volunteers
     to fight the loggers from the forest people.
+  id: 'session:session-16'
 - type: Session
   xp: 1200
   date: '2016-11-26T23:00:00.000Z'
@@ -3017,6 +3171,7 @@
 
     Dleegate fell almost instantly and judging from his skin color he was
     neutralized for a very long time.
+  id: 'session:session-17'
 - type: Session
   xp: 900
   date: '2016-12-17T23:00:00.000Z'
@@ -3168,6 +3323,7 @@
 
     Sami agreed but wanted to investigate the Woodcutters stance in the
     meantime.  
+  id: 'session:session-18'
 - type: Session
   xp: 800
   date: '2017-02-25T23:00:00.000Z'
@@ -3328,10 +3484,12 @@
 
     They discussed situation in the town, how much food hey would need to feed
     the woodcutters and how much money they need to pay the outstanding wages.
+  id: 'session:session-19'
 - type: Session
   date: '2015-10-16T22:00:00.000Z'
   name: Session 2
   description: "# 28.07.1524 HC\n## After Dusk - Guard Post in Ilien River Ward\nHormund Dahrmond and Ormus Al-Hazred reached guard post that was staffed by Constable Klon Malcene with 8 other city guardsmen.\nOrmus and Hormund reported attack and kidnapping.\nAfter recording the testimony Constable organized patrol to inspect the warehouse where Ormus nad Hormund were imprisoned.\n## After Dusk - Ilien River Ward\nThe warehouse was found empty but the guardsmen found some evidence and some of Ormus and Hormund possession was recovered.\nHormund was furious as his Bear Cloack was nowere to be found.\nGuards stopped Parniel Moroe who was intendant for the warehouse and took him to the guard post to give testimony.\nOn the way back to the guard post the group was stopped by  Alliene Tilrentor of Nessire who asked what in going on and then used her divine gift to heal Hormund.\n## Night - Ilien City Guard Barracks in Ilien Castle Ward\nOrmus and Hormund took invitation to sleep at the central city guard barracks.\n# 29.07.1524 HC\n## Morning - Ilien City Guard Barracks in Ilien Castle Ward\nAfter eating breakfast in canteen Ormus and Hormund was invited to the meeting with General Wynn Zoest who gave them assurance that guard is doing everything possible to solve their case.\n## Morning - Ilien\nSlitgrad got information that person called Carel Borno got price of 50 gp on his head - dead or alive.\nSlitgrad then learned that Carel Borno was involved with kidnapping of two foreigners, and that the bounty was placed by\_Vaesil Enderaine.\n## Afternoon - Ilien River Ward\nHormund enlisted to work as porter to earn some money. He was approached by Slitgrad who wanted to learn more about kidnapping. Slitgrad then spied on Ormus and Hormund from afar.\n## Afternoon - The Port Of Call Exchange Headquarter in Ilien River Ward\nOrmus went to the Port Of Call Exchange Headquarter and met with his cousin Malik who offered to accommodate Hormund in his own house and to raise the kidnapping issue with Guildlord El-Hadid. Ormus thanked for hospitality and asked if he can bring Hormund with him and got permission.\n## Evening and Night - Ilien River Ward\nSlitgrad further investigated the case. He broke into Parniel Moroe to search it. He found note indicating that Parniel Moroe had accomplice called Beale Dorien, that he was \"renting\" magazine for few months and that there is one other magazine rented to the Carel Borno and his Vos thugs.\n"
+  id: 'session:session-2'
 - type: Session
   xp: 900
   date: '2017-03-17T23:00:00.000Z'
@@ -3509,6 +3667,7 @@
 
     Dunmro and Hormund searched the ruins for traces of the Director treasure
     trove.
+  id: 'session:session-20'
 - type: Session
   xp: 1300
   date: '2017-04-07T22:00:00.000Z'
@@ -3696,6 +3855,7 @@
     Dunmro pretended that he is a sleeping drunk to avoid capture.
 
     Hormund want into warehouse through roof and waited the situation out.
+  id: 'session:session-21'
 - type: Session
   xp: 1800
   date: '2017-05-06T22:00:00.000Z'
@@ -3804,6 +3964,7 @@
 
     They stopped in the same cave as the last night and were approached by
     unknown people who told them that The High Mage Aelies want to talk to them.
+  id: 'session:session-22'
 - type: Session
   xp: 1400
   date: '2017-05-25T22:00:00.000Z'
@@ -3961,6 +4122,7 @@
     River Traders were staying.
 
     Fortuinately Dunmro's wife was not among the dead.
+  id: 'session:session-23'
 - type: Session
   xp: 1000
   date: '2017-06-15T22:00:00.000Z'
@@ -4039,6 +4201,7 @@
 
     He managed to neutralize first adversary using guardian spirits sent by
     Haelyn while second one was executed by Sami who infiltrated their hideout.
+  id: 'session:session-24'
 - type: Session
   xp: 2100
   date: '2017-07-15T22:00:00.000Z'
@@ -4336,6 +4499,7 @@
 
     Vaesil managed to reach Adele river but they captured him before the current
     took him away.
+  id: 'session:session-25'
 - type: Session
   xp: 1500
   date: '2017-07-21T22:00:00.000Z'
@@ -4473,6 +4637,7 @@
     When reaching Ilien the characters exposed to spread his infamy.
 
     The cart and the prisoners reached the Golden Plumes Barracks.
+  id: 'session:session-26'
 - type: Session
   xp: 1700
   date: '2017-08-04T22:00:00.000Z'
@@ -4640,6 +4805,7 @@
 
     After that Ormus worked on analyzing magical properties of items the party
     found during adventures.
+  id: 'session:session-27'
 - type: Session
   xp: 2500
   date: '2017-08-28T22:00:00.000Z'
@@ -4773,6 +4939,7 @@
 
     He was asked by the Count to support diplomatic mission to Aerenwe when it
     will be finally sent.
+  id: 'session:session-28'
 - type: Session
   xp: 3000
   date: '2017-09-29T22:00:00.000Z'
@@ -4859,11 +5026,13 @@
 
     The party returned to Abbadiel and arranged sale of the loot for about 24
     thousand gold pieces.
+  id: 'session:session-29'
 - type: Session
   xp: 150
   date: '2015-11-20T23:00:00.000Z'
   name: Session 3
   description: "# 30.07.1524 HC\n## Morning - Malik Al-Hazred Home in Ilien Castle Ward\nHormund Dahrmond and Ormus Al-Hazred woke up and discussed politics with the host. The young Vos boy brought message that Babushka\_Yukolevic invites them, Hormund caught the messenger.\n## Morning - Babushka\_Yukolevic Home in Ilien Common Ward\nHormund and Ormus visited Babushka Yukolevic house.\nThey noticed strange phenomenons around the house and that their hostess is blind but somehow see them nevertheless.\nBabushka\_Yukolevic gave them information where to find Hormund's cloak and ancient Vos writtings, gave back Ormus' spell-book that was brought to her by one of the kidnappers.\nShe asked to protect her granddaughter in exchange as she foresaw that she - babushka will die soon and great danger will threaten Sonya - her granddaughter.\n## Morning - The Port Of Call Exchange Headquarter in Ilien River Ward\nHormund and Ormus visited the Port Of Call Exchange Headquarter and shared information about the Vos hiding in a warehouse.\nA guild mercenary team was promptly assembled to check the information.\n## Morning - The Port Of Call Exchange Warehouse in Ilien Market Ward\nThe guild mercenaries searched warehouse and found single Vos hiding in the cellar.\nHormus' Bear Cloak was also found.\nThe Vos was taken to the guild headquarter for questioning.\n## Morning - The Impregnable Heard of Haelyn Cathedral in Ilien Castle Ward\nHormund and Ormus visited temple of Haelyn to ask about access to library.\nThey did not get much but they listened to sermon by The High Prefect Hubaere Armiendin who in harshest worlds condemned Vos peril.\n"
+  id: 'session:session-3'
 - type: Session
   xp: 2000
   date: '2017-10-13T22:00:00.000Z'
@@ -5008,6 +5177,7 @@
 
     The party traded one of the found swords for breakfast and stopped to
     consider what to do next.
+  id: 'session:session-30'
 - type: Session
   xp: 4400
   date: '2017-11-04T23:00:00.000Z'
@@ -5152,6 +5322,7 @@
     day for that and War-chief accepted.
 
     He summoned Hormund for celebration.
+  id: 'session:session-31'
 - type: Session
   xp: 2400
   date: '2017-12-02T23:00:00.000Z'
@@ -5314,14 +5485,17 @@
     narrow space.
 
     Eventually Hormund went first and pursued their target in darkness.
+  id: 'session:session-32'
 - type: Session
   date: '2015-12-10T23:00:00.000Z'
   name: Session 4
   description: "# 30.07.1524 HC\n## Morning - Ilien Common Ward\nSlitgrad investigated the kidnapping, the Vos and Carel Borno.\nHe found home of Beale Dorien and followed her around the town.\nHe noticed that he also have a tail.\nBeale met with the wife of Parniel Moroe who had a problem with kids - that were somehow harmed - and she may suffer because that.\nBeale joined a mob of Ilien citizens and stied them against the Vos insinuating that they sacrifice children.\nBoth women returned to Beale house where that were captured by\_The Port of Call Exchange mercenaries and taken to the Port headquarter.\nSlitgrad tried but failed to infiltrate the headquarter.\n## Noon - The Siren's Head Tavern in Ilien Market Ward\nHormund Dahrmond and Ormus Al-Hazred ate dinner with Malik Al-Hazred.\n## Early Afternoon - The Port Of Call Exchange Headquarter in Ilien River Ward\nOrmus and Hormund went to question the captured Vos.\nThey failed to get any useful information.\nThey were present when Guildlord El-Hadid interrogated wife of Parniel Moroe and Beale Dorien about their dealing with the Vos.\nThey learned that more warehouses was in use by Vos but the Guild mercenaries sent to check the magazines found only traces of Vos presence.\n## Evening - Babushka\_Yukolevic Home in Ilien Common Ward\nOrmus and Hormund visited Mara Yukolevic and got to know her granddaughter Sonya.\nMara repeated request to protect her granddaughter and affirmed her conviction that she will not live to see another sundown.\n## Night - The Port Of Call Exchange Warehouse in Ilien Market Ward\nSlitgrad waited until night and sneak into warehouse managed by Beale - he noticed the Port guards inside that ambushed another Vos.\nSlitgrad was forced to hide for extended period of time to avoid begin caught himself\n## Night - Ilien River Ward\nCarel Borno and the remaining Vos bandits left the town by sea pursued by city guards.\n# 31.07.1524 HC\n## Early Morning - Non-descriptive pub in Ilien Common Ward\nAfter being invited to meet a unknown man in a pub by the man who shadowed him yesterday Slitgrad got a job offer.\nHis first task would be to gain trust of Vaesil Enderaine and infiltrate his organization.\nSlitgrad employer failed to mention who he was or for who he works himself.\n## Around Noon - Vos Quarter in Ilien Common Ward\nHormund and Ormus noticed riots in Vos district.\nThey broke through the enraged crowd of townspeople.\nThey manage to get Sonya up the city wall just before Mara house went up in flames.\nSonya lost consciousness when her grandmother died and Hormund and Ormus took her into the Count's castle.\n## Around Noon - Central Tower of The Ilien Count Castle\nHormund and Ormus met\_Chamberlain Conor Ja'teem and then Count Rogr Aglondier and his daughter Alliene Tilrentor.\nCount promised to put Sonya somewhere safe.\nA messenger arrived with the next crisis for the Count to handle.\n## Around Noon - The Office of Magistrate of Ilien in Ilien Count Castle\nHigh Prefect Hubaere Armiendin was showing some infant bodies as a proof that Vos indeed performed human sacrifice.\nAlliene identified bodies as stillborn and verbally attacked High Prefect blaming him for riots and bloodshed.\nHormus sided with the woman joined and The High Perfect left with his tail between his legs.\n## Around Noon - A Chamber in Ilien Count Castle\nOrmus and Hormund checked on Sonya that was accommodated in the castle.\n## Afternoon - Outside Ilien City Walls\nOrmus and Hormund looked for treasure described by Mara.\nThey spent lot of time locating the right place and night caught them on the bog.\nThey found of old shrine and moonlight showed them where to dig to unearth a big stone chest.\nOrmus started to read runes activating some spell on the chest but failed to finish it.\nThey started hauling chest back to city accompanied by evil spirit who noticed them earlier.\n## Afternoon - An Inn in Ilien Common Ward\nWhen Vaseil Enderaine arrived with few companions Slitgrad approached him to discuss business.\nHe agreed to meet in alley behind the inn.\nSiltgrad surprised Vaesil's people with his stealth.\nHe got a test task to break in into Malik Al-Hazred house and retrieve some valuable notes.\n"
+  id: 'session:session-4'
 - type: Session
   date: '2016-02-05T23:00:00.000Z'
   name: Session 5
   description: "# 31.07.1524 HC\n## Night - Around the house of Malik Al-Hazred in Ilien Castle Ward\nSlitgrad moved in to observe his the house of Malik Al-Hazred.\nHe noticed two unidentified individuals trying to break in from the back door.\nAfter they broke in Slitgrad blocked the doors and alerted city guards.\nThe intruders killed a servant but then the guards arrived and captured one of them loosing guardsman to poisoned dagger.\nThe other intruder managed to open the back doors and reached a rooftop only to be thrown down by Slitgrad and captured by guards.\n## Night - Bog South of Ilien\nHormund Dahrmond and Ormus Al-Hazred tried to bring the stone chest of Vos to the city.\nThey were attacked by\_will'o'wisp, Hormund was harmed but they managed to force evil spirit to withdraw.\nOrmus went forward to bring help in the meantime Hormund slowly carried the chest to the City Gates.\n## Night - Around the house of Malik Al-Hazred in Ilien Castle Ward\nOrmus went to his cousins house, noticed guards in front and learned about break in.\nHe persuaded his cousin to help arrange porters for the chest.\n## Night - Ilien\nWith money and instructions from his cousin he got three helpers to carry the chest.\nThey went out of the city, encountered Hormund and together brought the chest into Malik's house.\nOrmus and Hormund then went to sleep.  \n# 32.07.1524 HC\n## Morning - The house of Malik Al-Hazred in Ilien Castle Ward\nSlitgrad waltzed into Maliks home and told Ormus that he want to be hired as bodyguard by Malik.\nSlitgrad then started to cook pancakes when he header some noise from upper floor of the house.\nSlitgrad, Ormus and Hormund caught two burglars searching Malik's room and handling some papers.\nOrmus retrieved the papers and requested all to wait for guards on the ground floor.\nIn the meantime Ormus read the papers but failed to understand much of them.\nThey waited for guards for a long time and after that all moved do the guard barracks.\n## Morning - Ilien City Guard Barracks in Ilien Castle Ward\nOrmus said Slitgrad and two intruders were burglars.\nMalik arrived with some guild mercenaries and persuaded the clerk to hand over the prisoners.\nAfter group leaving barracks one of burglars and went back for interrogation transcript.\nThen all moved to the Port of Exchange\_Hedquarter.\n## Afternoon - The Port Of Call Exchange Headquarter in Ilien River Ward\nMalik asked Ormus about the papers.\nHe explained that they are his analyses of the Port business, showing that significant amount of money started to disappear in recent months.\nMalik took the papers and delivered them to El Hadid.\nMalik, Ormus and Hormund  waited for a meeting with El Hadid but he was to busy.\n## Afternoon - The Port Of Call Exchange Headquarter in Ilien River Ward\nSlitgrad was contacted by his principal and explained that he need the papers to prove himself to Vaesil.\nHe got a falsified papers about hour later.\n## Afternoon -  An Inn in Ilien Common Ward\nSlitgrad delivered the papers to Vaesil Enderaine\nIn return he got 20 gp, and two job offers.\nFirst to help incite riots against Khinasi and second to participate in attacks on The Port Of The Call Exchange property.\nHe turned the first one down and said that he will consider second one.\n## Evening - The Port Of Call Exchange Headquarter in Ilien River Ward\nSlitgrad reported the results to his principal.\nHe became retained agent of The Port Of Call Exchange for 3 gp per day.\n## Evening - The house of Malik Al-Hazred in Ilien Castle Ward\nOrmus and Hormund opened the Vos chest finding multiple chains of runic stones inside.\n"
+  id: 'session:session-5'
 - type: Session
   date: '2016-03-05T23:00:00.000Z'
   name: Session 6
@@ -5445,11 +5619,13 @@
     Slitgrad stabilized Shaemes and disappeared.
 
     Ormus and Hormund gave their account at the guard post.
+  id: 'session:session-6'
 - type: Session
   xp: 900
   date: '2016-04-02T22:00:00.000Z'
   name: Session 7
   description: "# 01.08.1524 HC\n## Evening - Ilien Common Ward\nSlitgrad observer Ormus Al-Hazred and Hormund Dahrmond at the guard post and noticed The Crow watching city gate.\nAfter they left guard post Slitgrad warned Ormus and Hormund about the Crow.\n## Evening - Ilien Castle Ward\nOrmus, Hormund and Slitgrad was taking unconscious Shaemas to get help at the temple of Haelyn.\nThey encountered Altaweir Enlien watching stars on the plaza in front of the temple.\nPatriarch healed Shaemas using Ruenil power.\nOrmus discussed predicting future from star with Altaweir.\nHe get new information about the Crow from the cleric.\n## Evening - Kitchen in Ilien Count Castle\nThe Ilien Count and his daughter received Ormus, Hormund and Slitgrad in the castle kitchen where count was baking bread.\nAfter explaining situation with the Crow characters wanted to leave the city quickly while count preferred to set up ambush for assassin.\nThe count agreed to let them leave and gave Sonya some money for the travel and as compensation.\n## Evening - Ilien\nCharacters took Sonya and Shaemas and left Ilien Count Castle led by Alliene Tilrentor using secret passage.\nThey boarded Shaemas boat and sailed away.\n# 02.08.1524 HC\n## Morning - Aenier\nThe boat was forced to dock in Aenier by storm.\nHormund put the boat on the bank and helped to pull out another boat from the sea.\nThey entered a guest-house and argued about cost of stay with majordomo until Sonya decided to cut the discussion and simply pay.\nThey left they baggage\_ at the room and ate breakfast in the buffet.\nHormund decimated the food plates.\nOrmus played cards with two Anuerian nobles.\nThey all went to sleep\n## Noon - Aenier\nSlitgrad gathered some information about entertainment in Aenier before they all sailed forward in Shaemas boat.\n## Afternoon - Sea south of Abbatour\nCharacters noticed flock of crows tracking them.\nAfter trying to loose them Hormund attempted to persuade passing eagle to disperse the crows but failed.\nOrmus fried the crows with his magic but some escaped.\n## Afternoon - Erbanien in Abbatour\nAfter reaching mouth of small river in Abbatuor Hormund disembarked to take care of pursuing crows.\nHe downed one of them with thrown stone but then have a trouble with catching up with the party.\nShaemas secured his boat near small lake and guided the party to Sven Dharmond camp.\n## Dusk - Near  Sven Dharmond camp in Erbanien in Abbatour\nAfter many hours of traversing lively thicket the party movet to the old forest.\nThey almost reached Sven camp at sundown but were attacked by The Crow.\nThe enemy in a form of Giant Crow wounded Ormus but was caught by Hormund and reverted to human form after taking damage.\nHormund grabbed and held the crow but was gravely wounded by poisoned blades.\nThe effort of the whole party was enough to overcome the Crow.\nSlitgrad delivered final blow accidentaly performing bloodtheft.\n"
+  id: 'session:session-7'
 - type: Session
   xp: 400
   date: '2016-05-14T22:00:00.000Z'
@@ -5505,8 +5681,10 @@
 
     Hormund pursued another goblin and managed to capture him albeit sustaining
     heavy wounds in this process.
+  id: 'session:session-8'
 - type: Session
   date: '2016-05-25T22:00:00.000Z'
   name: Session 9
   description: "# 03.08.1524 HC\n## Afternoon - Sven Camp in Erbanien in Abbatuor\nHormund returned to the camp with a goblin prisoner.\nHe described the encounter with goblins.\nAfter few hours Sven departed to look for Slitgrad.\nHe returned and reported that he found the goblin Camp and trace of\_Slitgrad there.\nHormund, Ormus, Shaemas and Sven discussed next actions and how to rescues Slitgrad from Goblins.\nSven departed second time to scout the goblin camp.\nOrmus used his magic to make Goblin believe he is The Spider and plant seeds of misdirection in his mind.\nShaemes departed to warn woodsman about goblins an gather a force to deal with them\nSven returned with Slitgrad hand.\nHe told Hormund and Ormus that their companion is already fried by goblins.\nOrmus cut off unconscious goblin from the tree.\n## Night - Sven Camp in Erbanien in Abbatuor\nThe camp was attacked by shadows in two waves.\nDunmro cleric of the Haelyn arrived unexpectedly and struck the vile creatures with his power of light.\n# 04.08.1524 HC\n## Morning - Sven Camp in Erbanien in Abbatuor\nThey found a body of goblin drained by shadows.\n## Morning - Erbanien in Abbatuor\nThey took a look at the places of bloodtheft.\nDunmro was looking into aura and localized a rift to the shadow world.\nThey concluded that they can not close the rift by themselves.\nThey hoped that if they can keep shadow creatures from widening the rift then the rift will close itself with time.\n## Day - Rift to the Shadow World in Erbanien in Abbatuor\nHormund, Ormus, Dunmro and Sven prepared area to defend the rift.\nThey gathered wood for several bonfires and food to eat during the night\n## Night - Rift to the Shadow World in Erbanien in Abbatuor\nAfter defeating five waves of undead creatures Hormund, Ormus, Dunmro and Sven lived to see the dawn.\n"
+  id: 'session:session-9'
 

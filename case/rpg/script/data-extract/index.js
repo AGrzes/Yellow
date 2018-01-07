@@ -108,7 +108,6 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
       }]
       default:
       if (item._id === 'geo-toc'){
-        
         const result = []
         function traverse(children,parent){
           _.forEach(children,(child)=>{
@@ -128,5 +127,6 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
     }
     return []
   })
+  _.forEach(data,item=>item.id = `${_.kebabCase(item.type)}:${_.kebabCase(item.name)}`)
   console.log(yaml.safeDump(data,{skipInvalid:true}))
 }))
