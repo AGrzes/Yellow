@@ -20,9 +20,10 @@ class Metadata {
         if (!type.idAttribute&&ancestorClass.idAttribute){
           type.idAttribute = ancestorClass.idAttribute
           type.idTemplate = type.idTemplate? type.idTemplate: `{{${type.idAttribute}}}`
-          type.idTemplateHandlebars = handlebars.compile(type.idTemplate) 
-        }       
+          type.idTemplateHandlebars = handlebars.compile(type.idTemplate)
+        }
       }
+      type.attributes = _.assign({},..._.reverse(_.map(type.ancestors,'attributes')),type.attributes)
     })
   }
   type(typeName){
