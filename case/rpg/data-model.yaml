@@ -81,7 +81,7 @@ classes:
   - name: Religion
     is: Organization  
   - name: Domain
-    is: Organization
+    is: Location
     attributes:
       provinces:
         type: County  
