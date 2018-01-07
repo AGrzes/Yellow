@@ -104,6 +104,77 @@
     - 'province:edlin'
     - 'province:fairfield'
     - 'province:ghoried'
+- name: Heartlands
+  type: Region
+  children:
+    - 'domain:avanil'
+    - 'domain:mhoried'
+    - 'domain:tuornen'
+- name: Avanil
+  type: Domain
+  children: []
+  parent: 'region:heartlands'
+- name: Mhoried
+  type: Domain
+  children: []
+  parent: 'region:heartlands'
+- name: Tuornen
+  type: Domain
+  children: []
+  parent: 'region:heartlands'
+- name: Southern Coast
+  type: Region
+  children:
+    - 'domain:aerenwe'
+    - 'domain:diemed'
+    - 'domain:ghoere'
+    - 'domain:ilien'
+    - 'domain:medoere'
+    - 'domain:mieres'
+    - 'domain:roesone'
+    - 'location:isle-of-tamle'
+- name: Aerenwe
+  type: Domain
+  children: []
+  parent: 'region:southern-coast'
+- name: Diemed
+  type: Domain
+  children: []
+  parent: 'region:southern-coast'
+- name: Ghoere
+  type: Domain
+  children: []
+  parent: 'region:southern-coast'
+- name: Ilien
+  type: Domain
+  children: []
+  parent: 'region:southern-coast'
+- name: Medoere
+  type: Domain
+  children: []
+  parent: 'region:southern-coast'
+- name: Mieres
+  type: Domain
+  children: []
+  parent: 'region:southern-coast'
+- name: Roesone
+  type: Domain
+  children:
+    - 'province:abbatour'
+  parent: 'region:southern-coast'
+- name: Abbatour
+  type: Province
+  children: []
+  parent: 'domain:roesone'
+- name: Isle Of Tamle
+  type: Location
+  children:
+    - 'location:vos-fortress'
+  parent: 'region:southern-coast'
+- name: Vos Fortress
+  type: Location
+  children: []
+  parent: 'location:isle-of-tamle'
 - type: God
   name: Avani
   domain: Light
@@ -486,12 +557,14 @@
     - Lord Mayor
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Aeliran Gendril
   description: "Tennien is governed by an agent of the count named\_Aeliran Gendril (MA; F4; unblooded). Aeliran insures that the trade route remains open and good relations are kept with contacts in Roesone. Aeliran also keeps a close eye on el-Hadid's men, making sure they pay the appropriate tariffs and taxes, pay the farmers a fair price for their goods, and do not cheat or otherwise upset foreign merchants."
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Alliene Tilrentor
   description: "3rd-level Anuirean priest of Nesirie, unblooded\n\nS: D: C: I: W: Ch: AC: hp: MV: THACO: #AT: Dmg: 10 12 15 12 16 14 6 18 12 20 1 Id6\n\nEquipment: Spear +1, scale mail, holy symbol, ring of free action, potion of extra-healing\n\nSpells/Day: 4/3\n\nPreferred Spells: 1st level - cure light wounds, protection from evil, remove fear, sanctuary; 2nd level - detect charm, know alignment, obscurement\n\nDescription/History: Alliene is a fiery-spirited young woman who has brought inspiration to the Eastern Temple of Nesirie. She is a knowledgeable woman who always has something to say in the great hall. Herself being of common roots, Alliene has a special place in her heart for the simple people of Ilien. Alliene spends much of her free time in the Common Ward helping out the poor, which has made her exceedingly popular with many of the city's common factions.\n\n*   Lost mother at the age of 6 and was raised by single father\n*   Was raised among servants at the Iliens count castle\n*   She spend much of her time on the streets of the common and port ward and from earliest years learned to fight for her own\n*   She found support in Nesire faith and small temple in port ward, she learned tents of the faith and found consolation in her grief\n*   When she was a teenager the faith of Nesire in Ilien experienced crisis, she found herself much seal to fight for her faith survival\n*   She gained much experience in political maneuvers and developed very sharp tongue, despite her age she also gained some aura majesty and authority\_\n*   She is extremely energetic and industrious person, and is often torn between compassion and ruthlessness\n*   She is a woman behind a woman in the Iliens temple of Nesire, a respected priest without formal authority over temple but in practice dictating temple stance and politics. And everything at the age of 25 - before her father became count of ilien\n*   She grown up to become beautiful woman but find it hard to form a romantic relation - for which she is looking forward but without much hurry\n*   She is from time to time strut by melancholy and bouts of dark humorous"
@@ -500,12 +573,14 @@
     - of Nesirie
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Altaweir Enlien
   nicknames:
     - Patriarch of the Ninth Spell
   relations: []
   positions: []
+  location: 'domain:medoere'
 - type: Character
   name: Ansen Lermael
   description: >-
@@ -514,11 +589,12 @@
     mistreated by his subordinates lead by his own secretary.
   nicknames:
     - The Magistrate
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:dietric-deuter'
+      target: 'person:dietric-deuter'
       description: He is completely dependent on his secretary
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Arron Vaumel
   description: "Arron Vaumel (MA; T5; Br, minor, 17; NE), a scheming little wretch, seems more interested in personal gain than in serving as Governor of Mieres. Unfortunately for him, his domain lies across the Straits of Aerele from the Anuirean mainland. That's nowhere near the center of politics, so he spends his time plotting ever-greater control over his lands. Vaumel completely controls guild activity in\_ Mieres. He brooks no competitors for the gold the network brings him; those who try opposing him usually wash up sooner or later on the former colony's sandy shores. The governor feels less than concerned about the law; everyone knows that if they try anything, his squad of thugs will make examples of them.\n\nThe Prince of Avanil has the governor's sworn fealty. Darien Avan occasionally sends troops down to make sure Vaumel is not involved in any dishonest or illegal schemes—but of course, Mieres's regent always stays one step ahead, cleaning up his act (and his territory) before the investigators arrive.\n\n*   **Lieutenants**: Vaumel does not trust anyone enough to use as a lieutenant. Even his own children can not gain his confidence, so they, like everyone else, plot behind his back to seize control of the domain. One day he might rely on someone, though doing so could prove his downfall. Still, his bureaucracy takes care of day-to-day matters for him (and they're as corrupt a bunch as one cares to meet).  \n    Those who don't know the correct people to bribe or the right way to deliver a payoff can forget about getting anything done here."
@@ -526,6 +602,7 @@
     - Governor of Mieres
   relations: []
   positions: []
+  location: 'domain:mieres'
 - type: Character
   name: Barel Hestean
   description: >-
@@ -566,6 +643,7 @@
     - Lord
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Beldere Enderaine
   description: >-
@@ -582,6 +660,7 @@
     - Lord
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Blaese Virtol
   description: >-
@@ -590,6 +669,7 @@
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Braedonnal Tuare
   description: >-
@@ -598,11 +678,12 @@
     Rhuobhe, the duchess has forbidden it, reminding him that such an offensive
     would place the kingdom in considerable peril.
   nicknames: []
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
       name: Lieutenant
-      organization: 'person:laela-flaertes'
+      target: 'person:laela-flaertes'
+  positions: []
+  location: 'domain:tuornen'
 - type: Character
   name: Calder Moroe
   description: >-
@@ -610,13 +691,14 @@
     He distances himself from everybody but also keep tabs on everybody.
   nicknames:
     - The minstrel
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:thuer'
+      target: 'person:thuer'
       description: >-
         He have some history with Father Thuer but none of them is willing to
         tell what
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Cesare Cabiliano
   description: >-
@@ -625,16 +707,17 @@
     with women.
   nicknames:
     - The Logging Company Leg-breaker
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:gilberto-garetto'
+      target: 'person:gilberto-garetto'
       description: Takes orders from The logging company enforcers boss but envy him
     - type: CharacterRelation
-      organization: 'person:francesco-labiano'
+      target: 'person:francesco-labiano'
       description: >-
         Hates The Woodcutters Leader because of his position among the people
         and his strength
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Chylae Naentas
   description: >-
@@ -652,6 +735,7 @@
     - Chamberlain
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Conor Ja'teem
   description: >-
@@ -665,6 +749,7 @@
     - Chamberlain
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Crennia Ylian
   description: "The Eastern Temple of Nesirie is a level 3 temple holding under the control of the Council of Nesirie headed by\_Priestess Crennia Ylian (FA; Pr8; An, tainted, 11) and the Council of Seven including Alliene Tilgentor."
@@ -672,6 +757,7 @@
     - Priestess
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Cur Kaldish
   description: "Crimes like shoplifting and petty theft are controlled through the efforts of\_Constable Cur Kaldish (MV; F5; unblooded), a huge man of Vos ancestry. Cur's network of rogues and spies keep him updated on illegal activities in the Market Ward and much of the rest of the Free City. The Constable's oftentimes harsh sense of justice is an excellent deterrent to crime, though it is somewhat of a ruse. Cur is really a kind and caring man, and can often be seen giving beggars and the homeless a crown or two."
@@ -679,6 +765,7 @@
     - Constable
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Curan Ondier
   description: >-
@@ -725,6 +812,7 @@
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Daeric Mhoried
   description: >-
@@ -750,11 +838,12 @@
     his years as regent.
   nicknames:
     - The Mhor of Mhoried
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
       name: Father
-      organization: 'person:michael-mhoried'
+      target: 'person:michael-mhoried'
+  positions: []
+  location: 'domain:mhoried'
 - type: Character
   name: Darien Avan
   description: >-
@@ -777,6 +866,7 @@
     - Prince of Avanil
   relations: []
   positions: []
+  location: 'domain:avanil'
 - type: Character
   name: Delvin Boria
   description: >-
@@ -784,14 +874,15 @@
     Imports sailors in the legal and illegal dealings.
   nicknames:
     - The Southern Anuire Shipping and Imports Capitan
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:norvien-hanard'
+      target: 'person:norvien-hanard'
       description: He reports to The Orthien Delegate
     - type: CharacterRelation
-      organization: 'person:cesare-cabiliano'
+      target: 'person:cesare-cabiliano'
       description: He has a crush on Cesare Cabiliano
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Dheraene Bhailie
   description: >-
@@ -800,11 +891,12 @@
     in Anuire. Of course, she has flaws like everyone else—she's just more
     careful to hide them.
   nicknames: []
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
       name: Lieutenant
-      organization: 'person:darien-avan'
+      target: 'person:darien-avan'
+  positions: []
+  location: 'domain:avanil'
 - type: Character
   name: Dietric Deuter
   description: >-
@@ -815,18 +907,19 @@
     the Magistrate and now he takes payback tenfold.
   nicknames:
     - The Magistrate Secretary
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:ansen-lermael'
+      target: 'person:ansen-lermael'
       description: >-
         Controls and torment the senile Magistrate but fail to think what will
         happen when he finally will die.
     - type: CharacterRelation
-      organization: 'person:maele-dis'
+      target: 'person:maele-dis'
       description: >-
         Collects big bribes from The logging company director but hopes to have
         more intimate relationship with her
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Droene Eradiel
   description: >-
@@ -836,6 +929,7 @@
     - The old captain
   relations: []
   positions: []
+  location: 'province:abbatour'
 - type: Character
   name: El-Hadid
   description: >-
@@ -910,27 +1004,31 @@
     - Guildlord
   relations: []
   positions:
-    - type: CharacterRelation
+    - type: CharacterPosition
       name: Guildlord
       organization: 'organization:port-of-call-exchange'
+  location: 'domain:ilien'
 - type: Character
   name: Elenir Goerin
   nicknames:
     - Grand Curate
   relations: []
   positions: []
+  location: 'domain:medoere'
 - type: Character
   name: Erin ...
   nicknames:
     - The Tax Comptroller
   relations: []
   positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Erin Manero
   nicknames:
     - The Tax Comptroller
   relations: []
   positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Francesco Labiano
   description: >-
@@ -939,16 +1037,17 @@
     the Imperial Temple of Haelyn.
   nicknames:
     - The Woodcutters Leader
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:gilberto-garetto'
+      target: 'person:gilberto-garetto'
       description: >-
         Clashes regularly with The logging company enforcers boss but both sides
         avoid direct confrontation
     - type: CharacterRelation
-      organization: 'person:thuer'
+      target: 'person:thuer'
       description: Hates Father Thuer because he blocks arrival of Imperial Temple priests
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Gael
   description: >-
@@ -959,18 +1058,19 @@
     She act as de-facto security chief in province
   nicknames:
     - The First Mate of The Royal Captain's Crew
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:tael-brosuine'
+      target: 'person:tael-brosuine'
       description: >-
         She was a mentor of young Tael Brosuine and even if relation weakened
         with years she is here for him and he trust her completely
     - type: CharacterRelation
-      organization: 'person:norvien-hanard'
+      target: 'person:norvien-hanard'
       description: >-
         She handles coordination with The Orthien Delegate with professionalism
         but does not like him
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Gavin Tael
   description: >-
@@ -993,6 +1093,7 @@
     - Baron of Ghoere
   relations: []
   positions: []
+  location: 'domain:ghoere'
 - type: Character
   name: Gilberto Garetto
   description: >-
@@ -1001,17 +1102,18 @@
     many times hides considerable cunning and wit.
   nicknames:
     - The Logging Company Enforcers Boss
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:maele-dis'
+      target: 'person:maele-dis'
       description: Reports officially to The logging company director but also monitors her
     - type: CharacterRelation
-      organization: 'person:norvien-hanard'
+      target: 'person:norvien-hanard'
       description: Responds rally to The Orthien Delegate
     - type: CharacterRelation
-      organization: 'person:cesare-cabiliano'
+      target: 'person:cesare-cabiliano'
       description: Controls The logging company leg-breaker and lesser thugs
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Giuseppe Tarel
   description: >-
@@ -1019,21 +1121,22 @@
     operation inside Ileien-Abbatour-Issle-Of-Tamale triangle.
   nicknames:
     - The Smuggler Chief
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:gael'
+      target: 'person:gael'
       description: >-
         The first mate of The Royal Captain's Crew influences him and dictates
         where are the limits but also employs for covert Captains business
     - type: CharacterRelation
-      organization: 'person:onwen-faerle'
+      target: 'person:onwen-faerle'
       description: >-
         He reports to the underboss in matter of operations inside Abbadie, he
         respects underboss
-    - type: CharacterRelation
+  positions:
+    - type: CharacterPosition
       organization: Delvin Boria
       description: Sometimes collaborates sometime clashes with The Ship Capitan
+  location: 'province:abbatour'
 - type: Character
   name: Heirl Diem
   description: >-
@@ -1062,16 +1165,18 @@
     spies.
   nicknames:
     - Baron of Diemed
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
       name: Father
-      organization: 'person:lasica-diem'
+      target: 'person:lasica-diem'
+  positions: []
+  location: 'domain:diemed'
 - type: Character
   name: Hermedhie
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:medoere'
 - type: Character
   name: Hubaere Armiendin
   description: "The disciples of Haelyn in the Free City of Ilien answer to the\_High Prefect Hubaere Armiendin (MA; P11; Re, major, 27), the most powerful Haelynite in the realms of Ilien, Roesone, and Medoere. The High Prefect is often sought as a diplomatic mediator between rival lords in major disputes."
@@ -1079,6 +1184,7 @@
     - High Prefect
   relations: []
   positions: []
+  location: 'region:southern-coast'
 - type: Character
   name: Jonathan Miechale
   description: >-
@@ -1088,21 +1194,23 @@
     the decisions of his liege, he always feels determined to carry out his
     orders to his fullest ability.
   nicknames: []
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
       name: Lieutenant
-      organization: 'person:gavin-tael'
+      target: 'person:gavin-tael'
+  positions: []
+  location: 'domain:ghoere'
 - type: Character
   name: Karina
   description: Anuerian woman in her early thirties.
   nicknames:
     - Dunmro's Wife
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
       name: Wife
-      organization: 'person:dunmro'
+      target: 'person:dunmro'
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Kathaen Abeth
   description: "The current chancellors are\_Kathaen Abeth (MA; T3; unblooded), Minister of Trade"
@@ -1110,6 +1218,7 @@
     - Chancellor
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Klon Malcene
   description: "Peace is kept by the Guard Watch of the River Ward under the supervision of\_Constable Klon Malcene (MA; F4; unblooded), and it is a difficult job indeed."
@@ -1117,6 +1226,7 @@
     - Constable
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Konour
   description: >-
@@ -1130,12 +1240,14 @@
     - Patriarch
   relations: []
   positions: []
+  location: 'domain:medoere'
 - type: Character
   name: Kotrin Skirvin
   nicknames:
     - Lord
   relations: []
   positions: []
+  location: 'domain:medoere'
 - type: Character
   name: Laela Flaertes
   description: >-
@@ -1151,12 +1263,14 @@
     - Duchess of Tuornen
   relations: []
   positions: []
+  location: 'domain:tuornen'
 - type: Character
   name: Lasica Diem
   description: 'Lasica (FA; W5;Br, major, 42; LN)'
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:diemed'
 - type: Character
   name: Lia Hohen
   description: >-
@@ -1166,6 +1280,7 @@
     - The Knife Maiden
   relations: []
   positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Liliene Swordwraith
   description: "An indirect descendant of Roele, Liliene Swordwraith (FA; R10; An, major, 31; NG), is Queen of Aerenwe. She rose from obscurity in one of the forgotten towns of the domain, winning the favor of the people away from the harsh king before her. Eventually, she deposed the tyrant and forced the kingdom into modern times.\n\nThe aged queen has the absolute loyalty of her people, and they're all willing to give their lives in defense of her kingdom. If she asked, they would march into even the Gorgon's lair. However, she has no designs on expanding her kingdom; Liliene Swordwraith and her people-feel content with their corner of the land.\n\n*   **Lieutenants**: The queen places much of the burden of rulership on her two advisers, twins named Cole and Cale Alwier. The two 4th-tevel half-elf fighter-mages left the safety of the Aelvinnwode to follow the regent back to\_ Aerenwe. The queen trusts them implicitly, and some say the two of them have begin running the kingdom for years now. They also provide some aid to the embattled Baroness of Roesone against Diemed's incursions, for a reason known only to the three of them,"
@@ -1173,6 +1288,7 @@
     - Queen of Aerenwe
   relations: []
   positions: []
+  location: 'domain:aerenwe'
 - type: Character
   name: Londael Gant
   description: >-
@@ -1187,6 +1303,7 @@
     - Chamberlain
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Lucia Arele
   description: >-
@@ -1194,11 +1311,12 @@
     red-haired, hyperactive.
   nicknames:
     - The Port Master's wife
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
       name: Wife
-      organization: 'person:trevan-arele'
+      target: 'person:trevan-arele'
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Maele Dis
   description: >-
@@ -1208,23 +1326,24 @@
     uses it to build her own empire gathering influence and assets.
   nicknames:
     - The Logging Company Director
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:dietric-deuter'
+      target: 'person:dietric-deuter'
       description: >-
         Uses magistrate secretary to rubber-stamp the logging company operations
         and eliminate all legal challenges
     - type: CharacterRelation
-      organization: 'person:gilberto-garetto'
+      target: 'person:gilberto-garetto'
       description: >-
         She uses The logging company enforcers boss to keep the loggers in line
         but underestimates and despise him as simple brute
     - type: CharacterRelation
-      organization: 'person:wilhem-zweliger'
+      target: 'person:wilhem-zweliger'
       description: >-
         Formally respond to the The Southern Anuire Shipping and Imports
         representative but in fact ignores him
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Marlae Roesone
   description: >-
@@ -1246,6 +1365,7 @@
     - The Baroness of Roesone
   relations: []
   positions: []
+  location: 'domain:roesone'
 - type: Character
   name: Michael Mhoried
   description: >-
@@ -1256,6 +1376,7 @@
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:mhoried'
 - type: Character
   name: Molien Darest
   description: "The fanatic priest-superior\_Patriarch Molien Darest (MA; P5; Re, minor, 11) leads the community, and a full dozen celestial marshals serve as his lieutenants. In addition to the monastery and dormitories, a small keep overlooks the compound. The trade road that leads to Alamier runs past the town, but few merchants stop here. The community has a shroud of purpose hanging over it that is too intense for those who aren't a part of it - the town is in a state of readiness for war. Darest keeps his warrior-priests in battle condition, inspiring them with sermons designed to hone them to a fever pitch. Lady Suris believed that this was the best place for Darest and his order, but such a powerful weapon should be watched closely and kept on a short chain."
@@ -1263,12 +1384,14 @@
     - Patriarch
   relations: []
   positions: []
+  location: 'domain:medoere'
 - type: Character
   name: Molreyn Perium III
   description: "This inn is known for the nightly performances of\_Molreyn Perium III (MA; B7; unblooded), an aging bard who has played his lute for more than two dozen regents across Cerilia. Molreyn ended his traveling days following a goblin attack that cost him full use of his right leg, and chose Caette as his retirement home. Many say Molreyn's music is the most beautiful in all Anuire, and for this reason alone there is not often an empty seat to be found in the Lonely Traveler on any given night."
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Moro Mentier
   description: >-
@@ -1278,6 +1401,7 @@
     - Chancellor
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Norvien Hanard
   description: >-
@@ -1286,12 +1410,13 @@
     Man of particular tastes and keeping to himself.
   nicknames:
     - The Orthien Delegate
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
       name: subordinate
-      organization: 'person:gilberto-garetto'
+      target: 'person:gilberto-garetto'
       description: Gives commands to The logging company enforcers boss
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Nunziena Opalodakis
   description: >-
@@ -1301,6 +1426,7 @@
     - The Fishermen Elder
   relations: []
   positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Onwen Faerle
   description: >-
@@ -1313,14 +1439,15 @@
     clothes.
   nicknames:
     - The Underboss
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:sami-lehmann'
+      target: 'person:sami-lehmann'
       description: Secretly collaborate with The Mouse
     - type: CharacterRelation
-      organization: 'person:norvien-hanard'
+      target: 'person:norvien-hanard'
       description: Gets orders from Orthien Thane throught his delegate but resent him.
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Parkel Dargon
   description: >-
@@ -1332,6 +1459,7 @@
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:medoere'
 - type: Character
   name: Parniel Moroe
   description: >-
@@ -1340,6 +1468,7 @@
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Raederic Roesone
   description: >-
@@ -1351,6 +1480,7 @@
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:roesone'
 - type: Character
   name: Roannea Urdaen
   description: "The Market Ward is overseen by\_Roannea Urdaen (FA; W1; unblooded), the only female chamberlain in the Free City. Roannea is a former student of Moeran's, but as she is not a blooded scion she can never wield true magic. Having a keen mind and firm loyalties, she was given the position of chamberlain.\_The Seadrake is suspected in the disappearance of her predecessor, as he never returned from a trip to Aenier along the Straits of Aerele."
@@ -1358,19 +1488,21 @@
     - Chamberlain
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Rogr Aglondier
   description: "Rogr Aglondier (MA; W3; Ma, minor, 21; NG) was an exceptional commoner once, a trusted adviser and apprentice to the blooded count before him, Moeran Aglondier. However, he did not descend from the ancient bloodlines. Rogr never felt so astonished as the morning he woke up to discover he had inherited the old man's bloodline, his royal name, and the Free County of Ilien. The count rules Ilien wisely and well, doing his best not to make the mistakes of the regents around him. Neither ambitious nor proud, he's willing to admit his faults. His people enthusiastically support him, for he keeps their loyalty high and their taxes low. Aglondier claims Ilien is neutral, a statement that strays a bit from the truth. He's good friends with the rulers from both Medoere and Roesone—without their tolerance, his domain wouldn't exist. Still, the nonpartisan illusion persists, so other rulers use the Free County of Ilien as a neutral meeting spot; regents have forged numerous treaties there.\n\n*   Lieutenants: Despite his many good qualities, Aglondier isn't really the trusting sort. His only lieutenant is his daughter and heir, the Lady Alliene (FA; Pr3, Nesirie; CG). Together, the two can react to nearly any emergency that arises in the kingdom.\n\n3rd-level Anuirean Wizard\n\nS: 14\n\nD: 14\n\nC: 11\n\nI: 16\n\nW: 14\n\nCh: 16\n\nBloodline: Masela, minor, 21\n\nBlood Abilities: Detect lie, enhanced sense (major ability; see rule book)\n\nEquipment: Robes, quarterstaff +2\n\nSpells/Day: 2/1\n\nPreferred Spells: 1st level—charm person, sleep;\n\n2nd level—stinking cloud\n\nDescription/History: Rogr Tilgentor has been the apprentice, supporter and friend of Moeran Aglondier for the past decade. Rogr was a com- moner, fascinated by magic, when he met the Count and became his pupil. He studied magic, though as an unblooded human had no chance of rising far in the ranks of true magic spellcasting. Moeran took him as an apprentice, and having no other family, made plans to pass the regency on to Rogr. Now, with Moeran's untimely death, the fledgling Rogr is thrust into the regency of Ilien unexpectedly.\n\nRogr is an extremely intelligent individual, and the power he possesses coupled with the teachings of the old Count and his own growing skill makes him a formidable ruler. Rogr is the only known wizard in Ilien.\n\nRogr is a widower, his wife having died during the birth of his daughter Alliene. Alliene is a member of the Eastern Temple of Nesirie, and Rogr's only trusted lieutenant.\n\nThe suspected assassination of Moeran has unnerved the new regent of the land. Despite the assurances of Seneschal Godene, Rogr remains extremely paranoid about a potential assassin loose in the Free City.\n\n*   Rogr was born as a son of simple craftsman and had fairly rough childhood\n*   He shown signs of great intellect was educated on the Moeran Aglondier stipend, and in time bacome clerk, apprentice, advisor and friend of count\n*   He became father early - at 17 and widower at 23\_\n*   In his magic he is great at practice - he is able to perform spell perfectly after reading it-s description once - but not so great at theory, abstraction and synthesis.\n*   He have a talent to combine magical and mundane means and knack for finding solutions that most mages would not think of.\n*   He see himself as a servant of the people of Ilien and legacy of Aglondier counts, he will ignore personal attacks but fight fierce when city is threatened\n*   He is not accustomed to political maneuvering, he knows it happen but until recently he was focusing on finding best solutions not making them pass amid resistance\n*   He likes cooking and do not think to stop even when he is a count\n*   He was accustomed to work directly with the count and do not know who of the numerous advisors and officials can he trust and with what\n*   He often wears old hat - a gift from late wife - as remembrance of her - even when it is not very fitting occasion"
   nicknames:
     - Count of Ilien
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
       name: father
-      organization: 'person:alliene-tilrentor'
-    - type: CharacterRelation
+      target: 'person:alliene-tilrentor'
+  positions:
+    - type: CharacterPosition
       name: regent
       organization: 'domain:ilien'
+  location: 'domain:ilien'
 - type: Character
   name: Sami Lehmann
   description: >-
@@ -1383,11 +1515,12 @@
     Abbadiel.
   nicknames:
     - The Mouse
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:thuer'
+      target: 'person:thuer'
       description: As a cleric of Eloele plots to undermine the Father Thuer position
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Shaemes Legwine
   description: >-
@@ -1414,6 +1547,7 @@
   nicknames: []
   relations: []
   positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Shielin Roesone
   description: >-
@@ -1423,12 +1557,14 @@
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:roesone'
 - type: Character
   name: Sonya Yukolevic
   description: "*   A young Vos scion of ancient Yukolevic bloodline\n*   Average height, average build, medium long blond hair, no eyes - skin in place of sockets.\n*   Blessed with gift of seeing future but cursed with lack of eyesight\n*   Lost mother to plague that struck Ilien few years ago\n*   Isolated from wider community of Ilien and inside Vos sub-community treated with reverence but also with distance\n*   Always had knowledge that mother and grandmother may be watching her every move\n*   Had limited ability to see in space and time\n*   Many times ability to predict future made her re-live unpleasant moments time and time again\n*   With full force of Yukolevic bloodline she now can see far and wide but still have to discover limits of her abilities\n*   The precision of vision is directly proportional to difficult to change\_prophesied outcome\n*   There are also other dangers of looking far and wide still unknown to Sonya\n\n# Blood Powers\n\n*   Blind-sight 120 ft,\n*   Advantage to Dex, Int, Wis, Cha, checks and saving throws, and disadvantage to attacks against.\n*   Limited ability to \"see\" distant present, past or future, to share visions with others and to divine the destiny.\n\nYukolevic Curse\n\nThe Yukolevics was ancient Vos seers and archmages - they was seduced by the shadow by the promise of even more power and insight but betrayed the Shadow just before the final battle taking valuable knowledge and artifacts with them - or perhaps they siding with him was deception from the start.\n\nAzrai cursed them saying none of them will see the light of the following day - they managed to deflect it by sacrificing they sight but replacing it with heightened magical senses.\n\nAzrai cursed them again saying that there will be no more Yukolevics ever - they asked Voryn for help and he managed to use wording of the curse to state that there will be no more male Yukolevics\n\nAzray did not curse them third time buy sent his minions to kill them all promising great prize for this deed - they died, and died and eventually they crafted spell to protect a last of them - woman pregnant with child - sacrificing the remaining member of the house in process\n\nThe Shadow is no more but his minions still hunt with a sight on the promised prize - ant the spell is still working - but can effectively protect only two Yukolevics - usually mother and daughter"
   nicknames: []
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Suris Enlien
   description: "The Archpriest of Ruornil's Celestial Spell, Suris Enlien (FA; Pr4, Ruornil; Re, major, 32; NG) keeps a close watch over this land, controlling her theocracy with a velvet fist. Unfortunately, her control is not as absolute as she would like, so she enforces her edicts a little more harshly than she should.\n\nAs a priestess of the god of moon and magic, Enlien spends most of her days abed and works under the moon at night. Therefore she takes care of most of her courtly work at night also, giving her capital city of Braeme a different schedule than the rest of the kingdom.\n\n*   **Lieutenants**: The high priestess has one lieutenant, the commander of Medoere's tiny army. Lord Kotrin Skirvin (MR; F3; An, minor, 18; CG) has a\_ little blood of his own, so the regent keeps a close eye on him, knowing that his ambition might strip away his common sense. Other than that one flaw, she has chosen her commander well, and the two see eye to eye on policy matters.\n\nSiiris Enlien, became a priestess of Ruornil, seized the provinces of Caerwil, Braeme, and Alamier from Diemed, and forged the domain of Medoere when she was only 16 years old. To stop the persecution of the followers of the Celestial Spell and save hundreds of innocents from slaughter, she was forced to kill her own father, Dalien, count of the eastern provinces. She was seen as the Moon God's Sacred Voice, and the people of the new realm adored her.\n\nIn the eight years since that fateful day, Medoere has flourished as a theocracy.\n\nOnly 24, Suris is a beautiful woman who is totally devoted to her faith and her god. She has hair as dark as night, large gray eyes, and skin the color of pale moonlight. Wispy thin and only of average height, Suris nevertheless has a presence\n\n4th-level Anuirean priest\n\nS:\n\nD:\n\nC:\n\nI:\n\nW:\n\nCh: 11\n\n12\n\n9\n\n16\n\n17\n\n17\n\nAC:\n\nhp:\n\nMV:\n\nTHACO:\n\n#AT:\n\nDmg: 8(10)\n\n22\n\n12\n\n18\n\n1\n\nld6+2\n\nBloodline: Reynir,\n\nmajor, 32\n\nBlood Abilities: Enhanced sense (minor), heal-\n\ning (minor)\n\nEquipment: ring of protection +2, footman's mace\n\n+ 1, holy symbol of quality"
@@ -1436,6 +1572,7 @@
     - The Archpriest of Ruornil's Celestial Spell
   relations: []
   positions: []
+  location: 'domain:medoere'
 - type: Character
   name: Sven Dahrmond
   description: >-
@@ -1456,11 +1593,12 @@
 
     *   Have a very thick accent when speaking Anureian
   nicknames: []
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
       name: Uncle
-      organization: 'person:hormund-dahrmond'
+      target: 'person:hormund-dahrmond'
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Tael Brosuine
   description: >-
@@ -1469,25 +1607,26 @@
     in the pleasure  and dream of something that finally excites him.
   nicknames:
     - The Royal Captain
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:gael'
+      target: 'person:gael'
       description: >-
         The first mate of The Royal Captain's Crew is the only person really
         close to him and who can speak truth to power, she was some kind of
         surrogate mother to him
     - type: CharacterRelation
-      organization: 'person:wilhem-zweliger'
+      target: 'person:wilhem-zweliger'
       description: >-
         The Southern Anuire Shipping and Imports representative meets with the
         captain often to make sure he is well cared off and content with the
         collaboration
     - type: CharacterRelation
-      organization: 'person:sami-lehmann'
+      target: 'person:sami-lehmann'
       description: >-
         The Mouse provides and organizes some of more exotic experiences to the
         royal captain
+  positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Tallow
   description: "Castle Tallow, which guards the grassland pass one mile north of the town, is commanded by\_Lord Tallow (MA; F4; unblooded) and houses 30 seasoned soldiers who have been loyal to the noble since the realm was part of Diemed. There are a number of common folk who worship at the Shrine of the Heart, a small temple dedicated to the Impregnable Heart of Haelyn, but the majority of people follow the teachings of the Celestial Spell."
@@ -1495,6 +1634,7 @@
     - Lord
   relations: []
   positions: []
+  location: 'domain:medoere'
 - type: Character
   name: The Seadrake
   description: >-
@@ -1625,6 +1765,7 @@
   nicknames: []
   relations: []
   positions: []
+  location: 'region:southern-coast'
 - type: Character
   name: Thuer
   description: "*   A man of about 50 - high, thin, with tonsure and well combed long hair around it.\n*   A true belier and posing as blunt instrument of his God's will - underneath hides sharp intellect and pointy tongue\n*   Very experienced warrior without showing signs of his age\n*   Likes to wake up with the sun and proselytize until dusk.\n*   Thinks of Haelyn as a leader of the gods but see the place for the other gods underneath him.\n*   Thinks that if you don't follow Haelyns teaching you are simply hurting yourself\n*   Hates Ortodox Temple of Haelyn with deep fiery hate and talk about it worse than followers of Belnik and Kreiha\n*   Have a mace called Faith and a shield called Devotion with him - a\_ family heritage\n*   Is of noble origin but unbloodied and without inheritance - his family came from Mohrheid\n*   Had formal education in Imperial city of Anuerie\n\n## Relations\n\n*   Opposes The Mouse as the leader of largest whorehouse in Abbadiel and suspected cleric of some mischievous good\n*   Oposes The Woodcutters Leader against importing clerics of Ortodox Temple of Haelyn"
@@ -1632,6 +1773,7 @@
     - Father
   relations: []
   positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Trevan Arele
   description: >-
@@ -1641,6 +1783,7 @@
     - The Port Master
   relations: []
   positions: []
+  location: 'province:abbatour'
 - type: Character
   name: Ubael
   description: >-
@@ -1650,6 +1793,7 @@
     - Magistrate
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Vaesil Enderaine
   description: >-
@@ -1661,11 +1805,12 @@
     half of the wit of Vaesil, however he still have many enemies in the city.
     (MA; ROG3; Re, minor, 18)
   nicknames: []
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
       name: bastard-son
-      organization: 'person:beldere-enderaine'
+      target: 'person:beldere-enderaine'
+  positions: []
+  location: 'domain:ilien'
 - type: Character
   name: Wilhem Zweliger
   description: >-
@@ -1673,19 +1818,20 @@
     charge of all Orthien Thane legal business in Abbadiel
   nicknames:
     - The Southern Anuire Shipping and Imports representative
-  relations: []
-  positions:
+  relations:
     - type: CharacterRelation
-      organization: 'person:sami-lehmann'
+      target: 'person:sami-lehmann'
       description: He is a frequent visitor to The Mouse establishment
     - type: CharacterRelation
-      organization: 'organization:the-southern-anuire-shipping-and-imports'
-      description: Formally represents organization in Abbtour
-    - type: CharacterRelation
-      organization: 'person:tael-brosuine'
+      target: 'person:tael-brosuine'
       description: >-
         He conducts the The Southern Anuire Shipping and Imports business with
         The Royal Capitan and under this guise deliver the bribes.
+  positions:
+    - type: CharacterPosition
+      organization: 'organization:the-southern-anuire-shipping-and-imports'
+      description: Formally represents organization in Abbtour
+  location: 'province:abbatour'
 - type: Character
   name: Wynn Zoest
   description: "The Golden Plumes are led by\_General Wynn Zoest (MA; F6; An, tainted, 10), an aged veteran of the Guard Watch of nearly 40 years. General Zoest reports only to Chamberlain Ja'teem, the Lord Mayor, and Ilien's regent. Should the Free City ever be under siege, Zoest would be commanding the city's defenses."
@@ -1693,6 +1839,7 @@
     - General
   relations: []
   positions: []
+  location: 'domain:ilien'
 - type: County
   name: Ilien
   neighbors:

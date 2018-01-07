@@ -73,19 +73,20 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
         name: _.get(item,'name'),
         description: _.get(item,'description')||_.get(item,'content'),
         nicknames: _([_.get(item,'title'),_.get(item,'label')]).flatten().compact().value(),
-        relations: _(item).get('relations',[]).filter((relation)=>_.startsWith(_.get(relation,'role'),'person:')).map((relation)=>({
+        relations: _(item).get('relations',[]).filter((relation)=>_.startsWith(_.get(relation,'target'),'person:')).map((relation)=>({
           type: 'CharacterRelation',
           name:  _.get(relation,'role'),
           target: _.get(relation,'target'),
           reverse: _.get(relation,'reverse'),
           description: _.get(relation,'description')
         })),
-        positions: _(item).get('relations',[]).filter((relation)=>!_.startsWith(_.get(relation,'role'),'person:')).map((relation)=>({
-          type: 'CharacterRelation',
+        positions: _(item).get('relations',[]).filter((relation)=>!_.startsWith(_.get(relation,'target'),'person:')).map((relation)=>({
+          type: 'CharacterPosition',
           name:  _.get(relation,'role'),
           organization: _.get(relation,'target'),
           description: _.get(relation,'description')
-        })),        
+        })),   
+        location: _.get(item,'parent'),   
       }]
       case "location":
       return [{
@@ -105,6 +106,25 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
           description: _.get(neighbors,'border')
         }))
       }]
+      default:
+      if (item._id === 'geo-toc'){
+        
+        const result = []
+        function traverse(children,parent){
+          _.forEach(children,(child)=>{
+            result.push({
+              name:child.name,
+              type:_.upperFirst(_.camelCase(_.split(child.node,":")[0])),
+              children: _.map(child.children,'node'),
+              parent: _.get(parent,'node'),
+            })
+            traverse(child.children,child)
+          })
+
+        }
+        traverse(item.children,null)
+        return result
+      }
     }
     return []
   })

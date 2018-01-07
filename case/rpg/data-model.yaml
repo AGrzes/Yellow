@@ -54,7 +54,12 @@ classes:
         multiplicity: '*'
       sublocations:
         type: LocationRelation
-        multiplicity: '*'        
+        multiplicity: '*'
+      parent:
+        type: Location
+      children:
+        type: Location
+        multiplicity: '*'            
   - name: LocationRelation
     is: Entity
     attributes:
@@ -63,7 +68,11 @@ classes:
   - name: County
     is: Location
   - name: Settlement
-    is: Location     
+    is: Location
+  - name: Region
+    is: Location       
+  - name: Province
+    is: Location      
   - name: Organization
     is: Entity
     attributes:
