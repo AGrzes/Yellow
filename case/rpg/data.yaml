@@ -1,52 +1,4 @@
 - type: Change
-  date: '2016-11-19T00:00:00.000Z'
-  description: |
-    * Implemented news
-    * Published events of the session 5
-    * Published events of the session 6
-  id: 'change:'
-- type: Change
-  date: '2017-02-27T00:00:00.000Z'
-  description: |
-    * Added new character options
-  id: 'change:'
-- type: Change
-  date: '2016-11-20T00:00:00.000Z'
-  description: |
-    * Fixed NPC display
-    * Published events of the session 16
-  id: 'change:'
-- type: Change
-  date: '2016-11-22T00:00:00.000Z'
-  description: |
-    * Published events of the session 7
-  id: 'change:'
-- type: Change
-  date: '2016-11-23T00:00:00.000Z'
-  description: |
-    * Published events of the session 8 and 9
-  id: 'change:'
-- type: Change
-  date: '2016-11-28T00:00:00.000Z'
-  description: |
-    * Published events of the session 10, 11 and 17
-  id: 'change:'
-- type: Change
-  date: '2016-11-30T00:00:00.000Z'
-  description: |
-    * Published events of the session 12 and 13
-  id: 'change:'
-- type: Change
-  date: '2016-12-01T00:00:00.000Z'
-  description: |
-    * Published events of the session 14 and 15
-  id: 'change:'
-- type: Change
-  date: '2016-12-02T00:00:00.000Z'
-  description: |
-    * Added events in between live sessions
-  id: 'change:'
-- type: Change
   date: '2016-12-18T00:00:00.000Z'
   description: |
     * Added events of session 18
@@ -62,6 +14,8 @@
     - 'province:shadowgreen'
     - 'province:westmarch'
   id: 'domain:aerenwe'
+  children: []
+  parent: 'region:southern-coast'
 - type: Domain
   name: Diemed
   provinces:
@@ -72,6 +26,8 @@
     - 'province:moere'
     - 'province:tier'
   id: 'domain:diemed'
+  children: []
+  parent: 'region:southern-coast'
 - type: Domain
   name: Ghoere
   provinces:
@@ -86,11 +42,15 @@
     - 'province:tireste'
     - 'province:tornilen'
   id: 'domain:ghoere'
+  children: []
+  parent: 'region:southern-coast'
 - type: Domain
   name: Ilien
   provinces:
     - 'province:ilien'
   id: 'domain:ilien'
+  children: []
+  parent: 'region:southern-coast'
 - type: Domain
   name: Medoere
   provinces:
@@ -98,6 +58,8 @@
     - 'province:braeme'
     - 'province:caerwil'
   id: 'domain:medoere'
+  children: []
+  parent: 'region:southern-coast'
 - type: Domain
   name: Mieres
   provinces:
@@ -110,6 +72,8 @@
     - 'province:seaward'
     - 'province:serien'
   id: 'domain:mieres'
+  children: []
+  parent: 'region:southern-coast'
 - type: Domain
   name: Roesone
   provinces:
@@ -121,6 +85,9 @@
     - 'province:fairfield'
     - 'province:ghoried'
   id: 'domain:roesone'
+  children:
+    - 'province:abbatour'
+  parent: 'region:southern-coast'
 - name: Heartlands
   type: Region
   children:
@@ -155,42 +122,6 @@
     - 'domain:roesone'
     - 'location:isle-of-tamle'
   id: 'region:southern-coast'
-- name: Aerenwe
-  type: Domain
-  children: []
-  parent: 'region:southern-coast'
-  id: 'domain:aerenwe'
-- name: Diemed
-  type: Domain
-  children: []
-  parent: 'region:southern-coast'
-  id: 'domain:diemed'
-- name: Ghoere
-  type: Domain
-  children: []
-  parent: 'region:southern-coast'
-  id: 'domain:ghoere'
-- name: Ilien
-  type: Domain
-  children: []
-  parent: 'region:southern-coast'
-  id: 'domain:ilien'
-- name: Medoere
-  type: Domain
-  children: []
-  parent: 'region:southern-coast'
-  id: 'domain:medoere'
-- name: Mieres
-  type: Domain
-  children: []
-  parent: 'region:southern-coast'
-  id: 'domain:mieres'
-- name: Roesone
-  type: Domain
-  children:
-    - 'province:abbatour'
-  parent: 'region:southern-coast'
-  id: 'domain:roesone'
 - name: Abbatour
   type: Province
   children: []

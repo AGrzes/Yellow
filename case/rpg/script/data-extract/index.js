@@ -128,5 +128,6 @@ new Ouch(db).all().pipe(miss.to.obj((chunk, enc, done) => {
     return []
   })
   _.forEach(data,item=>item.id = `${_.kebabCase(item.type)}:${_.kebabCase(item.name)}`)
+  data = _(data).groupBy('id').values().map((groups)=>_.assign({},...groups)).value()
   console.log(yaml.safeDump(data,{skipInvalid:true}))
 }))

@@ -99,7 +99,7 @@ menu:
           master:
             - type: TOC
               data:
-                selector: (this.type == 'Location'||this.type == 'County'||this.type == 'Province'||this.type == 'Region') && !this.parent    
+                selector: (this.type == 'Location'||this.type == 'Province'||this.type == 'Region') && !this.parent    
               children: this.children    
               item:
                 type: DetailsLink
