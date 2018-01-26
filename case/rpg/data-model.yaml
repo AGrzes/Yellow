@@ -121,6 +121,8 @@ classes:
         multiplicity: '*'      
   - name: Reference
     is: Entity
+  - name: Category
+    is: Entity    
   - name: God
     is: Reference
     attributes:

@@ -340,6 +340,9 @@
     Sera embodies the adage that a man makes his own luck; she rewards diligence
     and hard work, but she occasionally smiles on the fool.
   id: 'god:sera'
+- type: Category
+  name: Gods
+  id: 'category:gods'
 - type: Organization
   name: The Church of the Celestial Spell
   description: "\_Medoere's major faith and official religion is Ruornil's Celestial Spell. By far, this is the most organized and powerful church dedicated to the Silver Prince. As a theocracy, Medoere's official religion serves as the law of the land as well as the keeper of the faith. The primary cathedral is the grand Temple of the Celestial Spell, located in Alamier City. A second major cathedral, the Temple of the Ninth Spell, is in the capital city of Braeme. It's a smaller but no less beautiful version of the Alamier complex.\n\nThe Celestial Spell has other temples, churches, and shrines throughout the three provinces. The theocracy controls all nine levels of temple in the domain. Although other faiths are tolerated, none have been allowed to establish any kind of holdings in the domain. (One is trying, though.)\n\nThe Celestial Archpriest serves as the leader of the church, though individual temples have local leaders who answer to the regent. The church dominates the three provinces as far as the power of faith is concerned. Because the theocracy is also in charge of foreign affairs and keeping the domain intact, it hasn't made many inroads into other realms. Indeed, the church isn't that interested in crossing political borders. After all, Ruornil specifically directed his faithful to settle the lands that became Medoere, so that's the region the church concentrates its efforts on.\n\nThat doesn't mean the church's influence hasn't spread. Due to the good relationship Medoere has with Roesone, shrines dedicated to Ruornil have been established in a few of Roesone's larger cities and towns. In the province of Caercas, however, Ruornil's Celestial Spell commands about 25% of the population's faith (the church has a level 1 holding in Caercas). Most of this is concentrated in the Temple of the Silver Moon, located in the city of Proudglaive."
@@ -2280,12 +2283,6 @@
 
     * [Feats](http://media.wizards.com/2016/downloads/DND/UA-Feats-V1.pdf)
   id: 'reference:character-options'
-- type: Reference
-  name: Eloele
-  id: 'reference:eloele'
-- type: Reference
-  name: Gods
-  id: 'reference:gods'
 - type: Reference
   name: Languages
   description: >
