@@ -112,7 +112,7 @@ menu:
               pattern: People of {{this}}   
             - type: List
               list:
-                selector:  this.type == 'Character' || this.location == location
+                selector:  this.type == 'Character' && this.location == parent
               style: list
               item:
                 type: ListItem
@@ -121,8 +121,8 @@ menu:
                     field: name
                     slot: header
                   - type: Field
-                    field: nickname
-                    slot: sub-header                    
+                    field: nicknames
+                    slot: sub-header
                   - type: Field
                     field: description
                     format: markdown
