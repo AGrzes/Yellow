@@ -1921,12 +1921,6 @@
       description: the Spider river
   id: 'county:ilien'
 - type: Reference
-  name: Avani
-  id: 'reference:avani'
-- type: Reference
-  name: Belinik
-  id: 'reference:belinik'
-- type: Reference
   name: Bloodlines
   description: >
     # Blood Derivation
@@ -2287,23 +2281,11 @@
     * [Feats](http://media.wizards.com/2016/downloads/DND/UA-Feats-V1.pdf)
   id: 'reference:character-options'
 - type: Reference
-  name: Cuiraecen
-  id: 'reference:cuiraecen'
-- type: Reference
   name: Eloele
   id: 'reference:eloele'
 - type: Reference
-  name: Erik
-  id: 'reference:erik'
-- type: Reference
   name: Gods
   id: 'reference:gods'
-- type: Reference
-  name: Kriesha
-  id: 'reference:kriesha'
-- type: Reference
-  name: Laerme
-  id: 'reference:laerme'
 - type: Reference
   name: Languages
   description: >
@@ -2361,9 +2343,6 @@
     *   Ancient Vos
   id: 'reference:languages'
 - type: Reference
-  name: Nesirie
-  id: 'reference:nesirie'
-- type: Reference
   name: Races
   description: |
     # Available
@@ -2389,12 +2368,6 @@
     *   Tiefling
     *   Dragonborn
   id: 'reference:races'
-- type: Reference
-  name: Ruornil
-  id: 'reference:ruornil'
-- type: Reference
-  name: Sera
-  id: 'reference:sera'
 - type: Session
   date: '2015-10-01T22:00:00.000Z'
   name: Session 1
