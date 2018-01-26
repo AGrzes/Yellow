@@ -27,6 +27,8 @@ classes:
       items:
         type: Item
         multiplicity: '*'
+      location:
+        type: Location
   - name: CharacterPosition
     attributes:
       organization: 
