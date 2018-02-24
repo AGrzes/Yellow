@@ -1,0 +1,20 @@
+---
+type: Author
+name: Terry Prattchet
+"@books":
+  - name: Small Gods
+    labels:
+     - discworld
+    "@owned":
+      form: paperback 
+  - name: Jingo
+    labels:
+     - discworld
+    "@owned":
+      form: paperback
+  - name: The Science of Discworld
+    labels:
+     - discworld
+     - discworld:science
+    "@owned":
+      form: paperback       
