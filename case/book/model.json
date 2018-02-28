@@ -1,0 +1,272 @@
+{
+  "items": [{
+    "form": ["digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "digital", "paperback", "paperback", "paperback"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    }
+  }, {
+    "name": "The Short Victorious War",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "the-short-victorious-war",
+    "$label": "The Short Victorious War"
+  }, {
+    "name": "Mission of Honor",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "mission-of-honor",
+    "$label": "Mission of Honor"
+  }, {
+    "name": "Crown of Slaves",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "crown-of-slaves",
+    "$label": "Crown of Slaves"
+  }, {
+    "name": "The Shadow of Saganami",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "the-shadow-of-saganami",
+    "$label": "The Shadow of Saganami"
+  }, {
+    "name": "Changer of Worlds",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "changer-of-worlds",
+    "$label": "Changer of Worlds"
+  }, {
+    "name": "The Service of the Sword",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "the-service-of-the-sword",
+    "$label": "The Service of the Sword"
+  }, {
+    "name": "Storm from the Shadows",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "storm-from-the-shadows",
+    "$label": "Storm from the Shadows"
+  }, {
+    "name": "Torch of Freedom",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "torch-of-freedom",
+    "$label": "Torch of Freedom"
+  }, {
+    "name": "Cauldron of Ghosts",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "cauldron-of-ghosts",
+    "$label": "Cauldron of Ghosts"
+  }, {
+    "name": "Shadow of Freedom",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "shadow-of-freedom",
+    "$label": "Shadow of Freedom"
+  }, {
+    "name": "A Rising Thunder",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "a-rising-thunder",
+    "$label": "A Rising Thunder"
+  }, {
+    "name": "In Fire Forged: Worlds of Honor V",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "in-fire-forged-worlds-of-honor-v",
+    "$label": "In Fire Forged: Worlds of Honor V"
+  }, {
+    "name": "House of Steel",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "house-of-steel",
+    "$label": "House of Steel"
+  }, {
+    "name": "Shadow of Victory",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "shadow-of-victory",
+    "$label": "Shadow of Victory"
+  }, {
+    "name": "Field of Dishonor",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "field-of-dishonor",
+    "$label": "Field of Dishonor"
+  }, {
+    "name": "Flag in Exile",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "flag-in-exile",
+    "$label": "Flag in Exile"
+  }, {
+    "name": "Honor Among Enemies",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "honor-among-enemies",
+    "$label": "Honor Among Enemies"
+  }, {
+    "name": "In Enemy Hands",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "in-enemy-hands",
+    "$label": "In Enemy Hands"
+  }, {
+    "name": "Echoes of Honor",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "echoes-of-honor",
+    "$label": "Echoes of Honor"
+  }, {
+    "name": "Ashes of Victory",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "ashes-of-victory",
+    "$label": "Ashes of Victory"
+  }, {
+    "name": "War of Honor",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "war-of-honor",
+    "$label": "War of Honor"
+  }, {
+    "name": "At All Costs",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "at-all-costs",
+    "$label": "At All Costs"
+  }, {
+    "name": "On Basilisk Station",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "on-basilisk-station",
+    "$label": "On Basilisk Station"
+  }, {
+    "name": "The Honor of the Queen",
+    "labels": ["honorverse"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "the-honor-of-the-queen",
+    "$label": "The Honor of the Queen"
+  }, {
+    "type": "Author",
+    "name": "David Webber",
+    "@books": ["the-short-victorious-war", "mission-of-honor", "crown-of-slaves", "the-shadow-of-saganami", "changer-of-worlds", "the-service-of-the-sword", "storm-from-the-shadows", "torch-of-freedom", "cauldron-of-ghosts", "shadow-of-freedom", "a-rising-thunder", "in-fire-forged-worlds-of-honor-v", "house-of-steel", "shadow-of-victory", "field-of-dishonor", "flag-in-exile", "honor-among-enemies", "in-enemy-hands", "echoes-of-honor", "ashes-of-victory", "war-of-honor", "at-all-costs", "on-basilisk-station", "the-honor-of-the-queen"],
+    "$metadata": {
+      "path": "data/david-webber.yaml",
+      "fileName": "david-webber.yaml"
+    },
+    "$key": "david-webber",
+    "$label": "David Webber"
+  }, {
+    "name": "Small Gods",
+    "labels": ["discworld"],
+    "$metadata": {
+      "path": "data/terry-pratchet.yaml",
+      "fileName": "terry-pratchet.yaml"
+    },
+    "$key": "small-gods",
+    "$label": "Small Gods"
+  }, {
+    "name": "Jingo",
+    "labels": ["discworld"],
+    "$metadata": {
+      "path": "data/terry-pratchet.yaml",
+      "fileName": "terry-pratchet.yaml"
+    },
+    "$key": "jingo",
+    "$label": "Jingo"
+  }, {
+    "name": "The Science of Discworld",
+    "labels": ["discworld", "discworld:science"],
+    "$metadata": {
+      "path": "data/terry-pratchet.yaml",
+      "fileName": "terry-pratchet.yaml"
+    },
+    "$key": "the-science-of-discworld",
+    "$label": "The Science of Discworld"
+  }, {
+    "type": "Author",
+    "name": "Terry Prattchet",
+    "@books": ["small-gods", "jingo", "the-science-of-discworld"],
+    "$metadata": {
+      "path": "data/terry-pratchet.yaml",
+      "fileName": "terry-pratchet.yaml"
+    },
+    "$key": "terry-prattchet",
+    "$label": "Terry Prattchet"
+  }]
+}
