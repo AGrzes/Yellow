@@ -7,7 +7,7 @@ Model folder with several sub-folders
 * Name of the folder maps to `lp` attribute.
 * `changelog:<lp>` is entity id
 
-# Geo
+## Geo
 * Each sub-folder represent entity
 * Name of the folder maps to `<type>:<snake-case-name>`. 
 * `type` maps to `type` attribute.
@@ -20,9 +20,9 @@ Model folder with several sub-folders
   * `<type'>` maps to additional entities `type` attribute if it is not already defined
   * Base entity have parent child relations with additional entities `<type'>s`/`location`
 
-# Misc
+## Misc
 Folder not processed.
-# Organization
+## Organization
 * First level sub-folder map to a `type` attribute.
 * Each subsequent sub-folder represent entity
 * metadata.yaml - stores entity attributes
@@ -31,7 +31,7 @@ Folder not processed.
 * `<type>:<snake-case-name>` is entity id
 * Base entity have parent child relations with additional nested `parts`/`partOf`
 
-# Reference
+## Reference
 * Each sub-folder represent entity
 * Name of the folder maps to `<type>:<snake-case-name>`. 
 * `type` maps to `type` attribute.
@@ -39,12 +39,23 @@ Folder not processed.
 * Parent child relation maps to `members`/`container`
 * metadata.yaml - stores entity attributes
 * content.md - stores markdown for `content` attribute
-# Rules
+
+## Rules
 Folder not processed.
-# Session
+## Session
 * Each sub-folder represents single entity
 * metadata.yaml - stores entity attributes
 * events.md - stores markdown for `events` attribute
 * Name of the folder maps to `lp` attribute.
 * `session:<lp>` is entity id
+
+# Common patterns
+* Type in folder name
+* Type in root folder
+* Parent child relation by nesting folders
+  * Custom names for that relation
+* metadata.yaml file for folder-entity metadata
+* *.md file containing content of attribute named like file name
+* Start case for name attribute
+* Snake case and type for ID
 
