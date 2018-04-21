@@ -59,3 +59,13 @@ Folder not processed.
 * Start case for name attribute
 * Snake case and type for ID
 
+# Builder sample
+
+```javascript
+loader().key('{{type}}:{{snake-case name}}')
+.path('changelog').folder('lp').attributes('metadata.yaml').attributeFile('changes.md',/*'changes'*/).key('changelog:{{lp}}')
+.path('organization').folder('type').hierarchy('parts','partOf').attributes('metadata.yaml').folder('snake-name').map('name','{{start-case snake-name}}')
+.path('sessions').folder('lp').attributes('metadata.yaml').attributeFile('events.md',/*'events'*/).key('session:{{lp}}')
+.path('reference').hierarchy('members','container').attributes('metadata.yaml').folder(\(.*):(.*)\,[null,'type','snake-name']).map('name','{{start-case snake-name}}').attributeFile('content.md',/*'content'*/)
+.path('geo').hierarchy('locations','in').attributes('metadata.yaml').folder(\(.*):(.*)\,[null,'type','snake-name']).map('name','{{start-case snake-name}}').attributeFile('description.md',/*'events'*/).additional(file(\(.*):(.*)\,[null,'type','snake-name']).hierarchy('{{type}}s','locations'))
+```
