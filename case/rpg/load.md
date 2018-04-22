@@ -73,7 +73,7 @@ loader().key('{{type}}:{{snake-case name}}')
 ## Second Attempt
 ```javascript
 loader().key(attribute('type').separator(':').attribute(name).snakeCase())
-.path('changelog').attribute('type','changelog').folder(attribute(lp)).key(attribute('type').separator(':').attribute('lp')).file('metadata.yaml').file('changes.md')
+.path('changelog').attribute('type','changelog').folder(attribute(lp)).key(attribute('type').separator(':').attribute('lp')).file('metadata.yaml').attributes().file('changes.md').attribute()
 ```
 
 # Processing model
@@ -84,4 +84,22 @@ loader().key(attribute('type').separator(':').attribute(name).snakeCase())
 * When descending into folder or file pass parent key attribute
 * When descending into file look for parser that is able to extract structure from file
   * If no parser is available then define attachment attribute based on file
+
+## Step by Step Sample
+1. Start with base folder - key resolver set to `attribute('type').separator(':').attribute(name).snakeCase()`
+2. Descent into `changelog` folder
+3. Unable to calculate key
+4. Match `changelog` path
+5. Set key resolver set to `attribute('type').separator(':').attribute('lp')`
+6. Set `type` attribute in current context to `changelog`
+7. Unable to calculate key
+8. Descend into `1` folder
+9. Set `lp` attribute to `1`
+10. Emit entity event for current folder
+11. Descend into `metadata.yaml` file
+12. Parse file with Yaml parser
+13. Emit entity event for `metadata.yaml` file
+11. Descend into `changes.md` file
+12. Parse file with plain text parser
+13. Emit entity event for `changes.md` file
 
