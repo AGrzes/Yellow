@@ -69,3 +69,8 @@ loader().key('{{type}}:{{snake-case name}}')
 .path('reference').hierarchy('members','container').attributes('metadata.yaml').folder(\(.*):(.*)\,[null,'type','snake-name']).map('name','{{start-case snake-name}}').attributeFile('content.md',/*'content'*/)
 .path('geo').hierarchy('locations','in').attributes('metadata.yaml').folder(\(.*):(.*)\,[null,'type','snake-name']).map('name','{{start-case snake-name}}').attributeFile('description.md',/*'events'*/).additional(file(\(.*):(.*)\,[null,'type','snake-name']).hierarchy('{{type}}s','locations'))
 ```
+
+# Processing model
+* Traverse working directory
+  * Use stack-context with each stack frame inheriting but overriding attributes from parent context
+* Consume put 'folder attributes' in context 
