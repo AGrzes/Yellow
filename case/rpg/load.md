@@ -61,6 +61,7 @@ Folder not processed.
 
 # Builder sample
 
+## Initial
 ```javascript
 loader().key('{{type}}:{{snake-case name}}')
 .path('changelog').folder('lp').attributes('metadata.yaml').attributeFile('changes.md',/*'changes'*/).key('changelog:{{lp}}')
@@ -69,8 +70,18 @@ loader().key('{{type}}:{{snake-case name}}')
 .path('reference').hierarchy('members','container').attributes('metadata.yaml').folder(\(.*):(.*)\,[null,'type','snake-name']).map('name','{{start-case snake-name}}').attributeFile('content.md',/*'content'*/)
 .path('geo').hierarchy('locations','in').attributes('metadata.yaml').folder(\(.*):(.*)\,[null,'type','snake-name']).map('name','{{start-case snake-name}}').attributeFile('description.md',/*'events'*/).additional(file(\(.*):(.*)\,[null,'type','snake-name']).hierarchy('{{type}}s','locations'))
 ```
+## Second Attempt
+```javascript
+loader().key(attribute('type').separator(':').attribute(name).snakeCase())
+.path('changelog').attribute('type','changelog').folder(attribute(lp)).key(attribute('type').separator(':').attribute('lp')).file('metadata.yaml').file('changes.md')
+```
 
 # Processing model
 * Traverse working directory
   * Use stack-context with each stack frame inheriting but overriding attributes from parent context
-* Consume put 'folder attributes' in context 
+* Map folder name to attributes using defined mapping
+* If key is calculable then emit entity with current context
+* When descending into folder or file pass parent key attribute
+* When descending into file look for parser that is able to extract structure from file
+  * If no parser is available then define attachment attribute based on file
+
