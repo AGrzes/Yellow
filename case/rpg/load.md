@@ -103,3 +103,12 @@ loader().key(attribute('type').separator(':').attribute(name).snakeCase())
 12. Parse file with plain text parser
 13. Emit entity event for `changes.md` file
 
+## Configuration Model
+* Matchers 
+  * Activation test
+    * File
+    * Folder
+    * Name
+  * Configuration
+    * Key rule
+    * Attribute rule
